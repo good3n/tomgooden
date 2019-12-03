@@ -46,6 +46,14 @@ const StyledFooter = styled.footer`
       }
     }
   }
+
+  br {
+    display: none;
+
+    @media (max-width: 899px) {
+      display: block;
+    }
+  }
 `
 
 const Footer = () => (
@@ -60,7 +68,7 @@ const Footer = () => (
         Coded in <Link to="https://code.visualstudio.com/" rel="nofollow noopener noreferrer">VS Code</Link>.
       </span>
       <span>
-        Built with <Link to="https://www.gatsbyjs.org/" rel="nofollow noopener noreferrer">Gatsby.js</Link>.
+        Built with <Link to="https://www.gatsbyjs.org/" rel="nofollow noopener noreferrer">Gatsby.js</Link>.<br />
       </span>
       <span>
         Hosted on <Link to="https://www.netlify.com/" rel="nofollow noopener noreferrer">Netlify</Link>.

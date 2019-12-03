@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 
 const Title = styled.h1`
   font-size: 50px;
-  margin-bottom: 30px;
+  margin: 20px 0 30px;
 
   @media (max-width: 899px) {
     font-size: 36px;
@@ -42,7 +42,7 @@ export default function Template({ data }) { // this prop 'data' will be injecte
   return (
     <Layout>
       <div className="blog-post">
-        <Img sizes={frontmatter.featuredImage.childImageSharp.sizes} style={{ marginBottom: `30px` }} />
+        <Img sizes={frontmatter.featuredImage.childImageSharp.sizes} style={{ marginBottom: `20px` }} />
         <Title>{frontmatter.title}</Title>
         <BlogMeta className={`is-sans`}>
           <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{

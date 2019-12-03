@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   color: #343434;
 
   @media (max-width: 899px) {
-    min-height: calc(100vh - 238px);
+    min-height: calc(100vh - 272px);
   }
 
   h1 {

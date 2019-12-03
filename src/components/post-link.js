@@ -13,7 +13,7 @@ const PostWrap = styled.article`
 `
 
 const Title = styled.h1`
-  margin-top: 20px;
+  margin: 20px 0 30px;
 `
 
 const BlogMeta = styled.div`

@@ -36,6 +36,14 @@ const BlogMeta = styled.div`
   }
 `
 
+const Content = styled.div`
+  margin-top: 50px;
+
+  a {
+    word-break: break-word;
+  }
+`
+
 export default function Template({ data }) { // this prop 'data' will be injected by the GraphQL query below.
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
@@ -55,9 +63,8 @@ export default function Template({ data }) { // this prop 'data' will be injecte
             <span className="read-time">{data.markdownRemark.fields.readingTime.text}</span>
           </div>
         </BlogMeta>
-        <div
-          style={{ marginTop: `50px` }}
-          className="blog-post-content"
+        <Content
+          className={`blog-post-content`}
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>

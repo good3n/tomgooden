@@ -24,9 +24,7 @@ const Wrapper = styled.div`
 
   svg {
     width: 40px;
-    margin: 0 15px;
-    position: relative;
-    top: 13px;
+    margin: -10px 10px;
     animation: bounce 3s infinite ease-in-out;
 
     @keyframes bounce {

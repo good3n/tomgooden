@@ -8,10 +8,6 @@ const Wrapper = styled.div`
   min-height: calc(100vh - 255px);
   display: flex;
   align-items: center;
-
-  /* @media (max-width: 899px) {
-    min-height: 0;
-  } */
 `
 
 const Intro = styled.div`

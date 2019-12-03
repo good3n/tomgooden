@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 const StyledFooter = styled.footer`
@@ -65,13 +64,13 @@ const Footer = () => (
     </div>
     <div>
       <span>
-        Coded in <Link to="https://code.visualstudio.com/" rel="nofollow noopener noreferrer">VS Code</Link>.
+        Coded in <a href="https://code.visualstudio.com/" rel="nofollow noopener noreferrer">VS Code</a>.
       </span>
       <span>
-        Built with <Link to="https://www.gatsbyjs.org/" rel="nofollow noopener noreferrer">Gatsby.js</Link>.<br />
+        Built with <a href="https://www.gatsbyjs.org/" rel="nofollow noopener noreferrer">Gatsby.js</a>.<br />
       </span>
       <span>
-        Hosted on <Link to="https://www.netlify.com/" rel="nofollow noopener noreferrer">Netlify</Link>.
+        Hosted on <a href="https://www.netlify.com/" rel="nofollow noopener noreferrer">Netlify</a>.
       </span>
     </div>
   </StyledFooter>

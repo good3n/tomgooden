@@ -15,6 +15,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "fonts",
+        path: `${__dirname}/src/assets/fonts`
+      }
+    },
     `gatsby-plugin-netlify`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

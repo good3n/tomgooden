@@ -10,6 +10,10 @@ const Wrapper = styled.div`
   align-items: center;
   color: #343434;
 
+  @media (max-width: 899px) {
+    min-height: calc(100vh - 238px);
+  }
+
   h1 {
     font-size: 100px;
 

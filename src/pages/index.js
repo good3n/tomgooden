@@ -8,6 +8,10 @@ const Wrapper = styled.div`
   min-height: calc(100vh - 255px);
   display: flex;
   align-items: center;
+
+  @media (max-width: 899px) {
+    min-height: calc(100vh - 238px);
+  }
 `
 
 const Intro = styled.div`
@@ -33,7 +37,6 @@ const Title = styled.h1`
   }
 
   strong {
-    font-weight: 600;
     animation: colors 20s infinite;
 
     @keyframes colors {

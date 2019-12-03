@@ -35,7 +35,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -66,6 +66,14 @@ module.exports = {
               target: "_self",
               rel: "nofollow"
             }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              quality: 70,
+              maxWidth: 670,
+              wrapperStyle: `display: block;`
+            },
           },
         ],
       },

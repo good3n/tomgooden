@@ -70,6 +70,7 @@ const BlogList = ({
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   return (
     <Layout>
+      <h1>Blog</h1>
       <Grid>
         <Block>
           <p class="is-sans" style={{ fontSize: `16px`, fontWeight: `500`, color: `#777` }}>Placeholder block for future categories/tags. Stay tuned!</p>

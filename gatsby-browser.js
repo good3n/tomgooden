@@ -6,6 +6,5 @@
 
 // You can delete this file if you're not using it
 
-// require("./src/assets/fonts/fonts.css"); // is this needed?
 // require("prismjs/themes/prism-okaidia.css");
 require("./src/styles/prism/prism-tomgooden.css");

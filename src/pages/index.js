@@ -1,8 +1,8 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from "styled-components"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const Wrapper = styled.div`
   min-height: calc(100vh - 255px);

@@ -8,10 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 import GlobalStyle from "../styles/global"
 import Header from "./header"
 import Footer from "./footer"
-import styled from "styled-components"
 
 const Container = styled.div`
   margin: 0 auto;

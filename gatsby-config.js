@@ -22,6 +22,7 @@ module.exports = {
         path: `${__dirname}/src/assets/fonts`
       }
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

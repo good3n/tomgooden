@@ -103,7 +103,7 @@ const GlobalStyle = createGlobalStyle`
 
   @media (max-width: 899px) {
     pre[class*=language-] {
-      padding: 1.5em;
+      padding: 2.5em 1.5em 1.5em;
     }
   }
 

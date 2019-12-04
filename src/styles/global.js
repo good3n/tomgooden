@@ -65,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
       top: 0;
       left: 0;
       padding: 5px 10px;
-      border-radius: 0.3em 0 0.3em 0;
+      border-radius: 0.2em 0 0.3em 0;
       color: #121212;
       text-shadow: none;
     }
@@ -86,6 +86,11 @@ const GlobalStyle = createGlobalStyle`
       &php::before {
         content: "php";
         background: #9192ff;
+      }
+
+      &jsx::before {
+        content: "jsx";
+        background: #E7F45E;
       }
 
       &text {

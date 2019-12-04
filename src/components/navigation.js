@@ -9,7 +9,7 @@ const Nav = styled.nav`
 
   &.active {
 
-    @media (min-width: 1000px) {
+    @media (min-width: 900px) {
       display: block !important;
     }
   
@@ -42,7 +42,7 @@ const Nav = styled.nav`
     margin: 0;
     padding: 0;
 
-    @media (min-width: 1000px) {
+    @media (min-width: 900px) {
       display: block !important;
     }
 
@@ -60,6 +60,22 @@ const Nav = styled.nav`
     text-decoration: none;
     font-weight: 600;
     color: #121212;
+    display: block;
+
+    &.is-active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        right: -10px;
+        left: -10px;
+        height: 4px;
+        background: #88ddff;
+        z-index: -1;
+      }
+    }
   }
 `
 
@@ -173,10 +189,10 @@ const Navigation = () => {
         </span>
       </NavToggle>
       <ul>
-        <li><Link to="/about/">About</Link></li>
-        <li><Link to="/work/">Work</Link></li>
-        <li><Link to="/blog/">Blog</Link></li>
-        <li><Link to="/contact/">Contact</Link></li>
+        <li><Link to="/about/" activeClassName="is-active">About</Link></li>
+        <li><Link to="/work/" activeClassName="is-active">Work</Link></li>
+        <li><Link to="/blog/" activeClassName="is-active">Blog</Link></li>
+        <li><Link to="/contact/" activeClassName="is-active">Contact</Link></li>
       </ul>
     </Nav>
   )

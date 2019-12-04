@@ -87,6 +87,12 @@ const GlobalStyle = createGlobalStyle`
         content: "php";
         background: #9192ff;
       }
+
+      &text {
+        background: #eee !important;
+        text-shadow: none;
+        color: #343434;
+      }
     }
   }
 

@@ -62,18 +62,21 @@ const Nav = styled.nav`
     color: #121212;
     display: block;
 
-    &.is-active {
-      position: relative;
+    @media (min-width: 900px) {
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        right: -10px;
-        left: -10px;
-        height: 4px;
-        background: #88ddff;
-        z-index: -1;
+      &.is-active {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          right: -10px;
+          left: -10px;
+          height: 4px;
+          background: #88ddff;
+          z-index: -1;
+        }
       }
     }
   }

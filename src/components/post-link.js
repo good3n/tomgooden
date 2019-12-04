@@ -41,7 +41,7 @@ const PostLink = ({ post }) => (
     <Link to={post.frontmatter.path} style={{ display: `block` }}>
       <Img sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
       <Title>{post.frontmatter.title}</Title>
-      <BlogMeta className={`is-sans`}>
+      <BlogMeta className={`is-sans meta`}>
         <img src={Avatar} alt="Tom Gooden" style={{
           width: `60px`,
           borderRadius: `60px`

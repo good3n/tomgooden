@@ -101,6 +101,12 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  @media (max-width: 899px) {
+    pre[class*=language-] {
+      padding: 1.5em;
+    }
+  }
+
   .is-sans {
     font-family: "Graphik", "Helvetica Neue", "Segoe UI", "Helvetica", "Arial", "sans-serif";
   }

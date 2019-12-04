@@ -191,7 +191,7 @@ const Navigation = () => {
       <ul>
         <li><Link to="/about/" activeClassName="is-active">About</Link></li>
         <li><Link to="/work/" activeClassName="is-active">Work</Link></li>
-        <li><Link to="/blog/" activeClassName="is-active">Blog</Link></li>
+        <li><Link to="/blog/" activeClassName="is-active" partiallyActive="is-active">Blog</Link></li>
         <li><Link to="/contact/" activeClassName="is-active">Contact</Link></li>
       </ul>
     </Nav>

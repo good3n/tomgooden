@@ -14,6 +14,7 @@ const Grid = styled.div`
   @media (max-width: 899px) {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 50px;
+    column-gap: 20px;
   }
 
   > article:nth-of-type(1) {
@@ -31,7 +32,7 @@ const Grid = styled.div`
   article:not(:first-of-type) {
     h1 {
       margin-bottom: 10px;
-      font-size: 23px;
+      font-size: 18px;
     }
 
     .meta {

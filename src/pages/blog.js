@@ -12,16 +12,12 @@ const Grid = styled.div`
   margin-bottom: 124px;
 
   @media (max-width: 899px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 50px;
   }
 
   > article:nth-of-type(1) {
     grid-column: 1 / 3;
-
-    @media (max-width: 899px) {
-      grid-column: auto;
-    }
   }
 
   a {
@@ -35,6 +31,7 @@ const Grid = styled.div`
   article:not(:first-of-type) {
     h1 {
       margin-bottom: 10px;
+      font-size: 23px;
     }
 
     .meta {
@@ -44,6 +41,15 @@ const Grid = styled.div`
       img,
       .author {
         display: none;
+      }
+
+      .date-time {
+        font-size: 16px;
+
+        span {
+          font: 0/0 a;
+          display: block;
+        }
       }
     }
   }

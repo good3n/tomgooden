@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     color: #121212;
     font-weight: 700;
     letter-spacing: -1px;
+    line-height: 1.4;
   }
 
   a {

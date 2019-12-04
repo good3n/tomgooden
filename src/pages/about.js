@@ -34,7 +34,7 @@ const AboutPage = ({ data }) => (
           <Img fluid={data.tom.childImageSharp.fluid} alt="" style={{ width: `180px`, height: `180px`, borderRadius: `2px` }} />
           <div>
             <p>I am a Metro-Detroit based Front-end Developer and Designer with a focus on user experience and efficient semantic code. Over the last {new Date().getFullYear() - 2007} years, I've spent my professional time creating and developing websites and web applications for businesses and brands. I like to think I am in LAMP stack anonymous, allowing the JAMstack to slowly consume my development environment.</p>
-            <p>During my downtime, I like to spend time with my family and <del>dog</del> two dogs, go fishing when the weather permits, binge watch a television series, or learn something new in web development. I'm also a Podcast junky. If you have some solid recommendations, then please feel free to <Link to="/contact/">email</Link> them to me.</p>
+            <p>During my downtime, I like to spend time with my family and <del>dog</del> two dogs, go fishing when the weather permits, binge watch a television series, or learn something new in web development. I'm also a Podcast junky. If you have some solid recommendations, then please feel free to <Link to="/contact/">email</Link>, or drop me a line on <a href="https://twitter.com/good3n/" rel="nofollow noopener noreferrer">Twitter</a>.</p>
           </div>
 
         </Grid>

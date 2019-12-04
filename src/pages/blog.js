@@ -32,7 +32,11 @@ const Grid = styled.div`
   article:not(:first-of-type) {
     h1 {
       margin-bottom: 10px;
-      font-size: 18px;
+      font-size: 24px;
+
+      @media (max-width: 899px) {
+        font-size: 18px;
+      }
     }
 
     .meta {

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import Avatar from "../images/avatar-tom-gooden.png"
+import Avatar from "../assets/images/avatar-tom-gooden.png"
 
 const PostWrap = styled.article`
   &:first-of-type {
@@ -21,7 +21,7 @@ const BlogMeta = styled.div`
   grid-template-columns: 60px 1fr;
   column-gap: 15px;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   color: #777;
 
   img {

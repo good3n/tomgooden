@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import Layout from "../components/layout"
+import Tags from "../components/post/post-tags"
 
 const Title = styled.h1`
   font-size: 50px;
@@ -13,8 +14,8 @@ const Title = styled.h1`
   }
 `
 
-const BlogMeta = styled.div`
-  font-size: 18px;
+const PostMeta = styled.div`
+  font-size: 16px;
   margin-bottom: 40px;
   border-top: 1px solid #eee;
   padding-top: 30px;
@@ -30,9 +31,14 @@ const BlogMeta = styled.div`
     grid-row: 1 / 3;
   }
 
-  .author {
+  .post-author {
     font-weight: 600;
     color: #121212;
+    margin-right: 10px;
+
+    @media (max-width: 899px) {
+      display: block;
+    }
   }
 `
 
@@ -47,22 +53,24 @@ const Content = styled.div`
 export default function Template({ data }) { // this prop 'data' will be injected by the GraphQL query below.
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+
   return (
     <Layout>
       <div className="blog-post">
         <Img sizes={frontmatter.featuredImage.childImageSharp.sizes} style={{ marginBottom: `20px` }} />
         <Title>{frontmatter.title}</Title>
-        <BlogMeta className={`is-sans`}>
+        <PostMeta className={`is-sans`}>
           <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{
             width: `60px`,
             borderRadius: `60px`
           }} />
-          <div className="author">Tom Gooden</div>
           <div>
+            <span className="post-author">Tom Gooden</span>
             <span className="post-date">{frontmatter.date} <span style={{ margin: `0 5px` }}>&middot;</span></span>
             <span className="read-time">{data.markdownRemark.fields.readingTime.text}</span>
+            <Tags tags={frontmatter.tags} />
           </div>
-        </BlogMeta>
+        </PostMeta>
         <Content
           className={`blog-post-content`}
           dangerouslySetInnerHTML={{ __html: html }}
@@ -76,7 +84,7 @@ export const pageQuery = graphql`
   query($path: String!) {
     placeholderImage: file(relativePath: {eq: "avatar-tom-gooden.png" }) {
       childImageSharp {
-        fluid(maxWidth: 350) {
+        fluid(maxWidth: 60, quality: 70) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -87,6 +95,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
+        author
         featuredImage {
           childImageSharp {
             sizes(maxWidth: 830, quality: 90) {

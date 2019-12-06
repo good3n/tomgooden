@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
@@ -21,6 +21,13 @@ module.exports = {
         name: "fonts",
         path: `${__dirname}/src/assets/fonts`
       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog`,
+      },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify`,
@@ -35,7 +42,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/site-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -54,12 +61,13 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [
+          `gatsby-remark-relative-images`,
+          `gatsby-remark-reading-time`,
+          `gatsby-remark-check-links`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {}
           },
-          `gatsby-remark-reading-time`,
-          `gatsby-remark-check-links`,
           {
             resolve: "gatsby-remark-external-links",
             options: {
@@ -83,13 +91,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `code`,
-        path: `${__dirname}/src/blog`,
-      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,

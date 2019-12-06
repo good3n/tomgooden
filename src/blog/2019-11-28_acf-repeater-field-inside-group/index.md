@@ -2,8 +2,9 @@
 title: "ACF Repeater Field inside of Group Field"
 path: "/blog/acf-repeater-field-inside-group/"
 date: "2019-11-28"
-featuredImage: "../images/acf-pro.png"
-tags: ["WordPress", "Advanced Custom Fields", "PHP"]
+featuredImage: "./acf-pro.png"
+author: "Tom Gooden"
+tags: ["wordpress", "advancedcustomfields", "php"]
 ---
 
 TLDR; In order to display repeater field values nested inside of a group field with Advanced Custom Fields (ACF), you will need to loop over the group field AND the repeater field.
@@ -37,7 +38,7 @@ In order to use ACF's Repeater Field, you're going to need to get your hands on 
 
 In this example, we're just going to make a simple frequently asked questions custom field.
 
-![ACF Group Field](./2019-11-28/acf-group-repeater-fields.png)
+![ACF Group Field](./acf-group-repeater-fields.png)
 
 Based on the field names we setup in the pictures above, we could use something like the following to get it all working:
 

@@ -2,8 +2,9 @@
 title: "Estimated Read Time Function for WordPress Posts"
 path: "/blog/estimated-read-time-function-wordpress/"
 date: "2019-12-01"
-featuredImage: "../images/posts/banner-wordpress.png"
-tags: ["WordPress", "PHP"]
+featuredImage: "banner-wordpress.png"
+author: "Tom Gooden"
+tags: ["wordpress", "php"]
 ---
 
 Adding an estimated read time to your WordPress blog is easier than you may think. Often, guides will suggest you install yet another plugin to achieve your desired functionality. But in the case of displaying content read time, there are only two simple steps.

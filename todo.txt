@@ -1,7 +1,17 @@
-• Create tags, tags template, tag template
-• Social share buttons
-• 404 "back home" error fix
-• 404 Wrapper component for align center
-• Breadcrumbs
-• HTML & XML sitemaps
-• Comments
+BACKLOG
+- Comments
+- Breadcrumbs (maybe)
+
+TODO
+- Social share buttons
+- 404 "back home" error fix
+- 404 Wrapper component for align center
+- HTML & XML sitemaps
+
+DOING
+- Create Authors
+- Display tags in gray block on blog list
+- Related Posts based on Tags
+
+DONE
+- Create tags, tags template, tag template

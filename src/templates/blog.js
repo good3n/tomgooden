@@ -55,7 +55,7 @@ export default function Template({ data }) { // this prop 'data' will be injecte
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout>
+    <Layout slug={data.markdownRemark.fields.slug}>
       <div className="blog-post">
         <Img sizes={frontmatter.featuredImage.childImageSharp.sizes} style={{ marginBottom: `20px` }} />
         <Title>{frontmatter.title}</Title>

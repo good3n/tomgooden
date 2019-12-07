@@ -62,6 +62,7 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [
+          `gatsby-remark-social-cards`,
           `gatsby-remark-relative-images`,
           `gatsby-remark-reading-time`,
           `gatsby-remark-check-links`,

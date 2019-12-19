@@ -52,16 +52,16 @@ const Content = styled.div`
 `
 
 export default function Template({ data }) { // this prop 'data' will be injected by the GraphQL query below.
+
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-
-  const ogImagePath = frontmatter.featuredImage.childImageSharp.sizes
+  const metaImagePath = frontmatter.featuredImage.childImageSharp.sizes.src
 
   return (
     <Layout slug={data.markdownRemark.fields.slug}>
       <SEO
         title={frontmatter.title}
-        image={ogImagePath}
+        image={metaImagePath}
       />
       <div className="blog-post">
         <Img sizes={frontmatter.featuredImage.childImageSharp.sizes} style={{ marginBottom: `20px` }} />

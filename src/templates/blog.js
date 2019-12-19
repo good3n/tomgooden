@@ -62,6 +62,7 @@ export default function Template({ data }) { // this prop 'data' will be injecte
       <SEO
         title={frontmatter.title}
         image={metaImagePath}
+        description={frontmatter.description}
       />
       <div className="blog-post">
         <Img sizes={frontmatter.featuredImage.childImageSharp.sizes} style={{ marginBottom: `20px` }} />
@@ -104,6 +105,7 @@ export const pageQuery = graphql`
         title
         tags
         author
+        description
         featuredImage {
           childImageSharp {
             sizes(maxWidth: 830, quality: 90) {

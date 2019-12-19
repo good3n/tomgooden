@@ -5,8 +5,7 @@ module.exports = {
     url: `https://tomgooden.net`,
     siteUrl: `https://tomgooden.net`,
     author: `Tom Gooden @good3n`,
-    twitterUsername: "good3n",
-    defaultImage: `/assets/images/default-image2.png`
+    twitterUsername: "good3n"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

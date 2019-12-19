@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import defaultOpenGraphImage from "../assets/images/default-image.png"
+import defaultImage from "../assets/images/default-image.png"
 
 function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
@@ -29,7 +29,7 @@ function SEO({ description, lang, meta, title, image }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const ogImageUrl = site.siteMetadata.siteUrl + (image || defaultOpenGraphImage)
+  const defaultImageUrl = site.siteMetadata.siteUrl + (image || defaultImage)
 
   return (
     <Helmet
@@ -45,7 +45,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `image`,
-          content: ogImageUrl,
+          content: defaultImageUrl,
         },
         {
           property: `og:title`,
@@ -61,7 +61,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: ogImageUrl,
+          content: defaultImageUrl,
         },
         {
           name: `twitter:card`,
@@ -81,7 +81,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `twitter:image`,
-          content: ogImageUrl,
+          content: defaultImageUrl,
         },
       ].concat(meta)}
     />

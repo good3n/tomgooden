@@ -1,6 +1,7 @@
 ---
 title: "ACF Repeater Field inside of Group Field"
 path: "/blog/acf-repeater-field-inside-group/"
+description: "Learn how to display your Advanced Custom Fields (ACF) Repeater Fields within your Group Field."
 date: "2019-11-28"
 featuredImage: "./acf-pro.png"
 author: "Tom Gooden"

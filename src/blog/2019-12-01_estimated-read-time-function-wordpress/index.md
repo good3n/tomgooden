@@ -1,6 +1,7 @@
 ---
 title: "Estimated Read Time Function for WordPress Posts"
 path: "/blog/estimated-read-time-function-wordpress/"
+description: "Easily add a read time to your WordPress blog posts by creating a simple PHP function."
 date: "2019-12-01"
 featuredImage: "banner-wordpress.png"
 author: "Tom Gooden"

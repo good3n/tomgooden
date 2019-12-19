@@ -1,6 +1,7 @@
 ---
 title: "Show Active Link with Gastby"
 path: "/blog/show-active-link-gatsby/"
+description: "Gatsby-link has built-in functionality that allows you to add an active class or state to your current page."
 date: "2019-12-04"
 featuredImage: "./active-class-gatsby-link.png"
 author: "Tom Gooden"

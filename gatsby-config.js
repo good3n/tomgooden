@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://tomgooden.net`,
     author: `Tom Gooden @good3n`,
     twitterUsername: "good3n",
-    defaultImage: `${__dirname}/src/assets/images/default-image.png`
+    defaultImage: `/assets/images/default-image.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

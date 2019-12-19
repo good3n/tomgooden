@@ -55,9 +55,14 @@ export default function Template({ data }) { // this prop 'data' will be injecte
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
 
+  const ogImagePath = frontmatter.featuredImage.childImageSharp.sizes
+
   return (
     <Layout slug={data.markdownRemark.fields.slug}>
-      <SEO title={frontmatter.title} />
+      <SEO
+        title={frontmatter.title}
+        image={ogImagePath}
+      />
       <div className="blog-post">
         <Img sizes={frontmatter.featuredImage.childImageSharp.sizes} style={{ marginBottom: `20px` }} />
         <Title>{frontmatter.title}</Title>
@@ -103,6 +108,7 @@ export const pageQuery = graphql`
           childImageSharp {
             sizes(maxWidth: 830, quality: 90) {
               ...GatsbyImageSharpSizes
+              src
             }
           }
         }

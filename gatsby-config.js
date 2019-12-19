@@ -4,8 +4,8 @@ module.exports = {
     description: `Web Development and Design`,
     url: `https://tomgooden.net`,
     siteUrl: `https://tomgooden.net`,
-    author: `Tom Gooden`,
-    twitterUsername: "@good3n",
+    author: `Tom Gooden @good3n`,
+    twitterUsername: "good3n",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -62,7 +62,6 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [
-          `gatsby-remark-social-cards`,
           `gatsby-remark-relative-images`,
           `gatsby-remark-reading-time`,
           `gatsby-remark-check-links`,

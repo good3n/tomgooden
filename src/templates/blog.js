@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Tags from "../components/post/post-tags"
@@ -56,6 +57,7 @@ export default function Template({ data }) { // this prop 'data' will be injecte
 
   return (
     <Layout slug={data.markdownRemark.fields.slug}>
+      <SEO title={frontmatter.title} />
       <div className="blog-post">
         <Img sizes={frontmatter.featuredImage.childImageSharp.sizes} style={{ marginBottom: `20px` }} />
         <Title>{frontmatter.title}</Title>

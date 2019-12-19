@@ -8,7 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 import styled from "styled-components"
 import GlobalStyle from "../styles/global"
 import Header from "./header"
@@ -20,7 +19,7 @@ const Container = styled.div`
   padding: 0 15px;
 `
 
-const Layout = ({ slug, children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -33,13 +32,6 @@ const Layout = ({ slug, children }) => {
 
   return (
     <>
-      <Helmet title={data.site.siteMetadata.title}>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content={`${data.site.siteMetadata.siteUrl}${slug}twitter-card.jpg`}
-        />
-      </Helmet>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       <Container>

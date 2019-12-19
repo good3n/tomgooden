@@ -21,6 +21,7 @@ function SEO({ description, lang, meta, title, image }) {
             description
             author
             defaultImage
+            siteUrl
           }
         }
       }

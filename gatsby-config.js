@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Tom Gooden`,
-    description: `Web Development and Design`,
+    description: `Web Development + Design by Tom Gooden | Metro-Detroit, Michigan`,
     url: `https://tomgooden.net`,
     siteUrl: `https://tomgooden.net`,
     author: `Tom Gooden @good3n`,

@@ -20,7 +20,7 @@ function SEO({ description, lang, meta, title, image }) {
             title
             description
             author
-            defaultImage
+            twitterUsername
             siteUrl
           }
         }
@@ -69,7 +69,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.twitterUsername,
         },
         {
           name: `twitter:title`,

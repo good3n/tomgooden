@@ -97,8 +97,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://.tomgooden.net',
-        sitemap: 'https://.tomgooden.net/sitemap.xml',
+        host: 'https://tomgooden.net',
+        sitemap: 'https://tomgooden.net/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },

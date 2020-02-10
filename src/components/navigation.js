@@ -58,7 +58,7 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     color: #121212;
     display: block;
 

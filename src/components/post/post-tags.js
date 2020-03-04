@@ -48,6 +48,11 @@ const Tags = styled.div`
         background: #bd00ff;
         color: #fff;
       }
+
+      &react {
+        background: #61DAFB;
+        color: #000;
+      }
     }
   }
 `

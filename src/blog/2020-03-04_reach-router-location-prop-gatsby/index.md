@@ -13,26 +13,34 @@ In Gatsby, generally you only have access to the `location` prop when you're ins
 ## @react/router example in Gatsby with some goodies
 
 ```jsx
+import React from "react"
+import { Location } from "@reach/router"
+import { SomeChildComponent } from "./SomeChildComponent"
+
 const SomeComponent = () => (
   <Location>
     {({ location }) => {
       const { pathname, search } = location
       return (
-        <SomeHeader className={`${pathname ? "sticky" : ""}`}>
+        <header className={`${pathname ? "sticky" : ""}`}>
           <SomeChildComponent params={search} />
-          <Logo />
-        </SomeHeader>
+        </header>
       )
     }}
   </Location>
 )
+
+export default SomeComponent
 ```
 
-In the above example, we've destructured the `location` prop, and used the `pathname` and `search` _(Which is basically just url parameters)_. Then used a ternary operator operator on the `<SomeHeader>` component, and conditionally added a sticky class based on if we were on the index `/` page or not.
+In the above example, we've destructured the `location` prop, and used the `pathname` and `search` _(Which is basically just url parameters)_. Then used a ternary operator operator on the `header` element, and conditionally added a sticky class based on if we were on the index `/` page or not.
 
 Being React, we can also pass the props down to child components. _(As in the example above "SomeChildComponent")_
 
 ```jsx
+import React from "react"
+import { Link } from "gatsby"
+
 const SomeChildComponent = props => {
   return (
     <Link to={props.params ? `/${props.params}` : `/`} className="back">
@@ -40,6 +48,8 @@ const SomeChildComponent = props => {
     </Link>
   )
 }
+
+export default SomeChildComponent
 ```
 
 You can view more ~~boring~~ mildly interesting information on @reach/router and how it works with Gatsby link from these links:

@@ -1,6 +1,24 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+
+  :root {
+    /* fonts */
+    --font_heading: 'Helvetica Neue', 'Segoe UI', 'Roboto', 'sans-serif';
+    --font_body: 'Lora', 'Georgia', 'sans-serif';
+
+    /* colors */
+    --color_heading: #37383c;
+    --color_body: #6b7c93;
+    --color_body-dark: #51637b;
+    --color_blue: #456cac;
+    --color_blue-light: #3d91f9;
+    --color_gray-light: #f4f9ff;
+    --color_gray-light2: #f6f9fc;
+    --color_green-light: #e6f4f1;
+    --color_purple: #636bb2;
+  }
+
   body {
     background: #fff;
     color: #212121;
@@ -108,11 +126,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .is-sans {
-    font-family: "Graphik", "Helvetica Neue", "Segoe UI", "Helvetica", "Arial", "sans-serif";
-  }
-
-  .is-serif {
-    font-family: "Lora", "Georgia", "serif";
+    font-family:
+    "Helvetica Neue",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "sans-serif"
   }
 `
 

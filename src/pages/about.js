@@ -1,9 +1,9 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import styled from "styled-components"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import SEO from '../components/seo'
+import Layout from '../components/layout'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   min-height: calc(100vh - 255px);
@@ -31,12 +31,37 @@ const AboutPage = ({ data }) => (
       <div>
         <h1>About</h1>
         <Grid>
-          <Img fluid={data.tom.childImageSharp.fluid} alt="" style={{ width: `180px`, height: `180px`, borderRadius: `2px` }} />
+          <Img
+            fluid={data.tom.childImageSharp.fluid}
+            alt=""
+            style={{ width: `180px`, height: `180px`, borderRadius: `2px` }}
+          />
           <div>
-            <p>I am a Metro-Detroit based Front-end Developer and Designer with a focus on user experience and efficient semantic code. Over the last {new Date().getFullYear() - 2007} years, I've spent my professional time creating and developing websites and web applications for businesses and brands. I like to think I am in LAMP stack anonymous, allowing the JAMstack to slowly consume my development environment.</p>
-            <p>During my downtime, I like to spend time with my family and <del>dog</del> two dogs, go fishing when the weather permits, binge watch a television series, or learn something new in web development. I'm also a Podcast junky. If you have some solid recommendations, then please feel free to <Link to="/contact/">email</Link>, or drop me a line on <a href="https://twitter.com/good3n/" rel="nofollow noopener noreferrer">Twitter</a>.</p>
+            <p>
+              I am a Metro-Detroit based Front-end Developer and Designer with a
+              focus on user experience and efficient semantic code. Over the
+              last {new Date().getFullYear() - 2007} years, I've spent my
+              professional time creating and developing websites and web
+              applications for businesses and brands. I like to think I am in
+              LAMP stack anonymous, allowing the JAMstack to slowly consume my
+              development environment.
+            </p>
+            <p>
+              During my downtime, I like to spend time with my family and{' '}
+              <del>dog</del> two dogs, go fishing when the weather permits,
+              binge watch a television series, or learn something new in web
+              development. I'm also a Podcast junky. If you have some solid
+              recommendations, then please feel free to{' '}
+              <Link to="/contact/">email</Link>, or drop me a line on{' '}
+              <a
+                href="https://twitter.com/good3n/"
+                rel="nofollow noopener noreferrer"
+              >
+                Twitter
+              </a>
+              .
+            </p>
           </div>
-
         </Grid>
 
         {/* <h2>Uses</h2>

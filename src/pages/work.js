@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import styled from "styled-components"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import SEO from '../components/seo'
+import Layout from '../components/layout'
+import styled from 'styled-components'
 
 const WorkItems = styled.div`
   display: grid;
@@ -78,25 +78,49 @@ const WorkPage = ({ data }) => (
     <h1>Work</h1>
     <WorkItems>
       <div className="work1">
-        <Img fluid={data.image3.childImageSharp.fluid} imgStyle={{ objectFit: `cover` }} alt="" />
+        <Img
+          fluid={data.image3.childImageSharp.fluid}
+          imgStyle={{ objectFit: `cover` }}
+          alt=""
+        />
       </div>
       <div className="work2">
-        <Img fluid={data.image1.childImageSharp.fluid} imgStyle={{ objectFit: `cover` }} alt="" />
+        <Img
+          fluid={data.image1.childImageSharp.fluid}
+          imgStyle={{ objectFit: `cover` }}
+          alt=""
+        />
       </div>
       <div className="work3">
-        <Img fluid={data.image2.childImageSharp.fluid} imgStyle={{ objectFit: `cover` }} alt="" />
+        <Img
+          fluid={data.image2.childImageSharp.fluid}
+          imgStyle={{ objectFit: `cover` }}
+          alt=""
+        />
       </div>
       <div className="work4">
-        <Img fluid={data.image4.childImageSharp.fluid} imgStyle={{ objectFit: `cover` }} alt="" />
+        <Img
+          fluid={data.image4.childImageSharp.fluid}
+          imgStyle={{ objectFit: `cover` }}
+          alt=""
+        />
       </div>
       <div className="work5">
-        <Img fluid={data.image6.childImageSharp.fluid} imgStyle={{ objectFit: `cover` }} alt="" />
+        <Img
+          fluid={data.image6.childImageSharp.fluid}
+          imgStyle={{ objectFit: `cover` }}
+          alt=""
+        />
       </div>
       <div className="work6">
-        <Img fluid={data.image5.childImageSharp.fluid} imgStyle={{ objectFit: `cover` }} alt="" />
+        <Img
+          fluid={data.image5.childImageSharp.fluid}
+          imgStyle={{ objectFit: `cover` }}
+          alt=""
+        />
       </div>
     </WorkItems>
-  </Layout >
+  </Layout>
 )
 
 export default WorkPage

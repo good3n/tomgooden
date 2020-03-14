@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import SEO from "../components/seo"
-import styled from "styled-components"
-import Layout from "../components/layout"
+import React from 'react'
+import { Link } from 'gatsby'
+import SEO from '../components/seo'
+import styled from 'styled-components'
+import Layout from '../components/layout'
 
 const Wrapper = styled.div`
   min-height: calc(100vh - 255px);
@@ -42,16 +42,24 @@ const NotFoundPage = () => (
       <div>
         <h1>404</h1>
         <p>Insert corny semi-creative 404 page text here. ¯\_(ツ)_/¯</p>
-        <Link to="/" style={{
-          display: `inline-block`,
-          textDecoration: `none`,
-          color: `#121212`,
-          fontWeight: `700`
-        }}>
-          <svg style={{ width: `32px`, marginRight: `10px` }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 904 904">
+        <Link
+          to="/"
+          style={{
+            display: `inline-block`,
+            textDecoration: `none`,
+            color: `#121212`,
+            fontWeight: `700`,
+          }}
+        >
+          <svg
+            style={{ width: `32px`, marginRight: `10px` }}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 904 904"
+          >
             <path fill="#121212" d="M0 452l327 229V537h577V367H327V223z" />
           </svg>
-          <span>Back Home</span></Link>
+          <span>Back Home</span>
+        </Link>
       </div>
     </Wrapper>
   </Layout>

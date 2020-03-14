@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql } from "gatsby"
-import PostLink from "../components/post-link"
-import Layout from "../components/layout"
-import styled from "styled-components"
+import React from 'react'
+import { graphql } from 'gatsby'
+import PostLink from '../components/post-link'
+import Layout from '../components/layout'
+import styled from 'styled-components'
 
 const Grid = styled.div`
   display: grid;
@@ -84,7 +84,12 @@ const BlogList = ({
       <h1>Blog</h1>
       <Grid>
         <Block>
-          <p class="is-sans" style={{ fontSize: `16px`, fontWeight: `500`, color: `#777` }}>Placeholder block for future categories/tags. Stay tuned!</p>
+          <p
+            class="is-sans"
+            style={{ fontSize: `16px`, fontWeight: `500`, color: `#777` }}
+          >
+            Placeholder block for future categories/tags. Stay tuned!
+          </p>
         </Block>
         {Posts}
       </Grid>

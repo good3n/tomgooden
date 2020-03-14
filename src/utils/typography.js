@@ -1,19 +1,9 @@
-import Typography from "typography";
+import Typography from 'typography'
 const typography = new Typography({
-  baseFontSize: "21px",
+  baseFontSize: '21px',
   baseLineHeight: 1.625,
-  headerFontFamily: [
-    "-apple-system",
-    "BlinkMacSystemFont",
-    "Helvetica Neue",
-    "Segoe UI",
-    "Roboto",
-    "sans-serif"
-  ],
-  bodyFontFamily: [
-    "Georgia",
-    "serif",
-  ],
+  headerFontFamily: ['Helvetica Neue', 'Segoe UI', 'Roboto', 'sans-serif'],
+  bodyFontFamily: ['Lora', 'Georgia', 'serif'],
   // headerFontFamily: [
   //   "Graphik",
   //   "Avenir Next",
@@ -30,4 +20,4 @@ const typography = new Typography({
   // ],
 })
 
-export default typography;
+export default typography

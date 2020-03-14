@@ -1,16 +1,16 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Nav = styled.nav`
   display: block;
   justify-self: end;
   font-size: 18px;
+  font-family: var(--font_heading);
 
   &.active {
-
     @media (min-width: 900px) {
       display: block !important;
     }
-  
+
     ul {
       display: flex;
       position: fixed;
@@ -31,7 +31,7 @@ export const Nav = styled.nav`
       }
 
       a {
-        color: #fff
+        color: #fff;
       }
     }
   }
@@ -52,23 +52,15 @@ export const Nav = styled.nav`
   li {
     display: inline-block;
     margin: 0 0 0 60px;
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #121212;
-    display: block;
 
     @media (min-width: 900px) {
-
-      &.is-active {
+      a.is-active {
         position: relative;
 
         &::after {
-          content: "";
+          content: '';
           position: absolute;
-          bottom: -5px;
+          bottom: -10px;
           right: -10px;
           left: -10px;
           height: 4px;
@@ -76,7 +68,30 @@ export const Nav = styled.nav`
           z-index: -1;
         }
       }
+
+      &:nth-of-type(1) a.is-active::after {
+        background: #0cafcf;
+      }
+
+      &:nth-of-type(2) a.is-active::after {
+        background: #e11d92;
+      }
+
+      &:nth-of-type(3) a.is-active::after {
+        background: #f06b70;
+      }
+
+      &:nth-of-type(4) a.is-active::after {
+        background: #1d5db2;
+      }
     }
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #121212;
+    display: block;
   }
 `
 
@@ -87,8 +102,8 @@ export const NavToggle = styled.button`
   padding: 0;
   cursor: pointer;
   transition-timing-function: linear;
-  transition-duration: .15s;
-  transition-property: opacity,filter;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
   text-transform: none;
   color: inherit;
   border: 0;
@@ -116,11 +131,11 @@ export const NavToggle = styled.button`
     /* width: 35px; */
     height: 4px;
     transition-timing-function: ease;
-    transition-duration: .15s;
+    transition-duration: 0.15s;
     transition-property: transform;
     border-radius: 4px;
     background-color: #000;
-    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition-duration: 75ms;
 
     &::before,
@@ -129,43 +144,45 @@ export const NavToggle = styled.button`
       width: 35px;
       height: 4px;
       transition-timing-function: ease;
-      transition-duration: .15s;
+      transition-duration: 0.15s;
       transition-property: transform;
       border-radius: 4px;
       background-color: #121212;
     }
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       top: -10px;
-      transition: top 75ms ease .12s,opacity 75ms ease;
+      transition: top 75ms ease 0.12s, opacity 75ms ease;
     }
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       bottom: -10px;
-      transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+      transition: bottom 75ms ease 0.12s,
+        transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
   }
 
   &.active .toggle-inner {
-    transition-delay: .12s;
-    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: rotate(45deg);
     background-color: #fff;
 
     &::before {
       top: 0;
-      transition: top 75ms ease,opacity 75ms ease .12s;
+      transition: top 75ms ease, opacity 75ms ease 0.12s;
       opacity: 0;
       background-color: #fff;
     }
 
     &::after {
       bottom: 0;
-      transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
+      transition: bottom 75ms ease,
+        transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
       transform: rotate(-90deg);
       background-color: #fff;
     }

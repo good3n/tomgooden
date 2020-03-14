@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
   max-width: 1400px;
@@ -8,6 +8,7 @@ const StyledFooter = styled.footer`
   font-size: 16px;
   font-weight: 500;
   color: #999;
+  font-family: var(--font_heading);
 
   /* layout */
   display: grid;
@@ -18,7 +19,7 @@ const StyledFooter = styled.footer`
     grid-template-columns: 1fr;
     padding: 30px 20px;
   }
-  
+
   a {
     text-decoration: none;
     color: #999;
@@ -56,7 +57,7 @@ const StyledFooter = styled.footer`
 `
 
 const Footer = () => (
-  <StyledFooter className={`is-sans`}>
+  <StyledFooter>
     <div>
       &copy; {new Date().getFullYear()}
       {` `}
@@ -64,13 +65,28 @@ const Footer = () => (
     </div>
     <div>
       <span>
-        Coded in <a href="https://code.visualstudio.com/" rel="nofollow noopener noreferrer">VS Code</a>.
+        Coded in{' '}
+        <a
+          href="https://code.visualstudio.com/"
+          rel="nofollow noopener noreferrer"
+        >
+          VS Code
+        </a>
+        .
       </span>
       <span>
-        Built with <a href="https://www.gatsbyjs.org/" rel="nofollow noopener noreferrer">Gatsby.js</a>.<br />
+        Built with{' '}
+        <a href="https://www.gatsbyjs.org/" rel="nofollow noopener noreferrer">
+          Gatsby.js
+        </a>
+        .<br />
       </span>
       <span>
-        Hosted on <a href="https://www.netlify.com/" rel="nofollow noopener noreferrer">Netlify</a>.
+        Hosted on{' '}
+        <a href="https://www.netlify.com/" rel="nofollow noopener noreferrer">
+          Netlify
+        </a>
+        .
       </span>
     </div>
   </StyledFooter>

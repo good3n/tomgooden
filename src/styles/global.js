@@ -1,11 +1,11 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
   :root {
     /* fonts */
-    --font_heading: "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Segoe UI", "Roboto", "sans-serif";
-    --font_body: 'Proxima Nova', 'Roboto', 'sans-serif';
+    --font_heading: 'Helvetica Neue', 'Segoe UI', 'Roboto', 'sans-serif';
+    --font_body: 'Lora', 'Georgia', 'sans-serif';
 
     /* colors */
     --color_heading: #37383c;
@@ -127,16 +127,12 @@ const GlobalStyle = createGlobalStyle`
 
   .is-sans {
     font-family:
+    "Helvetica Neue",
     "-apple-system",
     "BlinkMacSystemFont",
-    "Helvetica Neue",
     "Segoe UI",
     "Roboto",
     "sans-serif"
-  }
-
-  .is-serif {
-    font-family: "Georgia", "serif";
   }
 `
 

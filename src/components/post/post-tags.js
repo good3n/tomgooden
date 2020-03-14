@@ -1,9 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 const Tags = styled.div`
   margin-top: 5px;
+  font-family: var(--font_heading);
 
   a {
     font-size: 14px;
@@ -36,7 +37,7 @@ const Tags = styled.div`
       }
 
       &advancedcustomfields {
-        background: #69E4BB;
+        background: #69e4bb;
       }
 
       &php {
@@ -50,7 +51,7 @@ const Tags = styled.div`
       }
 
       &react {
-        background: #61DAFB;
+        background: #61dafb;
         color: #000;
       }
     }
@@ -58,9 +59,11 @@ const Tags = styled.div`
 `
 
 const PostTags = ({ tags }) => (
-  <Tags className={`is-sans`}>
-    {(tags).map(tag => (
-      <Link to={`/tags/${tag}/`} className={`tag-${tag}`}>#{tag}</Link>
+  <Tags>
+    {tags.map(tag => (
+      <Link to={`/tags/${tag}/`} className={`tag-${tag}`}>
+        #{tag}
+      </Link>
     ))}
   </Tags>
 )

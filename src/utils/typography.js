@@ -3,19 +3,31 @@ const typography = new Typography({
   baseFontSize: "21px",
   baseLineHeight: 1.625,
   headerFontFamily: [
-    "Graphik",
-    "Avenir Next",
+    "-apple-system",
+    "BlinkMacSystemFont",
     "Helvetica Neue",
     "Segoe UI",
-    "Helvetica",
-    "Arial",
-    "sans-serif",
+    "Roboto",
+    "sans-serif"
   ],
   bodyFontFamily: [
-    "Lora",
     "Georgia",
     "serif",
   ],
+  // headerFontFamily: [
+  //   "Graphik",
+  //   "Avenir Next",
+  //   "Helvetica Neue",
+  //   "Segoe UI",
+  //   "Helvetica",
+  //   "Arial",
+  //   "sans-serif",
+  // ],
+  // bodyFontFamily: [
+  //   "Lora",
+  //   "Georgia",
+  //   "serif",
+  // ],
 })
 
 export default typography;

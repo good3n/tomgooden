@@ -6,20 +6,31 @@ import { ThemeProvider } from 'styled-components'
 import { Header } from './Header'
 import { Footer } from './Footer'
 
+// ! come back and fix this
+
 const Layout = ({ children }) => {
-  let stored = ''
-  typeof window
-    ? (stored = localStorage.getItem('isDarkMode'))
-    : (stored = true)
-  const [isDarkMode, setDarkMode] = useState(stored === 'true' ? true : false)
-  return (
-    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-      <GlobalStyle />
-      <Header isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
-      <main className="container">{children}</main>
-      <Footer />
-    </ThemeProvider>
-  )
+  if (typeof window !== 'undefined') {
+    const stored = localStorage.getItem('isDarkMode')
+    const [isDarkMode, setDarkMode] = useState(stored === 'true' ? true : false)
+    return (
+      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+        <GlobalStyle />
+        <Header isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
+        <main className="container">{children}</main>
+        <Footer />
+      </ThemeProvider>
+    )
+  } else {
+    const [isDarkMode, setDarkMode] = useState(false)
+    return (
+      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+        <GlobalStyle />
+        <Header isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
+        <main className="container">{children}</main>
+        <Footer />
+      </ThemeProvider>
+    )
+  }
 }
 
 export default Layout

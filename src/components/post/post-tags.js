@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-const Tags = styled.div`
+const StyledTags = styled.div`
   margin-top: 5px;
   font-family: var(--font_heading);
 
@@ -59,13 +59,13 @@ const Tags = styled.div`
 `
 
 const PostTags = ({ tags }) => (
-  <Tags>
+  <StyledTags>
     {tags.map(tag => (
       <Link to={`/tags/${tag}/`} className={`tag-${tag}`}>
         #{tag}
       </Link>
     ))}
-  </Tags>
+  </StyledTags>
 )
 
 export default PostTags

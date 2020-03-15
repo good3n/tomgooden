@@ -1,7 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import PostLink from '../components/post-link'
 import Layout from '../components/layout'
+import PostLink from '../components/post-link'
+// import PostTags from '../components/post/post-tags'
 import styled from 'styled-components'
 
 const Grid = styled.div`
@@ -61,10 +62,14 @@ const Grid = styled.div`
 `
 
 const Block = styled.div`
-  background: #f7f7f7;
+  /* background: #f7f7f7; */
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  padding: 50px 30px;
+  /* padding: 50px 30px; */
+
+  h3 {
+    margin-bottom: 20px;
+  }
 
   @media (max-width: 899px) {
     display: none;
@@ -84,12 +89,8 @@ const BlogList = ({
       <h1>Blog</h1>
       <Grid>
         <Block>
-          <p
-            class="is-sans"
-            style={{ fontSize: `16px`, fontWeight: `500`, color: `#777` }}
-          >
-            Placeholder block for future categories/tags. Stay tuned!
-          </p>
+          <h3>Tags</h3>
+          {console.log(data)}
         </Block>
         {Posts}
       </Grid>

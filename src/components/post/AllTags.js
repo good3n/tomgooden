@@ -1,6 +1,6 @@
 import React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
 const StyledTags = styled.div`
   margin-top: 5px;
@@ -58,14 +58,28 @@ const StyledTags = styled.div`
   }
 `
 
-const PostTags = ({ tags }) => (
-  <StyledTags>
-    {tags.map(tag => (
-      <Link to={`/tags/${tag}/`} className={`tag-${tag}`}>
-        #{tag}
-      </Link>
-    ))}
-  </StyledTags>
-)
+const AllTags = () => {
+  const data = useStaticQuery(graphql`
+    {
+      tagsGroup: allMarkdownRemark {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
+    }
+  `)
+  const tags = data.tagsGroup.group
+  return (
+    <StyledTags>
+      {
+        tags.map(({ fieldValue }) => (
+          <Link to={`/tags/${fieldValue}/`} className={`tag-${fieldValue}`}>
+            #{fieldValue}
+          </Link>
+        ))
+      }
+    </StyledTags>
+  )
+}
 
-export default PostTags
+export default AllTags

@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import PostLink from '../components/post-link'
 // import PostTags from '../components/post/post-tags'
+import AllTags from '../components/post/AllTags'
 import styled from 'styled-components'
 
 const Grid = styled.div`
@@ -90,7 +91,7 @@ const BlogList = ({
       <Grid>
         <Block>
           <h3>Tags</h3>
-          {console.log(data)}
+          <AllTags />
         </Block>
         {Posts}
       </Grid>

@@ -6,7 +6,9 @@ const ThemeToggle = props => {
 
   const toggleTheme = () => {
     setDarkMode(!isDarkMode)
-    localStorage.setItem('isDarkMode', !isDarkMode)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('isDarkMode', !isDarkMode)
+    }
   }
 
   return (

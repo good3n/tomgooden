@@ -7,7 +7,10 @@ import { Header } from './Header'
 import { Footer } from './Footer'
 
 const Layout = ({ children }) => {
-  const stored = localStorage.getItem('isDarkMode')
+  let stored = ''
+  typeof window
+    ? (stored = localStorage.getItem('isDarkMode'))
+    : (stored = true)
   const [isDarkMode, setDarkMode] = useState(stored === 'true' ? true : false)
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>

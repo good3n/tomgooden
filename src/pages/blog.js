@@ -1,105 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import PostLink from '../components/post-link'
-// import PostTags from '../components/post/post-tags'
-import AllTags from '../components/post/AllTags'
-import styled from 'styled-components'
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
-  position: relative;
-  margin-bottom: 124px;
-
-  @media (max-width: 899px) {
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 50px;
-    column-gap: 20px;
-  }
-
-  > article:nth-of-type(1) {
-    grid-column: 1 / 3;
-  }
-
-  a {
-    text-decoration: none;
-
-    &::before {
-      display: none;
-    }
-  }
-
-  article:not(:first-of-type) {
-    h1 {
-      margin-bottom: 10px;
-      font-size: 24px;
-
-      @media (max-width: 899px) {
-        font-size: 18px;
-      }
-    }
-
-    .meta {
-      grid-template-columns: 1fr;
-      color: #888;
-
-      img,
-      .author {
-        display: none;
-      }
-
-      .date-time {
-        font-size: 16px;
-
-        span {
-          font: 0/0 a;
-          display: block;
-        }
-      }
-    }
-  }
-`
-
-const Block = styled.div`
-  /* background: #f7f7f7; */
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-  /* padding: 50px 30px; */
-
-  h3 {
-    margin-bottom: 20px;
-  }
-
-  @media (max-width: 899px) {
-    display: none;
-  }
-`
-
-const BlogList = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-  return (
-    <Layout>
-      <h1>Blog</h1>
-      <Grid>
-        <Block>
-          <h3>Tags</h3>
-          <AllTags />
-        </Block>
-        {Posts}
-      </Grid>
-    </Layout>
-  )
-}
-
-export default BlogList
+import { PostLink } from '../components/PostLink'
+import AllPostTags from '../components/PostTags/AllPostTags.component'
+import { Grid, Block } from '../page-styles/blog.styles'
 
 export const pageQuery = graphql`
   query {
@@ -131,3 +35,27 @@ export const pageQuery = graphql`
     }
   }
 `
+
+const BlogListPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const Posts = edges
+    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+  return (
+    <Layout>
+      <h1>Blog</h1>
+      <Grid>
+        <Block>
+          <h3>Tags</h3>
+          <AllPostTags />
+        </Block>
+        {Posts}
+      </Grid>
+    </Layout>
+  )
+}
+
+export default BlogListPage

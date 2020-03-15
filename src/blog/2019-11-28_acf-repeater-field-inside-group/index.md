@@ -1,32 +1,28 @@
 ---
-title: "ACF Repeater Field inside of Group Field"
-path: "/blog/acf-repeater-field-inside-group/"
-description: "Learn how to display your Advanced Custom Fields (ACF) Repeater Fields within your Group Field."
-date: "2019-11-28"
-featuredImage: "./acf-pro.png"
-author: "Tom Gooden"
-tags: ["wordpress", "advancedcustomfields", "php"]
+title: 'ACF Repeater Field inside of Group Field'
+path: '/blog/acf-repeater-field-inside-group/'
+description: 'Learn how to display your Advanced Custom Fields (ACF) Repeater Fields within your Group Field.'
+date: '2019-11-28'
+featuredImage: './acf-pro.png'
+author: 'Tom Gooden'
+tags: ['wordpress', 'advancedcustomfields', 'php']
 ---
 
 TLDR; In order to display repeater field values nested inside of a group field with Advanced Custom Fields (ACF), you will need to loop over the group field AND the repeater field.
 
 ```php
 // group loop
-if( have_rows('group_field_name') ):
-  while ( have_rows('group_field_name') ) : the_row();
-
+if( have_rows('group_field_name') ) {
+  while ( have_rows('group_field_name') ) { the_row();
     // repeater loop
-    if( have_rows('repeater_field_name') ):
-      while ( have_rows('repeater_field_name') ) : the_row();
-
+    if( have_rows('repeater_field_name') ) {
+      while ( have_rows('repeater_field_name') ) { the_row();
         // repeater sub field
         echo get_sub_field('repeater_sub_field_name');
-
-      endwhile;
-    endif;
-
-  endwhile;
-endif;
+      }
+    }
+  }
+}
 ```
 
 ## Getting Started
@@ -45,31 +41,25 @@ Based on the field names we setup in the pictures above, we could use something 
 
 ```php
 // group loop
-if( have_rows('faq') ):
-  while ( have_rows('faq') ) : the_row();
-
+if( have_rows('faq') ) {
+  while ( have_rows('faq') ) { the_row();
     // repeater loop
-    if( have_rows('faq_item') ):
-      while ( have_rows('faq_item') ) : the_row();
-
+    if( have_rows('faq_item') ) {
+      while ( have_rows('faq_item') ) { the_row();
         // vars
         $question = get_sub_field('question');
         $answer   = get_sub_field('answer');
-
         // sub fields
-        if($question):
+        if($question) {
           echo '<span class="question">'.$question.'</span>';
-        endif;
-
-        if($answer):
+        }
+        if($answer) {
           echo '<span class="answer">'.$answer.'</span>';
-        endif;
-
-      endwhile;
-    endif;
-
-  endwhile;
-endif;
+        }
+      }
+    }
+  }
+}
 ```
 
 > Advanced Custom Fields is a WordPress plugin which allows you to add extra content fields to your WordPress edit screens. These extra content fields are more commonly referred to as Custom Fields and can allow you to build website’s faster and educate your client’s quicker.

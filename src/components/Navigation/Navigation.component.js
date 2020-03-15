@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { Nav, NavToggle } from './Navigation.styles'
 
 const Navigation = () => {
-  const [isToggled, setIsToggled] = React.useState(false)
+  const [isToggled, setIsToggled] = useState(false)
   const handleToggle = () => setIsToggled(!isToggled)
   return (
     <Nav className={`${isToggled ? 'active' : ''}`}>

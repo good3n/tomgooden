@@ -1,11 +1,11 @@
 ---
-title: "Estimated Read Time Function for WordPress Posts"
-path: "/blog/estimated-read-time-function-wordpress/"
-description: "Easily add a read time to your WordPress blog posts by creating a simple PHP function."
-date: "2019-12-01"
-featuredImage: "banner-wordpress.png"
-author: "Tom Gooden"
-tags: ["wordpress", "php"]
+title: 'Estimated Read Time Function for WordPress Posts'
+path: '/blog/estimated-read-time-function-wordpress/'
+description: 'Easily add a read time to your WordPress blog posts by creating a simple PHP function.'
+date: '2019-12-01'
+featuredImage: 'banner-wordpress.png'
+author: 'Tom Gooden'
+tags: ['wordpress', 'php']
 ---
 
 Adding an estimated read time to your WordPress blog is easier than you may think. Often, guides will suggest you install yet another plugin to achieve your desired functionality. But in the case of displaying content read time, there are only two simple steps.
@@ -13,7 +13,7 @@ Adding an estimated read time to your WordPress blog is easier than you may thin
 Open your theme's `functions.php` file in your WordPress root directory, and paste the following code.
 
 ```php
-function tgooden_reading_time( $content='', $speed = 225 ) {
+function reading_time( $content='', $speed = 225 ) {
 
   // sanitize the content
   $words = str_word_count( strip_tags( $content ) );
@@ -48,7 +48,7 @@ The last step is to put this function we just created into the template you wish
 ```php
 <div class="reading-time">
   <?php
-    echo tgooden_reading_time( get_the_content() );
+    echo reading_time( get_the_content() );
   ?>
 </div>
 ```
@@ -58,7 +58,7 @@ Since our second argument (the reading speed) is 225 by default, there is no nee
 ```php
 <div class="reading-time">
   <?php
-    echo tgooden_reading_time( get_the_content(), 300 );
+    echo reading_time( get_the_content(), 300 );
   ?>
 </div>
 ```

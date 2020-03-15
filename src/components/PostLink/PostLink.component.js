@@ -1,41 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
-import Avatar from '../assets/images/avatar-tom-gooden.png'
-
-const PostWrap = styled.article`
-  &:first-of-type {
-    h1 {
-      font-size: 36px;
-    }
-  }
-`
-
-const Title = styled.h1`
-  margin: 20px 0 30px;
-`
-
-const BlogMeta = styled.div`
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  column-gap: 15px;
-  align-items: center;
-  font-size: 16px;
-  color: #777;
-  font-family: var(--font_heading);
-
-  img {
-    display: block;
-    grid-row: 1 / 3;
-    margin: 0;
-  }
-
-  .author {
-    color: #121212;
-    font-weight: 600;
-  }
-`
+import Avatar from '../../assets/images/about/tom-gooden.png'
+import { PostWrap, Title, BlogMeta } from './PostLink.styles'
 
 const PostLink = ({ post }) => (
   <PostWrap>
@@ -46,10 +13,10 @@ const PostLink = ({ post }) => (
         <img
           src={Avatar}
           alt="Tom Gooden"
-          style={{
-            width: `60px`,
-            borderRadius: `60px`,
-          }}
+          css={`
+            width: 60px;
+            border-radius: 60px;
+          `}
         />
         <div className="author">by Tom Gooden</div>
         <span className="date-time">

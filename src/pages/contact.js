@@ -2,13 +2,11 @@ import React from 'react'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import styled from 'styled-components'
-import GlobalStyles from '../styles/global'
 
 const Wrapper = styled.div`
   min-height: calc(100vh - 255px);
   display: flex;
   align-items: center;
-  color: #343434;
 
   @media (max-width: 899px) {
     min-height: calc(100vh - 272px);
@@ -26,6 +24,10 @@ const Wrapper = styled.div`
     width: 40px;
     margin: -10px 10px;
     animation: bounce 3s infinite ease-in-out;
+
+    path {
+      fill: ${props => props.theme.colors.bodyText};
+    }
 
     @keyframes bounce {
       0% {
@@ -51,7 +53,6 @@ const Text = styled.p`
 
 const ContactPage = () => (
   <Layout>
-    <GlobalStyles />
     <SEO title="Contact" />
     <Wrapper>
       <div>

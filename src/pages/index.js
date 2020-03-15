@@ -48,7 +48,7 @@ const Intro = styled.p`
 const Title = styled.h1`
   font-weight: 400;
   font-family: var(--font_body);
-  color: #454545;
+  color: ${props => props.theme.colors.bodyTextLight};
   font-size: 28px;
   line-height: 1.6;
   margin-bottom: 40px;
@@ -101,7 +101,7 @@ const Social = styled.div`
 
     path {
       transition: 0.2s fill ease;
-      fill: #343434;
+      fill: ${props => props.theme.colors.bodyTextLight};
     }
   }
 `

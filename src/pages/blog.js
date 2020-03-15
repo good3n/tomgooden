@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../../components/layout'
-import PostLink from '../../components/post-link'
-import AllPostTags from '../../components/PostTags/AllPostTags.component'
-import { Grid, Block } from "./blog.styles"
+import Layout from '../components/layout'
+import { PostLink } from '../components/PostLink'
+import AllPostTags from '../components/PostTags/AllPostTags.component'
+import { Grid, Block } from '../page-styles/blog.styles'
 
 export const pageQuery = graphql`
   query {

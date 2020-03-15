@@ -1,10 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
-import Layout from "../components/layout"
-import { PostTags } from "../components/PostTags"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import Layout from '../components/layout'
+import { PostTags } from '../components/PostTags'
 
 const Grid = styled.div`
   display: grid;
@@ -13,13 +13,13 @@ const Grid = styled.div`
   row-gap: 50px;
   font-size: 16px;
   color: #777;
+  font-family: var(--font_heading);
 
   @media (max-width: 599px) {
     grid-template-columns: 1fr;
   }
 
   a {
-
     @media (min-width: 900px) {
       .gatsby-image-wrapper {
         transition: transform 0.2s ease;
@@ -56,23 +56,32 @@ const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-    } tagged with #${tag}`
+    totalCount === 1 ? '' : 's'
+  } tagged with #${tag}`
   return (
     <Layout>
       <Wrapper>
         <div>
           <h1>{tagHeader}</h1>
-          <Grid className={`is-sans`}>
+          <Grid>
             {edges.map(({ node }) => {
-              const { path, title, author, date, tags, featuredImage } = node.frontmatter
+              const {
+                path,
+                title,
+                author,
+                date,
+                tags,
+                featuredImage,
+              } = node.frontmatter
               return (
                 <div key={path}>
                   <Link to={path}>
                     <Img sizes={featuredImage.childImageSharp.sizes} />
                     <h2>{title}</h2>
                   </Link>
-                  <div style={{ fontWeight: `bold`, color: `#121212` }}>{author}</div>
+                  <div style={{ fontWeight: `bold`, color: `#121212` }}>
+                    {author}
+                  </div>
                   <div style={{ marginBottom: `20px` }}>{date}</div>
                   <PostTags tags={tags} />
                 </div>
@@ -110,24 +119,25 @@ export default Tags
 
 export const pageQuery = graphql`
   query($tag: String) {
-  allMarkdownRemark(
-    limit: 2000
+    allMarkdownRemark(
+      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
-  ) {
-    totalCount
-    edges {
-      node {
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          path
-          tags
-          author
-          featuredImage {
-            childImageSharp {
-              sizes(maxWidth: 830, quality: 90) {
+    ) {
+      totalCount
+      edges {
+        node {
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            path
+            tags
+            author
+            featuredImage {
+              childImageSharp {
+                sizes(maxWidth: 830, quality: 90) {
                   ...GatsbyImageSharpSizes
+                }
               }
             }
           }
@@ -135,5 +145,4 @@ export const pageQuery = graphql`
       }
     }
   }
-}
 `

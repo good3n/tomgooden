@@ -90,7 +90,7 @@ export const Nav = styled.nav`
   a {
     text-decoration: none;
     font-weight: 500;
-    color: #121212;
+    color: ${props => props.theme.colors.bodyText};
     display: block;
   }
 `
@@ -137,6 +137,7 @@ export const NavToggle = styled.button`
     background-color: #000;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition-duration: 75ms;
+    background-color: ${props => props.theme.colors.headingText};
 
     &::before,
     &::after {
@@ -147,7 +148,7 @@ export const NavToggle = styled.button`
       transition-duration: 0.15s;
       transition-property: transform;
       border-radius: 4px;
-      background-color: #121212;
+      background-color: ${props => props.theme.colors.headingText};
     }
 
     &::before {

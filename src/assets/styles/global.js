@@ -20,16 +20,17 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #fff;
-    color: #212121;
+    background-color: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.bodyText};
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 	  -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
+    transition: background-color 0.2s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: #121212;
+    color: ${props => props.theme.colors.headingText};
     font-weight: 700;
     letter-spacing: -1px;
     line-height: 1.4;
@@ -37,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: #121212;
+    color: ${props => props.theme.colors.bodyText};
   }
 
   main a {
@@ -57,8 +58,12 @@ const GlobalStyle = createGlobalStyle`
       transition: height 0.2s ease;
     }
 
-    &:hover::before {
-      height: calc( 100% - 8px );
+    &:hover{
+      color: #121212;
+
+      &::before {
+        height: calc( 100% - 8px );
+      }
     }
   }
 
@@ -125,14 +130,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .is-sans {
-    font-family:
-    "Helvetica Neue",
-    "-apple-system",
-    "BlinkMacSystemFont",
-    "Segoe UI",
-    "Roboto",
-    "sans-serif"
+  .container {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 15px;
   }
 `
 

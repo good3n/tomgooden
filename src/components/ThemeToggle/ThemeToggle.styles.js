@@ -12,6 +12,8 @@ export const Toggle = styled.div`
 
   @media (max-width: 899px) {
     top: -3px;
+    order: 2;
+    margin-left: auto;
   }
 
   &::after {

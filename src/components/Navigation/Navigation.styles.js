@@ -2,9 +2,14 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
   display: block;
-  justify-self: end;
   font-size: 18px;
   font-family: var(--font_heading);
+  margin-left: auto;
+
+  @media (max-width: 899px) {
+    order: 3;
+    margin-left: 20px;
+  }
 
   &.active {
     @media (min-width: 900px) {
@@ -51,7 +56,7 @@ export const Nav = styled.nav`
 
   li {
     display: inline-block;
-    margin: 0 0 0 60px;
+    margin: 0 60px 0 0;
 
     @media (min-width: 900px) {
       a.is-active {

@@ -1,18 +1,15 @@
 import React from 'react'
+import { func, string } from 'prop-types';
 import { Toggle } from './ThemeToggle.styles'
 
 const ThemeToggle = props => {
-  const { isDarkMode, setDarkMode } = props
-
-  const toggleTheme = () => {
-    setDarkMode(!isDarkMode)
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('isDarkMode', !isDarkMode)
-    }
-  }
-
+  const { theme, toggleTheme } = props
+  const isLight = theme === 'light';
   return (
-    <Toggle onClick={toggleTheme} className={isDarkMode ? 'dark' : 'light'}>
+    <Toggle
+      onClick={toggleTheme}
+      className={isLight ? 'light' : 'dark'}
+    >
       <svg
         className="light"
         xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +26,11 @@ const ThemeToggle = props => {
       </svg>
     </Toggle>
   )
+}
+
+ThemeToggle.propTypes = {
+  theme: string.isRequired,
+  toggleTheme: func.isRequired,
 }
 
 export default ThemeToggle

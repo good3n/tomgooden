@@ -22,8 +22,8 @@ const Header = props => (
     </Link>
     <Navigation />
     <ThemeToggle
-      isDarkMode={props.isDarkMode}
-      setDarkMode={props.setDarkMode}
+      theme={props.theme}
+      toggleTheme={props.toggleTheme}
     />
   </StyledHeader>
 )

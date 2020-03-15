@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import Tags from "../components/post/post-tags"
+import { PostTags } from "../components/PostTags"
 
 const Title = styled.h1`
   font-size: 50px;
@@ -76,7 +76,7 @@ export default function Template({ data }) { // this prop 'data' will be injecte
             <span className="post-author">Tom Gooden</span>
             <span className="post-date">{frontmatter.date} <span style={{ margin: `0 5px` }}>&middot;</span></span>
             <span className="read-time">{data.markdownRemark.fields.readingTime.text}</span>
-            <Tags tags={frontmatter.tags} />
+            <PostTags tags={frontmatter.tags} />
           </div>
         </PostMeta>
         <Content

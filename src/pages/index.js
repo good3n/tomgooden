@@ -120,7 +120,6 @@ export const data = graphql`
 
 const IndexPage = ({ data }) => (
   <Layout>
-    {console.log(data.file.childImageSharp.fluid.src)}
     <SEO title="Web Developer + Designer" />
     <Wrapper>
       <div>

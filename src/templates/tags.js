@@ -4,9 +4,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import Layout from "../components/layout"
-
-// components
-import PostTags from "../components/post/post-tags"
+import { PostTags } from "../components/PostTags"
 
 const Grid = styled.div`
   display: grid;

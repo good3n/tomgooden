@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import GlobalStyle from '../assets/styles/global'
 import lightTheme from '../assets/styles/lightTheme'
 import darkTheme from '../assets/styles/darkTheme'
+import { useSpring, animated } from 'react-spring'
 import { ThemeProvider } from 'styled-components'
-import { useTheme } from './useTheme';
+import { useTheme } from './useTheme'
 import { Header } from './Header'
 import { Footer } from './Footer'
 
 const Layout = ({ children }) => {
-  const [theme, toggleTheme, componentMounted] = useTheme();
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  const transitions = useSpring({ opacity: 1, from: { opacity: 0 } })
+  const [theme, toggleTheme, componentMounted] = useTheme()
+  const themeMode = theme === 'light' ? lightTheme : darkTheme
   if (!componentMounted) {
     return <div />
-  };
+  }
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyle />
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <main className="container">{children}</main>
+      <animated.main className="container" style={transitions}>{children}</animated.main>
       <Footer />
     </ThemeProvider>
   )

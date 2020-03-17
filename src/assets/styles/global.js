@@ -19,6 +19,10 @@ const GlobalStyle = createGlobalStyle`
     --color_purple: #636bb2;
   }
 
+  html {
+    background-color: ${props => props.theme.colors.background};
+  }
+
   body {
     background-color: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.bodyText};

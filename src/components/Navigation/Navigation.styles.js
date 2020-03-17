@@ -70,7 +70,6 @@ export const Nav = styled.nav`
           left: -10px;
           height: 4px;
           background: #88ddff;
-          z-index: -1;
         }
       }
 

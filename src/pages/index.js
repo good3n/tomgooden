@@ -119,7 +119,7 @@ export const data = graphql`
 `
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <>
     <SEO title="Web Developer + Designer" />
     <Wrapper>
       <div>
@@ -191,7 +191,7 @@ const IndexPage = ({ data }) => (
         </Social>
       </div>
     </Wrapper>
-  </Layout>
+  </>
 )
 
 export default IndexPage

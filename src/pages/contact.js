@@ -52,7 +52,7 @@ const Text = styled.p`
 `
 
 const ContactPage = () => (
-  <Layout>
+  <>
     <SEO title="Contact" />
     <Wrapper>
       <div>
@@ -68,7 +68,7 @@ const ContactPage = () => (
         </Text>
       </div>
     </Wrapper>
-  </Layout>
+  </>
 )
 
 export default ContactPage

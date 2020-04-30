@@ -17,7 +17,7 @@ const TagsPage = ({
     },
   },
 }) => (
-  <Layout>
+  <>
     <Helmet title={title} />
     <div>
       <h1>Tags</h1>
@@ -31,7 +31,7 @@ const TagsPage = ({
         ))}
       </ul>
     </div>
-  </Layout>
+  </>
 )
 
 TagsPage.propTypes = {

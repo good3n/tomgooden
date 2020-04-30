@@ -14,7 +14,7 @@ export default function Template({ data }) {
   const metaImagePath = frontmatter.featuredImage.childImageSharp.sizes.src
 
   return (
-    <Layout slug={data.markdownRemark.fields.slug}>
+    <div slug={data.markdownRemark.fields.slug}>
       <SEO
         title={frontmatter.title}
         image={metaImagePath}
@@ -51,7 +51,7 @@ export default function Template({ data }) {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
-    </Layout>
+    </div>
   )
 }
 

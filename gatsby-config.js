@@ -4,10 +4,16 @@ module.exports = {
     description: `Web Development + Design by Tom Gooden | Metro-Detroit, Michigan`,
     siteUrl: `https://tomgooden.net`,
     author: `Tom Gooden @good3n`,
-    twitterUsername: "@good3n"
+    twitterUsername: '@good3n',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout`),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,11 +22,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "fonts",
-        path: `${__dirname}/src/assets/fonts`
-      }
+        name: 'fonts',
+        path: `${__dirname}/src/assets/fonts`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -66,21 +72,21 @@ module.exports = {
           `gatsby-remark-check-links`,
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {}
+            options: {},
           },
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: 'gatsby-remark-external-links',
             options: {
-              target: "_self",
-              rel: "nofollow"
-            }
+              target: '_self',
+              rel: 'nofollow',
+            },
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
               quality: 70,
               maxWidth: 670,
-              wrapperStyle: `display: block;`
+              wrapperStyle: `display: block;`,
             },
           },
         ],
@@ -90,15 +96,15 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
-      }
+      },
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://tomgooden.net',
         sitemap: 'https://tomgooden.net/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
     },
     {
       resolve: `gatsby-plugin-advanced-sitemap`,
@@ -112,12 +118,12 @@ module.exports = {
         ],
         createLinkInHead: true, // optional: create a link in the `<head>` of your site
         addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-142430836-1",
+        trackingId: 'UA-142430836-1',
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
         // Setting this parameter is optional

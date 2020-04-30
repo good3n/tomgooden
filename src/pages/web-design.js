@@ -3,7 +3,7 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 
 const WebDesignPage = () => (
-  <Layout>
+  <>
     <SEO title="Contact" />
     <h1>Website Design &amp; Development</h1>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 969">
@@ -63,7 +63,7 @@ const WebDesignPage = () => (
         />
       </g>
     </svg>
-  </Layout>
+  </>
 )
 
 export default WebDesignPage

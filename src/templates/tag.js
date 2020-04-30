@@ -59,7 +59,7 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? '' : 's'
   } tagged with #${tag}`
   return (
-    <Layout>
+    <>
       <Wrapper>
         <div>
           <h1>{tagHeader}</h1>
@@ -91,7 +91,7 @@ const Tags = ({ pageContext, data }) => {
           {/* <Link to="/tags">All tags</Link> */}
         </div>
       </Wrapper>
-    </Layout>
+    </>
   )
 }
 

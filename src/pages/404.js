@@ -36,7 +36,7 @@ const Wrapper = styled.div`
 `
 
 const NotFoundPage = () => (
-  <Layout>
+  <>
     <SEO title="404 Error - Page Not Found" />
     <Wrapper>
       <div>
@@ -62,7 +62,7 @@ const NotFoundPage = () => (
         </Link>
       </div>
     </Wrapper>
-  </Layout>
+  </>
 )
 
 export default NotFoundPage

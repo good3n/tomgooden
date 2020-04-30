@@ -25,7 +25,7 @@ const Grid = styled.div`
 `
 
 const AboutPage = ({ data }) => (
-  <Layout>
+  <>
     <SEO title="About" />
     <Wrapper>
       <div>
@@ -86,7 +86,7 @@ const AboutPage = ({ data }) => (
         </ul> */}
       </div>
     </Wrapper>
-  </Layout>
+  </>
 )
 
 export default AboutPage

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import { PostLink } from '../components/PostLink'
 import AllPostTags from '../components/PostTags/AllPostTags.component'
 import { Grid, Block } from '../page-styles/blog.styles'

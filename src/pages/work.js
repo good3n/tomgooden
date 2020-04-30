@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
-import Layout from '../components/layout'
 import styled from 'styled-components'
 
 const WorkItems = styled.div`

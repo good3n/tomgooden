@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
-import Layout from '../components/layout'
 import { PostTags } from '../components/PostTags'
 import { Title, PostMeta, Content } from '../page-styles/blogPost.styles'
 

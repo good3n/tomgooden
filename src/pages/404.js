@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import SEO from '../components/seo'
 import styled from 'styled-components'
-import Layout from '../components/layout'
 
 const Wrapper = styled.div`
   min-height: calc(100vh - 255px);

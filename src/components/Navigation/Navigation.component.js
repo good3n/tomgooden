@@ -5,6 +5,7 @@ import { Nav, NavToggle } from './Navigation.styles'
 const Navigation = () => {
   const [isToggled, setIsToggled] = useState(false)
   const handleToggle = () => setIsToggled(!isToggled)
+  const closeNav = () => setIsToggled(false)
   return (
     <Nav className={`${isToggled ? 'active' : ''}`}>
       <NavToggle
@@ -21,12 +22,12 @@ const Navigation = () => {
       </NavToggle>
       <ul>
         <li>
-          <Link to="/about/" activeClassName="is-active" onClick={handleToggle}>
+          <Link to="/about/" activeClassName="is-active" onClick={closeNav}>
             About
           </Link>
         </li>
         <li>
-          <Link to="/work/" activeClassName="is-active" onClick={handleToggle}>
+          <Link to="/work/" activeClassName="is-active" onClick={closeNav}>
             Work
           </Link>
         </li>
@@ -35,17 +36,13 @@ const Navigation = () => {
             to="/blog/"
             activeClassName="is-active"
             partiallyActive={true}
-            onClick={handleToggle}
+            onClick={closeNav}
           >
             Blog
           </Link>
         </li>
         <li>
-          <Link
-            to="/contact/"
-            activeClassName="is-active"
-            onClick={handleToggle}
-          >
+          <Link to="/contact/" activeClassName="is-active" onClick={closeNav}>
             Contact
           </Link>
         </li>

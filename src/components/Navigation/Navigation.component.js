@@ -21,22 +21,31 @@ const Navigation = () => {
       </NavToggle>
       <ul>
         <li>
-          <Link to="/about/" activeClassName="is-active">
+          <Link to="/about/" activeClassName="is-active" onClick={handleToggle}>
             About
           </Link>
         </li>
         <li>
-          <Link to="/work/" activeClassName="is-active">
+          <Link to="/work/" activeClassName="is-active" onClick={handleToggle}>
             Work
           </Link>
         </li>
         <li>
-          <Link to="/blog/" activeClassName="is-active" partiallyActive={true}>
+          <Link
+            to="/blog/"
+            activeClassName="is-active"
+            partiallyActive={true}
+            onClick={handleToggle}
+          >
             Blog
           </Link>
         </li>
         <li>
-          <Link to="/contact/" activeClassName="is-active">
+          <Link
+            to="/contact/"
+            activeClassName="is-active"
+            onClick={handleToggle}
+          >
             Contact
           </Link>
         </li>

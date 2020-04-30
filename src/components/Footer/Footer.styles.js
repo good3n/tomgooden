@@ -53,4 +53,16 @@ export const StyledFooter = styled.footer`
       display: block;
     }
   }
+
+  svg {
+    width: 18px;
+    margin: 0 3px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+
+    path {
+      fill: ${props => props.theme.colors.bodyTextLight};
+    }
+  }
 `

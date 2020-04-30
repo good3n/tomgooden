@@ -5,20 +5,56 @@ import SEO from '../components/seo'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  min-height: calc(100vh - 255px);
-`
+  h1 {
+    padding-right: 180px;
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 50px;
+    @media (max-width: 899px) {
+      padding-right: 0;
+      font-size: 1.5rem;
+    }
+  }
 
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .image-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin: 120px -100px 100px;
 
-    .gatsby-image-wrapper {
-      grid-row: 1 / 2;
+    @media (max-width: 1080px) {
+      margin: 120px -10px 100px;
+    }
+
+    @media (max-width: 899px) {
+      margin: 100px -10px 50px;
+    }
+
+    div {
+      background: #000;
+      min-height: 150px;
+
+      @media (max-width: 1080px) {
+        min-height: 0;
+      }
+
+      &:nth-of-type(1) {
+      }
+      &:nth-of-type(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+      &:nth-of-type(3) {
+        grid-row: 1 / 3;
+        margin-top: -30px;
+      }
+      &:nth-of-type(4) {
+        grid-row: 1 / 3;
+      }
+      &:nth-of-type(5) {
+        margin-top: -70px;
+      }
+      &:nth-of-type(6) {
+        grid-row: 2 / 3;
+      }
     }
   }
 `
@@ -27,43 +63,59 @@ const AboutPage = ({ data }) => (
   <>
     <SEO title="About" />
     <Wrapper>
-      <div>
-        <h1>About</h1>
-        <Grid>
-          <Img
-            fluid={data.tom.childImageSharp.fluid}
-            alt=""
-            style={{ width: `180px`, height: `180px`, borderRadius: `2px` }}
-          />
-          <div>
-            <p>
-              I am a Metro-Detroit based Front-end Developer and Designer with a
-              focus on user experience and efficient semantic code. Over the
-              last {new Date().getFullYear() - 2007} years, I've spent my
-              professional time creating and developing websites and web
-              applications for businesses and brands. I like to think I am in
-              LAMP stack anonymous, allowing the JAMstack to slowly consume my
-              development environment.
-            </p>
-            <p>
-              During my downtime, I like to spend time with my family and{' '}
-              <del>dog</del> two dogs, go fishing when the weather permits,
-              binge watch a television series, or learn something new in web
-              development. I'm also a Podcast junky. If you have some solid
-              recommendations, then please feel free to{' '}
-              <Link to="/contact/">email</Link>, or drop me a line on{' '}
-              <a
-                href="https://twitter.com/good3n/"
-                rel="nofollow noopener noreferrer"
-              >
-                Twitter
-              </a>
-              .
-            </p>
-          </div>
-        </Grid>
+      <h1>I'm Tom, and I build scalable custom web applications and sites.</h1>
+      <div className="image-wrapper">
+        <Img fluid={data.image1.childImageSharp.fluid} alt="" />
+        <Img fluid={data.image2.childImageSharp.fluid} alt="" />
+        <Img fluid={data.image3.childImageSharp.fluid} alt="" />
+        <Img fluid={data.image4.childImageSharp.fluid} alt="" />
+        <Img fluid={data.image5.childImageSharp.fluid} alt="" />
+        <Img fluid={data.image6.childImageSharp.fluid} alt="" />
+      </div>
 
-        {/* <h2>Uses</h2>
+      <div>
+        <p>
+          I am a Metro-Detroit based Front-end Developer and Designer with a
+          focus on user experience and efficient semantic code. Over the last{' '}
+          {new Date().getFullYear() - 2007}+ years, I've spent my professional
+          time creating and developing websites and web applications for
+          businesses and brands.
+        </p>
+        <h2>Personal</h2>
+        <p>
+          I am the father of two daughters, which has shaped me in ways that I
+          never would have imagined. During my downtime, I like to spend time
+          with my family and <del>dog</del> two dogs. When time permits, I also
+          enjoy fishing, camping, reading,
+        </p>
+        <p>
+          I enjoy gaming, whether it's flying circles in <del>Stormwind</del>{' '}
+          Orgrimmar, or cooking up some "Dubious Food"{' '}
+          <Img
+            fluid={data.food.childImageSharp.fluid}
+            alt="Dubious Food"
+            style={{
+              width: `32px`,
+              display: `inline-block`,
+              position: `relative`,
+              top: `9px`,
+              margin: `0 5px 0 0`,
+            }}
+          />
+          on the Switch.
+        </p>
+        <p>
+          You can usually catch me hanging out in the{' '}
+          <a href="https://discord.gg/KntFa9p">CodeHelp</a> discord server.
+        </p>
+        <h2>Uses</h2>
+        <p>
+          I plan on populating this section with some of the software and
+          hardware I use to go about my development day. Stay tuned.
+        </p>
+      </div>
+
+      {/*
         <ul>
           <li>MacBookPro 15" 2015 and 15" 2018</li>
           <li>Monitors</li>
@@ -83,21 +135,44 @@ const AboutPage = ({ data }) => (
           <li>Dropbox</li>
           <li>Backpack</li>
         </ul> */}
-      </div>
     </Wrapper>
   </>
 )
 
 export default AboutPage
 
-export const squareImage = graphql`
-  query {
-    tom: file(relativePath: { eq: "about/tom-gooden.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 180, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+export const aboutImage = graphql`
+  fragment aboutImage on File {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
       }
+    }
+  }
+`
+
+export const query = graphql`
+  query {
+    image1: file(relativePath: { eq: "about/about1.jpg" }) {
+      ...aboutImage
+    }
+    image2: file(relativePath: { eq: "about/about2.jpg" }) {
+      ...aboutImage
+    }
+    image3: file(relativePath: { eq: "about/about3.jpg" }) {
+      ...aboutImage
+    }
+    image4: file(relativePath: { eq: "about/about4.jpg" }) {
+      ...aboutImage
+    }
+    image5: file(relativePath: { eq: "about/about5.jpg" }) {
+      ...aboutImage
+    }
+    image6: file(relativePath: { eq: "about/about6.jpg" }) {
+      ...aboutImage
+    }
+    food: file(relativePath: { eq: "about/dubious-food.png" }) {
+      ...aboutImage
     }
   }
 `

@@ -79,18 +79,18 @@ const AboutPage = ({ data }) => (
           focus on user experience and efficient semantic code. Over the last{' '}
           {new Date().getFullYear() - 2007}+ years, I've spent my professional
           time creating and developing websites and web applications for
-          businesses and brands.
+          businesses and brands. Over the last couple years I've been
+          "migrating" to the JAMstack and I am enjoying every minute of it.
         </p>
         <h2>Personal</h2>
         <p>
           I am the father of two daughters, which has shaped me in ways that I
           never would have imagined. During my downtime, I like to spend time
           with my family and <del>dog</del> two dogs. When time permits, I also
-          enjoy fishing, camping, reading,
-        </p>
-        <p>
-          I enjoy gaming, whether it's flying circles in <del>Stormwind</del>{' '}
-          Orgrimmar, or cooking up some "Dubious Food"{' '}
+          enjoy fishing, camping, reading, watching sports, fantasy football,
+          home automation, and expanding my development skill set. I enjoy
+          gaming, whether it's flying circles in <del>Stormwind</del> Orgrimmar,
+          or cooking up some Dubious Food{' '}
           <Img
             fluid={data.food.childImageSharp.fluid}
             alt="Dubious Food"

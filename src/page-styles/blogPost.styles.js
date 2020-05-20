@@ -12,7 +12,7 @@ export const Title = styled.h1`
 export const PostMeta = styled.div`
   font-size: 16px;
   margin-bottom: 40px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid ${props => props.theme.colors.border};
   padding-top: 30px;
   color: ${props => props.theme.colors.bodyTextExtraLight};
   font-family: var(--font_heading);

@@ -48,26 +48,23 @@ const GlobalStyle = createGlobalStyle`
   main a {
     display: inline-block;
     position: relative;
+    z-index: 1;
 
     &::before {
       content: "";
       width: 100%;
-      height: 5px;
-      background: #caebf2;
+      height: 4px;
+      background: ${props => props.theme.colors.link};
       position: absolute;
-      z-index: -1;
       bottom: 3px;
       right: 0;
       left: 0;
+      z-index: -1;
       transition: height 0.2s ease;
     }
 
-    &:hover{
-      color: #121212;
-
-      &::before {
-        height: calc( 100% - 8px );
-      }
+    &:hover::before {
+      height: calc( 100% - 8px );
     }
   }
 
@@ -118,12 +115,6 @@ const GlobalStyle = createGlobalStyle`
       &jsx::before {
         content: "jsx";
         background: #E7F45E;
-      }
-
-      &text {
-        background: #eee !important;
-        text-shadow: none;
-        color: #343434;
       }
     }
   }

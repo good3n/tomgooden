@@ -1,5 +1,6 @@
 import React from 'react'
 import GlobalStyle from '../assets/styles/global'
+import GlobalPrismStyle from '../assets/styles/prism-tomgooden'
 import lightTheme from '../assets/styles/lightTheme'
 import darkTheme from '../assets/styles/darkTheme'
 import { useSpring, animated } from 'react-spring'
@@ -18,8 +19,11 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyle />
+      <GlobalPrismStyle />
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <animated.main className="container" style={transitions}>{children}</animated.main>
+      <animated.main className="container" style={transitions}>
+        {children}
+      </animated.main>
       <Footer />
     </ThemeProvider>
   )

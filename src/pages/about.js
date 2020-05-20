@@ -73,7 +73,7 @@ const AboutPage = ({ data }) => (
         <Img fluid={data.image6.childImageSharp.fluid} alt="" />
       </div>
 
-      <div>
+      <main>
         <p>
           I am a Metro-Detroit based Front-end Developer and Designer with a
           focus on user experience and efficient semantic code. Over the last{' '}
@@ -106,14 +106,17 @@ const AboutPage = ({ data }) => (
         </p>
         <p>
           You can usually catch me hanging out in the{' '}
-          <a href="https://discord.gg/KntFa9p">CodeHelp</a> discord server.
+          <a href="https://discord.gg/KntFa9p" target="_blank">
+            CodeHelp
+          </a>{' '}
+          discord server.
         </p>
         <h2>Uses</h2>
         <p>
           I plan on populating this section with some of the software and
           hardware I use to go about my development day. Stay tuned.
         </p>
-      </div>
+      </main>
 
       {/*
         <ul>

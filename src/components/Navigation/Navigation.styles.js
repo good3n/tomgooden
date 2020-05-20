@@ -65,10 +65,10 @@ export const Nav = styled.nav`
         &::after {
           content: '';
           position: absolute;
-          bottom: -10px;
-          right: -10px;
-          left: -10px;
-          height: 4px;
+          bottom: -7px;
+          right: -5px;
+          left: -5px;
+          height: 3px;
           background: #88ddff;
         }
       }

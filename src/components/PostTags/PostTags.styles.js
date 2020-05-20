@@ -37,6 +37,7 @@ export const StyledTags = styled.div`
 
       &advancedcustomfields {
         background: #69e4bb;
+        color: #212121;
       }
 
       &php {

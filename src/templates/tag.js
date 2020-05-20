@@ -51,6 +51,17 @@ const Wrapper = styled.div`
   }
 `
 
+const PostMeta = styled.header`
+  div:first-of-type {
+    font-weight: 700;
+    color: ${props => props.theme.colors.bodyText};
+  }
+
+  div:last-of-type {
+    margin-bottom: 20px;
+  }
+`
+
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
@@ -78,10 +89,10 @@ const Tags = ({ pageContext, data }) => {
                     <Img sizes={featuredImage.childImageSharp.sizes} />
                     <h2>{title}</h2>
                   </Link>
-                  <div style={{ fontWeight: `bold`, color: `#121212` }}>
-                    {author}
-                  </div>
-                  <div style={{ marginBottom: `20px` }}>{date}</div>
+                  <PostMeta>
+                    <div>{author}</div>
+                    <div>{date}</div>
+                  </PostMeta>
                   <PostTags tags={tags} />
                 </div>
               )

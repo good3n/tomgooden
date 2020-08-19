@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.headingText};
     font-weight: 700;
     letter-spacing: -1px;
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   a {

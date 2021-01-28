@@ -1,23 +1,28 @@
 import { createGlobalStyle } from 'styled-components'
+import { Fonts } from '../fonts/fonts'
 
 const GlobalStyle = createGlobalStyle`
 
   :root {
-    /* fonts */
-    --font_heading: 'Helvetica Neue', 'Segoe UI', 'Roboto', 'sans-serif';
-    --font_body: 'Lora', 'Georgia', 'sans-serif';
-
     /* colors */
-    --color_heading: #37383c;
-    --color_body: #6b7c93;
-    --color_body-dark: #51637b;
-    --color_blue: #456cac;
-    --color_blue-light: #3d91f9;
-    --color_gray-light: #f4f9ff;
-    --color_gray-light2: #f6f9fc;
-    --color_green-light: #e6f4f1;
-    --color_purple: #636bb2;
+    --color_red: #FC0055;
+    --color_blue: #56CBF9;
+    --color_yellow: #FFEA9F;
+    --color_text--base: #353839;
+    --color_text--heading: #00171f;
+    --color_offWhite: #fbf7f2;
+
+    /* fonts */
+    --font-size__base: 1rem;
+    --font-size__small: 0.833rem;
+    --font-size__h1: 2.074rem;
+    --font-size__h2: 1.728rem;
+    --font-size__h3: 1.44rem;
+    --font-size__h4: 1.2rem;
+    --font-size__h5: 1rem;
   }
+
+  ${Fonts}
 
   html {
     background-color: ${props => props.theme.colors.background};
@@ -26,18 +31,48 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.bodyText};
-    line-height: 1.6;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-	  -moz-osx-font-smoothing: grayscale;
-    overflow: hidden;
+    -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.2s ease;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5 {
     color: ${props => props.theme.colors.headingText};
-    font-weight: 700;
-    letter-spacing: -1px;
-    line-height: 1.2;
+    font-weight: 900;
+    line-height: 1.3;
+    margin: 3rem 0 1.38rem;
+  }
+
+  h1,
+  .h1 {
+    margin-top: 0;
+    font-size: var(--font-size__h1);
+  }
+
+  h2,
+  .h2 {
+    font-size: var(--font-size__h2);
+  }
+
+  h3,
+  .h3 {
+    font-size: var(--font-size__h3);
+  }
+
+  h4,
+  .h4 {
+    font-size: var(--font-size__h4);
+  }
+
+  h5,
+  .h5 {
+    font-size: var(--font-size__h5);
+  }
+
+  small,
+  .text-small {
+    font-size: var(--font-size__small);
   }
 
   a {

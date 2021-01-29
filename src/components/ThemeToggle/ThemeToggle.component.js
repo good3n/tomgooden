@@ -1,15 +1,12 @@
 import React from 'react'
-import { func, string } from 'prop-types';
+import { func, string } from 'prop-types'
 import { Toggle } from './ThemeToggle.styles'
 
 const ThemeToggle = props => {
   const { theme, toggleTheme } = props
-  const isLight = theme === 'light';
+  const isLight = theme === 'light'
   return (
-    <Toggle
-      onClick={toggleTheme}
-      className={isLight ? 'light' : 'dark'}
-    >
+    <Toggle onClick={toggleTheme} className={isLight ? 'light' : 'dark'}>
       <svg
         className="light"
         xmlns="http://www.w3.org/2000/svg"

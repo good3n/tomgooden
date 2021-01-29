@@ -9,13 +9,19 @@ export const StyledHeader = styled.header`
     padding: 50px;
   }
 
-  svg {
-    width: 175px;
-    position: relative;
-    top: 5px;
+  > div:first-of-type {
+    svg {
+      width: 175px;
+      position: relative;
+      top: 5px;
 
-    path {
-      fill: ${props => props.theme.colors.headingText};
+      @media (max-width: 600px) {
+        width: 100px;
+      }
+
+      path {
+        fill: ${props => props.theme.colors.headingText};
+      }
     }
   }
 `

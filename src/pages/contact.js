@@ -116,9 +116,9 @@ const ContactPage = () => (
         netlify-honeypot="bot-field"
         action="/"
       >
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" placeholder="Phone" />
         <div className="grid">
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="bot-field" placeholder="Phone" />
           <div>
             <label>
               Your name{' '}

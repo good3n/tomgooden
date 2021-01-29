@@ -5,6 +5,10 @@ export const StyledHeader = styled.header`
   align-items: center;
   padding: 50px 150px;
 
+  @media (max-width: 899px) {
+    padding: 50px;
+  }
+
   svg {
     width: 175px;
     position: relative;

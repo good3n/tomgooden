@@ -165,10 +165,16 @@ const GlobalStyle = createGlobalStyle`
   .container {
     margin: 0 auto;
     max-width: 1300px;
-    padding: 0 90px;
+    padding-right: 90px;
+    padding-left: 90px;
 
     @media (max-width: 1175px) {
       max-width: 100%;
+    }
+
+    @media (max-width: 899px) {
+      padding-right: 30px;
+      padding-left: 30px;
     }
   }
 `

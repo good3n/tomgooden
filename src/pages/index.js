@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SEO title="Web Developer + Designer" />
-      <Hero>
+      <Hero className="container">
         <h1>
           <span className="block">Digital</span>{' '}
           <span className="text">
@@ -134,8 +134,8 @@ const IndexPage = ({ data }) => {
         <div>
           <h2>IDK</h2>
           <p>
-            The web is built for the user. User focused design and interaction
-            is paramount.
+            No idea what this section will be. But it will be something! What?
+            I'm not sure yet.
           </p>
         </div>
       </Services>

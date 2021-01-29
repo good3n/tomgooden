@@ -1,14 +1,22 @@
 import styled from 'styled-components'
 
 export const Hero = styled.div`
-  margin: 11rem 0 16rem;
+  margin: 11rem auto 16rem;
   text-align: center;
+
+  @media (max-width: 899px) {
+    margin: 5rem auto 7rem;
+  }
 
   h1 {
     position: relative;
     font-size: 5.55rem;
     letter-spacing: -3px;
     margin-bottom: 7rem;
+
+    @media (max-width: 899px) {
+      font-size: 3.815rem;
+    }
 
     span.block {
       display: block;
@@ -20,6 +28,11 @@ export const Hero = styled.div`
       right: 0;
       left: 0;
       z-index: 1;
+      white-space: nowrap;
+
+      @media (max-width: 899px) {
+        top: calc(100% - 1rem);
+      }
 
       > span {
         position: relative;
@@ -28,7 +41,7 @@ export const Hero = styled.div`
           content: '';
           height: 10px;
           width: 100%;
-          background-color: var(--color_red);
+          background-color: var(--color_red); // fallback
           animation-name: underline-color;
           animation-duration: 5s;
           animation-timing-function: ease-in-out;
@@ -38,6 +51,10 @@ export const Hero = styled.div`
           right: 0;
           left: 0;
           z-index: -1;
+
+          @media (max-width: 899px) {
+            bottom: 13px;
+          }
         }
       }
     }
@@ -52,6 +69,10 @@ export const Hero = styled.div`
 
   p {
     font-size: var(--font-size__h3);
+
+    @media (max-width: 899px) {
+      font-size: var(--font-size__base);
+    }
   }
 
   @keyframes blinking-cursor {
@@ -91,6 +112,10 @@ export const Services = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
+    @media (max-width: 899px) {
+      padding: 70px 60px;
+    }
 
     &:nth-of-type(1) {
       grid-column: 1 / 3;
@@ -135,6 +160,10 @@ export const Services = styled.div`
         grid-row: 3 / 4;
       }
 
+      @media (max-width: 600px) {
+        grid-column: 1 / 5;
+      }
+
       h2 {
         color: var(--color_text--heading);
       }
@@ -149,6 +178,11 @@ export const Services = styled.div`
       @media (max-width: 1175px) {
         grid-column: 3 / 5;
         grid-row: 3 / 4;
+      }
+
+      @media (max-width: 600px) {
+        grid-column: 1 / 5;
+        grid-row: 4 / 5;
       }
 
       h2 {
@@ -189,6 +223,10 @@ export const Roadmap = styled.div`
       max-width: 100%;
       padding: 0 90px;
     }
+
+    @media (max-width: 899px) {
+      padding: 0 60px;
+    }
   }
 
   h2 {
@@ -207,6 +245,10 @@ export const Roadmap = styled.div`
 
       @media (max-width: 1175px) {
         top: -175px;
+      }
+
+      @media (max-width: 899px) {
+        left: 60px;
       }
     }
 

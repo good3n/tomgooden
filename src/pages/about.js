@@ -62,7 +62,7 @@ const Wrapper = styled.div`
 const AboutPage = ({ data }) => (
   <>
     <SEO title="About" />
-    <Wrapper>
+    <Wrapper className="container">
       <h1>I'm Tom, and I build scalable custom web applications and sites.</h1>
       <div className="image-wrapper">
         <Img fluid={data.image1.childImageSharp.fluid} alt="" />

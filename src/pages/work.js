@@ -72,7 +72,7 @@ const WorkItems = styled.div`
 `
 
 const WorkPage = ({ data }) => (
-  <>
+  <div className="container">
     <SEO title="Work" />
     <h1>Work</h1>
     <WorkItems>
@@ -119,7 +119,7 @@ const WorkPage = ({ data }) => (
         />
       </div>
     </WorkItems>
-  </>
+  </div>
 )
 
 export default WorkPage

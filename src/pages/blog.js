@@ -44,7 +44,7 @@ const BlogListPage = ({
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   return (
-    <>
+    <div className="container">
       <h1>Blog</h1>
       <Grid>
         <Block>
@@ -53,7 +53,7 @@ const BlogListPage = ({
         </Block>
         {Posts}
       </Grid>
-    </>
+    </div>
   )
 }
 

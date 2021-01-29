@@ -13,7 +13,7 @@ export default function Template({ data }) {
   const metaImagePath = frontmatter.featuredImage.childImageSharp.sizes.src
 
   return (
-    <div slug={data.markdownRemark.fields.slug}>
+    <div className="container" slug={data.markdownRemark.fields.slug}>
       <SEO
         title={frontmatter.title}
         image={metaImagePath}

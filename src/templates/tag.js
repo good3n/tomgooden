@@ -70,7 +70,7 @@ const Tags = ({ pageContext, data }) => {
   } tagged with #${tag}`
   return (
     <>
-      <Wrapper>
+      <Wrapper className="container">
         <div>
           <h1>{tagHeader}</h1>
           <Grid>

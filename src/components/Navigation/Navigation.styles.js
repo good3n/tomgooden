@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Nav = styled.nav`
   margin-left: auto;
   font-weight: 600;
+  font-size: var(--font-size__small);
 
   ul {
     margin: 0;
@@ -13,10 +14,10 @@ export const Nav = styled.nav`
 
   li {
     display: block;
-    margin: 0 30px 0 0;
+    margin: 0 40px 0 0;
   }
 
   a {
-    color: ${props => props.theme.colors.heading};
+    color: ${props => props.theme.colors.headingText};
   }
 `

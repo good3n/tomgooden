@@ -29,8 +29,10 @@ export const Hero = styled.div`
           height: 10px;
           width: 100%;
           background-color: var(--color_red);
-          animation: underline-color 5s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
-            infinite;
+          animation-name: underline-color;
+          animation-duration: 5s;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
           position: absolute;
           bottom: 22px;
           right: 0;
@@ -89,13 +91,17 @@ export const Services = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    /* flex-direction: column; */
 
     &:nth-of-type(1) {
       grid-column: 1 / 3;
       grid-row: 1 / 3;
       background-color: var(--color_red);
       color: #fff;
+
+      @media (max-width: 1175px) {
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+      }
 
       h2 {
         color: #fff;
@@ -108,6 +114,11 @@ export const Services = styled.div`
       background-color: var(--color_blue);
       color: #fff;
 
+      @media (max-width: 1175px) {
+        grid-column: 1 / 5;
+        grid-row: 2 / 3;
+      }
+
       h2 {
         color: #fff;
       }
@@ -119,6 +130,11 @@ export const Services = styled.div`
       grid-row: 2 / 3;
       color: var(--color_text--heading);
 
+      @media (max-width: 1175px) {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+      }
+
       h2 {
         color: var(--color_text--heading);
       }
@@ -129,6 +145,11 @@ export const Services = styled.div`
       grid-row: 2 / 3;
       background-color: var(--color_yellow);
       color: var(--color_text--heading);
+
+      @media (max-width: 1175px) {
+        grid-column: 3 / 5;
+        grid-row: 3 / 4;
+      }
 
       h2 {
         color: var(--color_text--heading);
@@ -150,5 +171,109 @@ export const Services = styled.div`
   p {
     clear: both;
     margin: 0;
+    font-weight: 500;
+  }
+`
+
+export const Roadmap = styled.div`
+  background-color: ${props => props.theme.colors.darkBlock};
+  padding: 130px 0;
+  overflow: hidden;
+  color: var(--color_offWhite);
+
+  > div:first-of-type {
+    margin: 0 auto;
+    max-width: 700px;
+
+    @media (max-width: 1175px) {
+      max-width: 100%;
+      padding: 0 90px;
+    }
+  }
+
+  h2 {
+    color: var(--color_offWhite);
+    margin-top: 0;
+  }
+
+  .container {
+    position: relative;
+    margin-top: 90px;
+
+    .gatsby-image-wrapper {
+      position: absolute !important;
+      top: -60px;
+      left: 90px;
+
+      @media (max-width: 1175px) {
+        top: -175px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      position: relative;
+
+      @media (max-width: 1175px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    li {
+      margin: 0;
+      display: block;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 600;
+      font-size: var(--font-size__h5);
+      color: var(--color_offWhite);
+    }
+
+    p {
+      margin: 90px 0 0;
+      font-size: var(--font-size__small);
+      opacity: 0.7;
+
+      @media (max-width: 1175px) {
+        margin-top: 20px;
+      }
+    }
+  }
+`
+
+export const Cta = styled.div`
+  text-align: center;
+  padding: 110px 0 60px;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .card {
+    display: inline-block;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: var(--font-size__small);
+    background-color: var(--color_red);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    will-change: transform;
+
+    &:hover {
+      box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+    }
+
+    a {
+      color: #fff;
+      padding: 15px 30px;
+      display: block;
+    }
   }
 `

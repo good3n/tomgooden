@@ -8,9 +8,11 @@ const GlobalStyle = createGlobalStyle`
     --color_red: #FC0055;
     --color_blue: #56CBF9;
     --color_yellow: #FFEA9F;
+    --color_dark: #353839;
+    --color_offWhite: #fbf7f2;
+    --color_text--light: #b4b9be;
     --color_text--base: #353839;
     --color_text--heading: #00171f;
-    --color_offWhite: #fbf7f2;
 
     /* fonts */
     --font-size__base: 1rem;
@@ -80,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.bodyText};
   }
 
-  main a {
+  /* main a {
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -101,7 +103,7 @@ const GlobalStyle = createGlobalStyle`
     &:hover::before {
       height: calc( 100% - 8px );
     }
-  }
+  } */
 
   blockquote {
     border-left: 5px solid #e863a6;
@@ -117,7 +119,7 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
 
-  code {
+  /* code {
 
     &::before {
       position: absolute;
@@ -152,7 +154,7 @@ const GlobalStyle = createGlobalStyle`
         background: #E7F45E;
       }
     }
-  }
+  } */
 
   @media (max-width: 899px) {
     pre[class*=language-] {
@@ -162,8 +164,12 @@ const GlobalStyle = createGlobalStyle`
 
   .container {
     margin: 0 auto;
-    max-width: 900px;
-    padding: 0 15px;
+    max-width: 1300px;
+    padding: 0 90px;
+
+    @media (max-width: 1175px) {
+      max-width: 100%;
+    }
   }
 `
 

@@ -110,13 +110,15 @@ const ContactPage = () => (
         drop a line, shoot me a message via the contact form below.
       </p>
       <form
+        netlify
         name="contact"
         method="POST"
-        data-netlify="true"
         netlify-honeypot="bot-field"
         action="/"
       >
         <div className="grid">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" placeholder="Phone" />
           <div>
             <label>
               Your name{' '}
@@ -125,7 +127,6 @@ const ContactPage = () => (
               </span>
             </label>
           </div>
-          <input type="hidden" name="bot-field" placeholder="Phone" />
           <div>
             <label>
               Email{' '}

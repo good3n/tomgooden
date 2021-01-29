@@ -29,7 +29,7 @@ export const Nav = styled.nav`
       background: rgba(0, 23, 31, 0.95);
       z-index: 999;
       text-align: center;
-      padding: 60px;
+      padding: 150px 60px 100px;
       font-size: var(--font-size__h3);
 
       &.true {

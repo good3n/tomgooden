@@ -4,130 +4,210 @@ import Img from 'gatsby-image'
 import SEO from '../components/seo'
 import styled from 'styled-components'
 
-const WorkItems = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 5px;
+const MainImage = styled(Img)`
+  max-width: 730px;
+  margin: 0 auto;
+  position: relative;
+  left: -40px;
 
-  @media (max-width: 660px) {
-    grid-template-columns: 1fr 1fr;
+  @media (max-width: 600px) {
+    left: -30px;
+    left: -6%;
+  }
+`
+
+const SubImage = styled(Img)`
+  max-width: 760px;
+  position: relative;
+  right: -50px;
+
+  @media (max-width: 899px) {
+    right: auto;
+    left: -70px;
+    margin-top: -200px;
   }
 
-  div {
-    width: 100%;
-    background: #000;
-    min-height: 286px;
-    position: relative;
-  }
-
-  .gatsby-image-wrapper {
-    position: absolute !important;
-    top: 0;
-    right: 0;
-    bottom: 0;
+  @media (max-width: 600px) {
     left: 0;
+    margin-top: -100px;
+  }
+`
+
+const WorkOne = styled.div`
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+
+  @media (max-width: 899px) {
+    padding-top: 50px;
   }
 
-  /* glpg brochure */
-  .work2 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
+  @media (max-width: 600px) {
+    padding-top: 30px;
   }
 
-  /* revize victor */
-  .work3 {
-    @media (max-width: 660px) {
-      grid-row: 4 / 5;
-      grid-column: 1 / 2;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -138px;
+    right: 0;
+    left: 0;
+    height: 700px;
+    background: var(--color_blue);
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 100%);
+
+    @media (max-width: 899px) {
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+      top: -150px;
     }
-  }
 
-  /* jmk */
-  .work4 {
-    @media (max-width: 660px) {
-      grid-row: 2 / 3;
-      grid-column: 1 / 2;
+    @media (max-width: 600px) {
+      height: 500px;
     }
-  }
 
-  /* glpg mobile */
-  .work5 {
-    grid-row: 2 / 4;
-    grid-column: 3 / 4;
-
-    @media (max-width: 660px) {
-      grid-row: 4 / 5;
-      grid-column: 2 / 3;
-    }
-  }
-
-  /* manawire */
-  .work6 {
-    grid-column: 1 / 3;
-
-    @media (max-width: 660px) {
-      grid-row: 3 / 4;
+    @media (max-width: 450px) {
+      height: 400px;
     }
   }
 `
 
+const Work = styled.div`
+  h1 {
+    font-size: var(--font-size__big-ass);
+
+    @media (max-width: 1175px) {
+      font-size: var(--font-size__medium-ass);
+    }
+
+    @media (max-width: 899px) {
+      font-size: var(--font-size__h1);
+    }
+
+    span {
+      display: block;
+      color: var(--color_blue);
+      font-size: var(--font-size__h5);
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 760px;
+    gap: 50px;
+    margin-top: 50px;
+
+    @media (max-width: 899px) {
+      grid-template-columns: 1fr;
+    }
+
+    > div:first-of-type {
+      position: relative;
+      z-index: 1;
+      margin-right: -220px;
+
+      @media (max-width: 899px) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: var(--font-size__h4);
+    color: ${props => props.theme.colors.headingText};
+  }
+
+  li {
+    display: block;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+
+    svg {
+      height: 24px;
+      width: 24px;
+      margin-right: 20px;
+    }
+  }
+`
+
+const ListItem = ({ text }) => (
+  <li>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <defs />
+      <path
+        stroke="#56CBF9"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M21 12H3m14-4l4 4-4-4zm4 4l-4 4 4-4z"
+      />
+    </svg>
+    <span>{text}</span>
+  </li>
+)
+
 const WorkPage = ({ data }) => (
-  <div className="container">
+  <Work>
     <SEO title="Work" />
-    <h1>Work</h1>
-    <WorkItems>
-      <div className="work1">
-        <Img
-          fluid={data.image3.childImageSharp.fluid}
-          imgStyle={{ objectFit: `cover` }}
-          alt=""
-        />
-      </div>
-      <div className="work2">
-        <Img
+    <WorkOne>
+      <div className="container">
+        <MainImage
           fluid={data.image1.childImageSharp.fluid}
           imgStyle={{ objectFit: `cover` }}
           alt=""
         />
+        <div className="grid">
+          <div>
+            <h1>
+              <span>GLPG</span>Patient check-in portal
+            </h1>
+            <p>
+              A portal designed and developed allowing patients to self check-in
+              via an in-office kiosk, or mobile check-in in advance.
+            </p>
+            <ul>
+              <ListItem text="React" />
+              <ListItem text="GatsbyJS" />
+              <ListItem text="AWS Amplify" />
+              <ListItem text="Podio API" />
+            </ul>
+          </div>
+          <div>
+            <SubImage
+              fluid={data.image2.childImageSharp.fluid}
+              imgStyle={{ objectFit: `cover` }}
+              alt=""
+            />
+          </div>
+        </div>
       </div>
-      <div className="work3">
-        <Img
-          fluid={data.image2.childImageSharp.fluid}
-          imgStyle={{ objectFit: `cover` }}
-          alt=""
-        />
-      </div>
-      <div className="work4">
-        <Img
-          fluid={data.image4.childImageSharp.fluid}
-          imgStyle={{ objectFit: `cover` }}
-          alt=""
-        />
-      </div>
-      <div className="work5">
-        <Img
-          fluid={data.image6.childImageSharp.fluid}
-          imgStyle={{ objectFit: `cover` }}
-          alt=""
-        />
-      </div>
-      <div className="work6">
-        <Img
-          fluid={data.image5.childImageSharp.fluid}
-          imgStyle={{ objectFit: `cover` }}
-          alt=""
-        />
-      </div>
-    </WorkItems>
-  </div>
+    </WorkOne>
+  </Work>
 )
 
 export default WorkPage
 
-export const squareImage = graphql`
-  fragment squareImage on File {
+export const mainImage = graphql`
+  fragment mainImage on File {
     childImageSharp {
-      fluid(maxWidth: 600, maxHeight: 500, quality: 90) {
+      fluid(maxWidth: 730, quality: 90) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const subImage = graphql`
+  fragment subImage on File {
+    childImageSharp {
+      fluid(maxWidth: 760, quality: 90) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -136,23 +216,15 @@ export const squareImage = graphql`
 
 export const query = graphql`
   query {
-    image1: file(relativePath: { eq: "work/glpg-brochure.png" }) {
-      ...squareImage
+    image1: file(
+      relativePath: { eq: "mockups/checkin-portal-glpg-ipad-mockup.png" }
+    ) {
+      ...mainImage
     }
-    image2: file(relativePath: { eq: "work/revize-victor.png" }) {
-      ...squareImage
-    }
-    image3: file(relativePath: { eq: "work/tom-gooden-michigan-tinting.png" }) {
-      ...squareImage
-    }
-    image4: file(relativePath: { eq: "work/tom-gooden-jmkpm.png" }) {
-      ...squareImage
-    }
-    image5: file(relativePath: { eq: "work/tom-gooden-manawire.png" }) {
-      ...squareImage
-    }
-    image6: file(relativePath: { eq: "work/tom-gooden-glpg.png" }) {
-      ...squareImage
+    image2: file(
+      relativePath: { eq: "mockups/checkin-portal-glpg-mobile-mockup.png" }
+    ) {
+      ...subImage
     }
   }
 `

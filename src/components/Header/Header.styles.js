@@ -4,6 +4,8 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   padding: 50px 150px;
+  position: relative;
+  z-index: 998;
 
   @media (max-width: 899px) {
     padding: 50px;

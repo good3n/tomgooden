@@ -67,6 +67,17 @@ export const NavToggle = styled.button`
   font-size: var(--font-size__base);
   outline: 0;
 
+  &.in-nav {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    @media (max-width: 600px) {
+      top: 30px;
+      right: 30px;
+    }
+  }
+
   svg {
     width: 24px;
     height: 24px;

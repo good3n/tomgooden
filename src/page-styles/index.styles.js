@@ -10,12 +10,12 @@ export const Hero = styled.div`
 
   h1 {
     position: relative;
-    font-size: 5.55rem;
+    font-size: var(--font-size__extra-big-ass);
     letter-spacing: -3px;
     margin-bottom: 7rem;
 
     @media (max-width: 899px) {
-      font-size: 3.815rem;
+      font-size: var(--font-size__big-ass);
     }
 
     span.block {
@@ -47,7 +47,7 @@ export const Hero = styled.div`
           animation-timing-function: ease-in-out;
           animation-iteration-count: infinite;
           position: absolute;
-          bottom: 22px;
+          bottom: 20px;
           right: 0;
           left: 0;
           z-index: -1;

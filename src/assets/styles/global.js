@@ -15,13 +15,17 @@ const GlobalStyle = createGlobalStyle`
     --color_text--heading: #00171f;
 
     /* fonts */
-    --font-size__base: 1rem;
-    --font-size__small: 0.833rem;
+
+    --font-size__extra-big-ass: 5.16rem;
+    --font-size__big-ass: 3.583rem;
+    --font-size__medium-ass: 2.488rem;
     --font-size__h1: 2.074rem;
     --font-size__h2: 1.728rem;
     --font-size__h3: 1.44rem;
     --font-size__h4: 1.2rem;
     --font-size__h5: 1rem;
+    --font-size__base: 1rem;
+    --font-size__small: 0.833rem;
   }
 
   ${Fonts}

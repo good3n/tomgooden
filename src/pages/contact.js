@@ -2,72 +2,174 @@ import React from 'react'
 import SEO from '../components/seo'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  min-height: calc(100vh - 255px);
-  display: flex;
-  align-items: center;
+const Contact = styled.div`
+  margin: 100px 0;
+  padding: 0 200px;
 
-  @media (max-width: 899px) {
-    min-height: calc(100vh - 272px);
+  @media (max-width: 1175px) {
+    padding: 0;
+  }
+
+  @media (max-width: 600px) {
+    margin: 50px 0;
   }
 
   h1 {
-    font-size: 100px;
+    font-size: var(--font-size__big-ass);
 
-    @media (max-width: 899px) {
-      font-size: 50px;
+    @media (max-width: 600px) {
+      font-size: var(--font-size__h1);
     }
   }
 
-  svg {
-    width: 40px;
-    margin: -10px 10px;
-    animation: bounce 3s infinite ease-in-out;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 
-    path {
-      fill: ${props => props.theme.colors.bodyText};
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
 
-    @keyframes bounce {
-      0% {
-        transform: translateY(-5px);
-      }
-      50% {
-        transform: translateY(10px);
-      }
-      100% {
-        transform: translateY(-5px);
+    > div:last-of-type {
+      grid-column: 1 / 3;
+
+      @media (max-width: 600px) {
+        grid-column: 1 / 2;
       }
     }
   }
-`
 
-const Text = styled.p`
-  font-size: 28px;
+  label {
+    font-weight: bold;
+    color: ${props => props.theme.colors.headingText};
+  }
 
-  @media (max-width: 899px) {
-    font-size: 24px;
+  span {
+    background: #fff;
+    display: block;
+  }
+
+  input,
+  textarea,
+  select {
+    display: block;
+    width: 100% !important;
+    border: none;
+    border-bottom: 3px solid var(--color_blue);
+    font-weight: normal;
+    padding: 20px;
+    outline: 0;
+    margin-top: 7px;
+    resize: none;
+    border-radius: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input,
+  select {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+  }
+
+  textarea {
+    min-height: 200px;
+
+    @media (max-width: 600px) {
+      height: 100px;
+    }
+  }
+
+  button {
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: var(--font-size__small);
+    background-color: var(--color_red);
+    border: none;
+    display: flex;
+    margin: 30px 0 0 auto;
+    outline: 0;
+    cursor: pointer;
   }
 `
 
 const ContactPage = () => (
-  <>
-    <SEO title="Contact" />
-    <Wrapper className="container">
-      <div>
-        <h1>Contact</h1>
-        <Text>
-          If you would like to get in touch, please feel free to send me an
-          email at
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345.834 345.834">
-            <path d="M339.798 260.429c.13-.026.257-.061.385-.094.109-.028.219-.051.326-.084.125-.038.247-.085.369-.129.108-.039.217-.074.324-.119.115-.048.226-.104.338-.157.109-.052.22-.1.327-.158.107-.057.208-.122.312-.184.107-.064.215-.124.319-.194.111-.074.214-.156.321-.236.09-.067.182-.13.27-.202.162-.133.316-.275.466-.421.027-.026.056-.048.083-.075.028-.028.052-.059.079-.088.144-.148.284-.3.416-.46.077-.094.144-.192.216-.289.074-.1.152-.197.221-.301.074-.111.139-.226.207-.34.057-.096.118-.19.171-.289.062-.115.114-.234.169-.351.049-.104.101-.207.146-.314.048-.115.086-.232.128-.349.041-.114.085-.227.12-.343.036-.118.062-.238.092-.358.029-.118.063-.234.086-.353.028-.141.045-.283.065-.425.014-.1.033-.199.043-.3.025-.249.038-.498.038-.748V92.76c0-4.143-3.357-7.5-7.5-7.5h-236.25c-.066 0-.13.008-.196.01-.143.004-.285.01-.427.022-.113.009-.225.022-.337.037-.128.016-.255.035-.382.058-.119.021-.237.046-.354.073-.119.028-.238.058-.356.092-.117.033-.232.069-.346.107-.117.04-.234.082-.349.128-.109.043-.216.087-.322.135-.118.053-.235.11-.351.169-.099.051-.196.103-.292.158-.116.066-.23.136-.343.208-.093.06-.184.122-.274.185-.106.075-.211.153-.314.235-.094.075-.186.152-.277.231-.09.079-.179.158-.266.242-.099.095-.194.194-.288.294-.047.05-.097.094-.142.145-.027.03-.048.063-.074.093-.094.109-.182.223-.27.338-.064.084-.13.168-.19.254-.078.112-.15.227-.222.343-.059.095-.12.189-.174.286-.063.112-.118.227-.175.342-.052.105-.106.21-.153.317-.049.113-.092.23-.135.345-.043.113-.087.225-.124.339-.037.115-.067.232-.099.349-.032.12-.066.239-.093.36-.025.113-.042.228-.062.342-.022.13-.044.26-.06.39-.013.108-.019.218-.027.328-.01.14-.019.28-.021.421-.001.041-.006.081-.006.122v46.252c0 4.143 3.357 7.5 7.5 7.5s7.5-3.357 7.5-7.5v-29.595l66.681 59.037c-.348.245-.683.516-.995.827l-65.687 65.687v-49.288c0-4.143-3.357-7.5-7.5-7.5s-7.5 3.357-7.5 7.5v9.164h-38.75c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h38.75v43.231c0 4.143 3.357 7.5 7.5 7.5h236.25c.247 0 .494-.013.74-.037.115-.011.226-.033.339-.049.13-.018.258-.033.386-.058zm-8.964-25.462l-65.688-65.687c-.042-.042-.087-.077-.13-.117l49.383-41.897c3.158-2.68 3.546-7.412.866-10.571-2.678-3.157-7.41-3.547-10.571-.866l-84.381 71.59-98.444-87.158h208.965v134.706zm-144.956-55.079c.535-.535.969-1.131 1.308-1.765l28.051 24.835c1.418 1.255 3.194 1.885 4.972 1.885 1.726 0 3.451-.593 4.853-1.781l28.587-24.254c.26.38.553.743.89 1.08l65.687 65.687H120.191l65.687-65.687z" />
-            <path d="M7.5 170.676h126.667c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5H7.5c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5zM20.625 129.345H77.5c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5H20.625c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5zM62.5 226.51h-55c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h55c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5z" />
-          </svg>
-          <a href="mailto:good3n@gmail.com">good3n@gmail.com</a>
-        </Text>
-      </div>
-    </Wrapper>
-  </>
+  <div className="container">
+    <Contact>
+      <SEO title="Contact" />
+      <h1>Get in touch</h1>
+      <p>
+        Whether it’s a new project, consulting inquiries, or you’d just like to
+        drop a line, shoot me a message via the contact form below.
+      </p>
+      <form name="contact" method="POST" data-netlify="true">
+        <div className="grid">
+          <div>
+            <label>
+              Your name{' '}
+              <span>
+                <input type="text" name="name" />
+              </span>
+            </label>
+          </div>
+          <div>
+            <label>
+              Email{' '}
+              <span>
+                <input type="email" name="email" />
+              </span>
+            </label>
+          </div>
+          <div>
+            <label>
+              What brings you here?
+              <span>
+                <select name="reason[]">
+                  <option value="newdesign">New website design</option>
+                  <option value="redesign">Current website redesign</option>
+                  <option value="webapp">Custom web application</option>
+                  <option value="consulting">Consulting</option>
+                  <option value="hello">Just saying hey!</option>
+                </select>
+              </span>
+            </label>
+          </div>
+          <div>
+            <label>
+              What's your budget?
+              <span>
+                <select name="budget[]">
+                  <option value="1">$2,500-$5,000</option>
+                  <option value="2">$5,000-$7,500</option>
+                  <option value="3">$7,500-$10,000</option>
+                  <option value="4">$10,000+</option>
+                </select>
+              </span>
+            </label>
+          </div>
+          <div>
+            <label>
+              Additional details{' '}
+              <span>
+                <textarea
+                  name="message"
+                  placeholder="Current website link, current pain-points, etc"
+                />
+              </span>
+            </label>
+          </div>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </Contact>
+  </div>
 )
 
 export default ContactPage

@@ -71,10 +71,6 @@ module.exports = {
           `gatsby-remark-reading-time`,
           `gatsby-remark-check-links`,
           {
-            resolve: `gatsby-remark-prismjs`,
-            options: {},
-          },
-          {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_self',

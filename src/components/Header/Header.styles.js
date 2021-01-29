@@ -9,6 +9,10 @@ export const StyledHeader = styled.header`
     padding: 50px;
   }
 
+  @media (max-width: 600px) {
+    padding: 30px;
+  }
+
   > div:first-of-type {
     svg {
       width: 175px;

@@ -25,7 +25,7 @@ const Navigation = () => {
           onClick={() => {
             setIsNavOpen(!isNavOpen)
           }}
-          style={{ position: `absolute`, top: `50px`, right: `50px` }}
+          style={{ position: `absolute`, top: `30px`, right: `30px` }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
             <defs />

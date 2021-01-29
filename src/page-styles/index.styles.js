@@ -227,6 +227,10 @@ export const Roadmap = styled.div`
     @media (max-width: 899px) {
       padding: 0 60px;
     }
+
+    @media (max-width: 600px) {
+      padding: 0 30px;
+    }
   }
 
   h2 {
@@ -250,6 +254,10 @@ export const Roadmap = styled.div`
       @media (max-width: 899px) {
         left: 60px;
       }
+
+      @media (max-width: 600px) {
+        left: 30px;
+      }
     }
 
     ul {
@@ -262,6 +270,13 @@ export const Roadmap = styled.div`
 
       @media (max-width: 1175px) {
         grid-template-columns: 1fr 1fr;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+
+      @media (max-width: 600px) {
+        padding-right: 0;
+        padding-left: 0;
       }
     }
 
@@ -292,6 +307,11 @@ export const Roadmap = styled.div`
 export const Cta = styled.div`
   text-align: center;
   padding: 110px 0 60px;
+
+  @media (max-width: 600px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 
   h2 {
     margin-top: 0;

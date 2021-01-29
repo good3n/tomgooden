@@ -106,7 +106,11 @@ const AboutPage = ({ data }) => (
         </p>
         <p>
           You can usually catch me hanging out in the{' '}
-          <a href="https://discord.gg/KntFa9p" target="_blank">
+          <a
+            href="https://discord.gg/KntFa9p"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             CodeHelp
           </a>{' '}
           discord server.

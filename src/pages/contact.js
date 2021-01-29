@@ -109,21 +109,28 @@ const ContactPage = () => (
         Whether it’s a new project, consulting inquiries, or you’d just like to
         drop a line, shoot me a message via the contact form below.
       </p>
-      <form name="contact" method="POST" data-netlify="true">
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/"
+      >
         <div className="grid">
           <div>
             <label>
               Your name{' '}
               <span>
-                <input type="text" name="name" />
+                <input type="text" name="name" required />
               </span>
             </label>
           </div>
+          <input type="hidden" name="bot-field" placeholder="Phone" />
           <div>
             <label>
               Email{' '}
               <span>
-                <input type="email" name="email" />
+                <input type="email" name="email" required />
               </span>
             </label>
           </div>
@@ -131,7 +138,7 @@ const ContactPage = () => (
             <label>
               What brings you here?
               <span>
-                <select name="reason[]">
+                <select name="reason[]" required>
                   <option value="newdesign">New website design</option>
                   <option value="redesign">Current website redesign</option>
                   <option value="webapp">Custom web application</option>
@@ -145,11 +152,11 @@ const ContactPage = () => (
             <label>
               What's your budget?
               <span>
-                <select name="budget[]">
-                  <option value="1">$2,500-$5,000</option>
-                  <option value="2">$5,000-$7,500</option>
-                  <option value="3">$7,500-$10,000</option>
-                  <option value="4">$10,000+</option>
+                <select name="budget[]" required>
+                  <option value="2k-5k">$2,500-$5,000</option>
+                  <option value="5k-7500">$5,000-$7,500</option>
+                  <option value="7500-10k">$7,500-$10,000</option>
+                  <option value="10k-plus">$10,000+</option>
                 </select>
               </span>
             </label>
@@ -161,7 +168,7 @@ const ContactPage = () => (
                 <textarea
                   name="message"
                   placeholder="Current website link, current pain-points, etc"
-                />
+                ></textarea>
               </span>
             </label>
           </div>

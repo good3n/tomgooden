@@ -1,12 +1,12 @@
 export default {
   colors: {
-    background: '#fff',
-    bodyText: '#212121',
-    bodyTextLight: '#454545',
-    bodyTextExtraLight: '#999',
-    headingText: '#121212',
+    background: '#fbf7f2',
+    bodyText: '#5d6770',
+    bodyTextLight: '#b4b9be',
+    headingText: '#00171f',
     link: 'rgba(136, 221, 255, 0.5)',
     border: 'rgba(0, 0, 0, 0.15)',
+    darkBlock: '#353839',
 
     // code sections
     codeText: '#000',

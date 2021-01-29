@@ -53,7 +53,7 @@ const Text = styled.p`
 const ContactPage = () => (
   <>
     <SEO title="Contact" />
-    <Wrapper>
+    <Wrapper className="container">
       <div>
         <h1>Contact</h1>
         <Text>

@@ -1,8 +1,7 @@
 import React from 'react'
 import GlobalStyle from '../assets/styles/global'
-import GlobalPrismStyle from '../assets/styles/prism-tomgooden'
-import lightTheme from '../assets/styles/lightTheme'
-import darkTheme from '../assets/styles/darkTheme'
+import themeLight from '../assets/styles/themeLight'
+import themeDark from '../assets/styles/themeDark'
 import { useSpring, animated } from 'react-spring'
 import { ThemeProvider } from 'styled-components'
 import { useTheme } from './useTheme'
@@ -12,18 +11,17 @@ import { Footer } from './Footer'
 const Layout = ({ children }) => {
   const transitions = useSpring({ opacity: 1, from: { opacity: 0 } })
   const [theme, toggleTheme, componentMounted] = useTheme()
-  const themeMode = theme === 'light' ? lightTheme : darkTheme
+  const themeMode = theme === 'light' ? themeLight : themeDark
+
   if (!componentMounted) {
     return <div />
   }
+
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyle />
-      <GlobalPrismStyle />
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <animated.main className="container" style={transitions}>
-        {children}
-      </animated.main>
+      <animated.main style={transitions}>{children}</animated.main>
       <Footer />
     </ThemeProvider>
   )

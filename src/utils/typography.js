@@ -1,23 +1,19 @@
 import Typography from 'typography'
+
+const fonts = [
+  'Gilroy',
+  'Helvetica Neue',
+  'Segoe UI',
+  'Helvetica',
+  'Arial',
+  'sans-serif',
+]
+
 const typography = new Typography({
-  baseFontSize: '21px',
+  baseFontSize: '18px',
   baseLineHeight: 1.625,
-  headerFontFamily: ['Helvetica Neue', 'Segoe UI', 'Roboto', 'sans-serif'],
-  bodyFontFamily: ['Lora', 'Georgia', 'serif'],
-  // headerFontFamily: [
-  //   "Graphik",
-  //   "Avenir Next",
-  //   "Helvetica Neue",
-  //   "Segoe UI",
-  //   "Helvetica",
-  //   "Arial",
-  //   "sans-serif",
-  // ],
-  // bodyFontFamily: [
-  //   "Lora",
-  //   "Georgia",
-  //   "serif",
-  // ],
+  headerFontFamily: fonts,
+  bodyFontFamily: fonts,
 })
 
 export default typography

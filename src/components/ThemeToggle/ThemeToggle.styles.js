@@ -11,7 +11,6 @@ export const Toggle = styled.div`
   box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 
   @media (max-width: 899px) {
-    top: -3px;
     order: 2;
     margin-left: auto;
   }

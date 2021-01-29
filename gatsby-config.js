@@ -48,7 +48,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/site-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -70,10 +70,6 @@ module.exports = {
           `gatsby-remark-relative-images`,
           `gatsby-remark-reading-time`,
           `gatsby-remark-check-links`,
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {},
-          },
           {
             resolve: 'gatsby-remark-external-links',
             options: {

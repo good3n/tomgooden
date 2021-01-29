@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
 import styled from 'styled-components'
@@ -62,7 +62,7 @@ const Wrapper = styled.div`
 const AboutPage = ({ data }) => (
   <>
     <SEO title="About" />
-    <Wrapper>
+    <Wrapper className="container">
       <h1>I'm Tom, and I build scalable custom web applications and sites.</h1>
       <div className="image-wrapper">
         <Img fluid={data.image1.childImageSharp.fluid} alt="" />

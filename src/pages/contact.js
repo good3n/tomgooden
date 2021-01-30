@@ -43,7 +43,7 @@ const Contact = styled.div`
 
   label {
     font-weight: bold;
-    color: ${(props) => props.theme.colors.headingText};
+    color: ${props => props.theme.colors.headingText};
   }
 
   span {
@@ -114,9 +114,10 @@ const ContactPage = () => (
         name="contact"
         method="POST"
         netlify-honeypot="bot-field"
-        action="/"
+        action="/thanks"
       >
         <input type="hidden" name="bot-field" placeholder="Phone" />
+        <input type="hidden" name="form-name" value="contact" />
         <div className="grid">
           <div>
             <label>

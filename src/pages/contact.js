@@ -43,7 +43,7 @@ const Contact = styled.div`
 
   label {
     font-weight: bold;
-    color: ${props => props.theme.colors.headingText};
+    color: ${(props) => props.theme.colors.headingText};
   }
 
   span {
@@ -116,7 +116,6 @@ const ContactPage = () => (
         netlify-honeypot="bot-field"
         action="/"
       >
-        <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" placeholder="Phone" />
         <div className="grid">
           <div>
@@ -139,7 +138,7 @@ const ContactPage = () => (
             <label>
               What brings you here?
               <span>
-                <select name="reason[]" required>
+                <select name="reason" required>
                   <option value="newdesign">New website design</option>
                   <option value="redesign">Current website redesign</option>
                   <option value="webapp">Custom web application</option>
@@ -153,7 +152,7 @@ const ContactPage = () => (
             <label>
               What's your budget?
               <span>
-                <select name="budget[]" required>
+                <select name="budget" required>
                   <option value="2k-5k">$2,500-$5,000</option>
                   <option value="5k-7500">$5,000-$7,500</option>
                   <option value="7500-10k">$7,500-$10,000</option>

@@ -132,10 +132,27 @@ const IndexPage = ({ data }) => {
           </p>
         </div>
         <div>
-          <h2>IDK</h2>
+          <h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 40 40"
+            >
+              <defs />
+              <path
+                fill="#FC0055"
+                d="M27.7488 6.17851l8.0139 8.01389c.7811.781.781 2.0474 0 2.8284L24.1453 28.6382c-.7811.7811-2.0474.7811-2.8285 0l-8.0138-8.0138c-.6509-.6509-.8552-1.5019-.4562-1.9008L25.848 5.72229c.3989-.39891 1.25-.19465 1.9008.45622z"
+              />
+              <path
+                fill="#56CBF9"
+                d="M4.17851 14.4282l8.01389-8.0139c.781-.78105 2.0474-.78105 2.8284 0l20.7418 20.7418c.7811.7811.7811 2.0474 0 2.8284l-8.0139 8.0139c-.6508.6509-1.7061.6509-2.357 0L4.17851 16.7852c-.65087-.6509-.65087-1.7062 0-2.357z"
+              />
+            </svg>
+            Consulting
+          </h2>
           <p>
-            No idea what this section will be. But it will be something! What?
-            I'm not sure yet.
+            From the basics to best practices, you likely have a lot of
+            questions.
           </p>
         </div>
       </Services>

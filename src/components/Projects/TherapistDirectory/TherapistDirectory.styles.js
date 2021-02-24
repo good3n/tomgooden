@@ -8,6 +8,7 @@ export const StyledWork = styled.div`
 
   @media (max-width: 899px) {
     padding: 0 0 50px;
+    margin-top: 50px;
 
     .container {
       padding-right: 50px;
@@ -31,10 +32,12 @@ export const StyledWork = styled.div`
     align-items: center;
     margin-top: 50px;
     position: relative;
+    z-index: 10;
 
     @media (max-width: 899px) {
       display: flex;
       flex-direction: column;
+      margin-top: 0;
     }
 
     > div:last-of-type {

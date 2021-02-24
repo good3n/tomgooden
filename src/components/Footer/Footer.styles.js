@@ -5,6 +5,7 @@ export const StyledFooter = styled.footer`
   text-align: center;
   font-size: var(--font-size__small);
   color: ${props => props.theme.colors.bodyTextLight};
+  position: relative;
 
   a {
     display: inline-block;

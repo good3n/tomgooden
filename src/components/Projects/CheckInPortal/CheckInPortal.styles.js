@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledWork = styled.div`
   position: relative;
-  z-index: 1;
+  z-index: 10;
   padding: 100px 0 200px;
 
   @media (max-width: 899px) {
@@ -28,6 +28,7 @@ export const StyledWork = styled.div`
     grid-template-columns: 550px 1fr;
     gap: 50px;
     margin-top: 50px;
+    position: relative;
 
     @media (max-width: 1090px) {
       grid-template-columns: 1fr 1fr;

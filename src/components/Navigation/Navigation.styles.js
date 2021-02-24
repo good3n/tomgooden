@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Nav = styled.nav`
   margin-left: auto;
   font-weight: 600;
-  font-size: var(--font-size__small);
+  font-size: 0.9rem;
 
   @media (max-width: 899px) {
     order: 3;

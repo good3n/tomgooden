@@ -3,7 +3,11 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { StyledWork, MainImage } from './TherapistDirectory.styles'
 import { ListItem } from '../../../pages/work'
 
-const TherapistDirectory = ({ className, dataBackgroundColor }) => {
+const TherapistDirectory = ({
+  className,
+  dataBackgroundColor,
+  dataBackgroundColorTwo,
+}) => {
   const data = useStaticQuery(graphql`
     fragment workTwoImage on File {
       childImageSharp {

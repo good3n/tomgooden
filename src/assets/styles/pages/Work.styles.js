@@ -4,24 +4,23 @@ import Img from 'gatsby-image'
 export const Work = styled.div`
   overflow: hidden;
 
-  > section:first-of-type {
-    position: fixed !important;
-    height: 70vw;
-    width: 35vw;
-    top: 50px !important;
-    right: 0 !important;
-    left: 0 !important;
-    margin-left: 65vw !important;
-    margin-right: 0 !important;
-    clip-path: polygon(100% 0, 100% 100%, 0 49%);
-    transform: rotate(0deg);
-    transition: all 1s ease;
-  }
+  > section:nth-of-type(1) {
+    &:after {
+      content: '';
+      position: fixed;
+      background-color: ${props => props.theme.colors.background};
+      top: 15px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
 
-  &.even > section:first-of-type {
-    transform: rotate(180deg);
-    margin-left: 0 !important;
-    margin-right: 65vw !important;
+      @media (max-width: 899px) {
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+      }
+    }
   }
 
   h1 {

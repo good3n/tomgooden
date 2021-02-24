@@ -29,6 +29,11 @@ const WorkPage = () => {
     setVisibility(isVisible)
   }
 
+  const red = 'rgb(252, 0, 85)'
+  const yellow = 'rgb(255, 234, 159)'
+  const blue = 'rgb(86, 203, 249)'
+  const green = 'rgb(6, 214, 160)'
+
   return (
     <>
       <SEO title="Work" />
@@ -36,10 +41,12 @@ const WorkPage = () => {
         <ScrollingColorBackground
           selector=".js-color-stop[data-background-color]"
           colorDataAttribute="data-background-color"
-          initialRgb="rgb(86, 203, 249)"
+          initialRgb={blue}
         />
         <TherapistDirectory
-          dataBackgroundColor="rgb(86, 203, 249)"
+          dataBackgroundColor={blue}
+          dataBackgroundColorTwo={green}
+          dataBackgroundColorThree={red}
           className="js-color-stop"
         />
         <VisibilitySensor
@@ -47,10 +54,7 @@ const WorkPage = () => {
           partialVisibility={true}
           offset={{ bottom: 550 }}
         >
-          <CheckInPortal
-            dataBackgroundColor="rgb(252, 0, 85)"
-            className="js-color-stop"
-          />
+          <CheckInPortal dataBackgroundColor={red} className="js-color-stop" />
         </VisibilitySensor>
       </Work>
     </>

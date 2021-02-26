@@ -120,8 +120,8 @@ const ContactPage = () => {
         </p>
         <form
           method="POST"
+          netlify
           netlify-honeypot="bot-field"
-          data-netlify="true"
           action="/thanks"
           name="contact"
         >

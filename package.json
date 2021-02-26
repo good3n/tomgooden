@@ -6,6 +6,7 @@
   "author": "Tom Gooden <good3n@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "cross-env": "^7.0.3",
     "gatsby": "^2.32.8",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-advanced-sitemap": "^1.5.4",
@@ -50,7 +51,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",

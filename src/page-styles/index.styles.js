@@ -210,7 +210,7 @@ export const Services = styled.div`
 `
 
 export const Roadmap = styled.div`
-  background-color: ${props => props.theme.colors.darkBlock};
+  background-color: var(--color_dark-block);
   padding: 130px 0;
   overflow: hidden;
   color: var(--color_offWhite);

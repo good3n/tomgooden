@@ -26,7 +26,7 @@ export const StyledHeader = styled.header`
       }
 
       path {
-        fill: ${props => props.theme.colors.headingText};
+        fill: var(--color_heading-text);
       }
     }
   }

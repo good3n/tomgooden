@@ -43,7 +43,7 @@ const Contact = styled.div`
 
   label {
     font-weight: bold;
-    color: ${props => props.theme.colors.headingText};
+    color: var(--color_heading-text);
   }
 
   span {
@@ -120,7 +120,7 @@ const ContactPage = () => {
         </p>
         <form
           method="POST"
-          netlify
+          data-netlify="true"
           netlify-honeypot="bot-field"
           action="/thanks"
           name="contact"
@@ -129,7 +129,7 @@ const ContactPage = () => {
           <input name="bot-field" type="hidden" placeholder="Phone" />
 
           <div>
-            <label labelFor="name">
+            <label labelfor="name">
               Your name{' '}
               <span>
                 <input id="name" name="name" type="text" required />
@@ -137,7 +137,7 @@ const ContactPage = () => {
             </label>
           </div>
           <div>
-            <label labelFor="email">
+            <label labelfor="email">
               Email{' '}
               <span>
                 <input id="email" name="email" type="email" required />
@@ -145,7 +145,7 @@ const ContactPage = () => {
             </label>
           </div>
           <div>
-            <label labelFor="reason">
+            <label labelfor="reason">
               What brings you here?
               <span>
                 <select id="reason" name="reason" required>
@@ -159,7 +159,7 @@ const ContactPage = () => {
             </label>
           </div>
           <div>
-            <label labelFor="budget">
+            <label labelfor="budget">
               What's your budget?
               <span>
                 <select id="budget" name="budget" required>
@@ -172,7 +172,7 @@ const ContactPage = () => {
             </label>
           </div>
           <div>
-            <label labelFor="message">
+            <label labelfor="message">
               Additional details{' '}
               <span>
                 <textarea

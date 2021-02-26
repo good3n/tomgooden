@@ -54,7 +54,7 @@ const Wrapper = styled.div`
 const PostMeta = styled.header`
   div:first-of-type {
     font-weight: 700;
-    color: ${props => props.theme.colors.bodyText};
+    color: var(--color_body-text);
   }
 
   div:last-of-type {

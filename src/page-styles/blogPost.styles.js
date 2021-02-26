@@ -12,9 +12,9 @@ export const Title = styled.h1`
 export const PostMeta = styled.div`
   font-size: 16px;
   margin-bottom: 40px;
-  border-top: 1px solid ${props => props.theme.colors.border};
+  border-top: 1px solid var(--color_border);
   padding-top: 30px;
-  color: ${props => props.theme.colors.bodyTextExtraLight};
+  color: var(--color_body-text--light);
   font-family: var(--font_heading);
 
   /* layout */
@@ -29,7 +29,7 @@ export const PostMeta = styled.div`
 
   .post-author {
     font-weight: 600;
-    color: ${props => props.theme.colors.bodyText};
+    color: var(--color_body-text);
     margin-right: 10px;
 
     @media (max-width: 899px) {

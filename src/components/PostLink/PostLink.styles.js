@@ -18,7 +18,7 @@ export const BlogMeta = styled.div`
   column-gap: 15px;
   align-items: center;
   font-size: 16px;
-  color: ${props => props.theme.colors.bodyTextExtraLight};
+  color: var(--color_body-text--light);
   font-family: var(--font_heading);
 
   img {
@@ -28,7 +28,7 @@ export const BlogMeta = styled.div`
   }
 
   .author {
-    color: ${props => props.theme.colors.bodyText};
+    color: var(--color_body-text);
     font-weight: 600;
   }
 `

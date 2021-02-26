@@ -3,7 +3,7 @@ import { Fonts } from '../fonts/fonts'
 
 const GlobalStyle = createGlobalStyle`
 
-  :root {
+:root {
     /* colors */
     --color_red: #FC0055;
     --color_blue: #56CBF9;
@@ -14,6 +14,15 @@ const GlobalStyle = createGlobalStyle`
     --color_text--light: #b4b9be;
     --color_text--base: #353839;
     --color_text--heading: #00171f;
+
+    /* theme light */
+    --color_background: #fbf7f2;
+    --color_body-text: #5d6770;
+    --color_body-text--light: #b4b9be;
+    --color_heading-text: #00171f;
+    --color_link: rgba(136, 221, 255, 0.5);
+    --color_border: rgba(0, 0, 0, 0.15);
+    --color_dark-block: #353839;
 
     /* fonts */
     --font-size__extra-big-ass: 5.16rem;
@@ -28,23 +37,28 @@ const GlobalStyle = createGlobalStyle`
     --font-size__small: 0.833rem;
   }
 
-  ${Fonts}
-
-  html {
-    background-color: ${props => props.theme.colors.background};
+  .dark {
+    --color_background: #2c2836;
+    --color_body-text: #f3f1eb;
+    --color_body-text--light: #fbf7f2;
+    --color_heading-text: #fbf7f2;
+    --color_link: rgba(136, 221, 255, 0.5);
+    --color_border: rgba(255, 255, 255, 0.15);
   }
 
+  ${Fonts}
+
   body {
-    background-color: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.bodyText};
+    background-color: var(--color_background);
+    color: var(--color_body-text);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   h1, h2, h3, h4, h5 {
-    color: ${props => props.theme.colors.headingText};
+    color: var(--color_heading-text);
     font-weight: 900;
     line-height: 1.3;
     margin: 3rem 0 1.38rem;
@@ -83,31 +97,8 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${props => props.theme.colors.bodyText};
+    color: var(--color_body-text);
   }
-
-  /* main a {
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-
-    &::before {
-      content: "";
-      width: 100%;
-      height: 4px;
-      background: ${props => props.theme.colors.link};
-      position: absolute;
-      bottom: 3px;
-      right: 0;
-      left: 0;
-      z-index: -1;
-      transition: height 0.2s ease;
-    }
-
-    &:hover::before {
-      height: calc( 100% - 8px );
-    }
-  } */
 
   blockquote {
     border-left: 5px solid #e863a6;
@@ -122,43 +113,6 @@ const GlobalStyle = createGlobalStyle`
   .gatsby-highlight {
     position: relative;
   }
-
-  /* code {
-
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 5px 10px;
-      border-radius: 0.2em 0 0.3em 0;
-      color: #121212;
-      text-shadow: none;
-    }
-
-    &.language- {
-      &css::before {
-        content: "css";
-        background: #ff79c6;
-      }
-      &html::before {
-        content: "html";
-        background: #88ddff;
-      }
-      &js::before {
-        content: "js";
-        background: #f7df1e;
-      }
-      &php::before {
-        content: "php";
-        background: #9192ff;
-      }
-
-      &jsx::before {
-        content: "jsx";
-        background: #E7F45E;
-      }
-    }
-  } */
 
   @media (max-width: 899px) {
     pre[class*=language-] {

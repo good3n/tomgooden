@@ -2,11 +2,9 @@ import React from 'react'
 import { func, string } from 'prop-types'
 import { Toggle } from './ThemeToggle.styles'
 
-const ThemeToggle = props => {
-  const { theme, toggleTheme } = props
-  const isLight = theme === 'light'
+const ThemeToggle = ({ theme, toggleTheme }) => {
   return (
-    <Toggle onClick={toggleTheme} className={isLight ? 'light' : 'dark'}>
+    <Toggle onClick={toggleTheme} className={theme}>
       <svg
         className="light"
         xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +24,7 @@ const ThemeToggle = props => {
 }
 
 ThemeToggle.propTypes = {
-  theme: string.isRequired,
+  theme: string,
   toggleTheme: func.isRequired,
 }
 

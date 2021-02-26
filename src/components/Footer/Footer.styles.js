@@ -4,12 +4,12 @@ export const StyledFooter = styled.footer`
   margin: 50px auto;
   text-align: center;
   font-size: var(--font-size__small);
-  color: ${props => props.theme.colors.bodyTextLight};
+  color: var(--color_body-text--light);
   position: relative;
 
   a {
     display: inline-block;
-    color: ${props => props.theme.colors.bodyTextLight};
+    color: var(--color_body-text--light);
   }
 
   svg {
@@ -17,7 +17,7 @@ export const StyledFooter = styled.footer`
     height: 24px;
 
     path {
-      fill: ${props => props.theme.colors.bodyTextLight};
+      fill: var(--color_body-text--light);
     }
   }
 

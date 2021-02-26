@@ -48,7 +48,7 @@ export const Nav = styled.nav`
   }
 
   a {
-    color: ${props => props.theme.colors.headingText};
+    color: var(--color_heading-text);
 
     @media (max-width: 899px) {
       color: #fff;

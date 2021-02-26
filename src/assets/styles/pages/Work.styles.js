@@ -8,7 +8,7 @@ export const Work = styled.div`
     &:after {
       content: '';
       position: fixed;
-      background-color: ${props => props.theme.colors.background};
+      background-color: var(--color_background);
       top: 15px;
       right: 15px;
       bottom: 15px;
@@ -45,7 +45,7 @@ export const Work = styled.div`
 
   p {
     font-weight: 500;
-    color: ${props => props.theme.colors.headingText};
+    color: var(--color_heading-text);
   }
 
   ul {
@@ -53,7 +53,7 @@ export const Work = styled.div`
     padding: 0;
     font-weight: bold;
     font-size: var(--font-size__h4);
-    color: ${props => props.theme.colors.headingText};
+    color: var(--color_heading-text);
   }
 
   li {

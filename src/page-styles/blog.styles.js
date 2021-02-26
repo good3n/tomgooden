@@ -37,7 +37,7 @@ export const Grid = styled.div`
 
     .meta {
       grid-template-columns: 1fr;
-      color: ${props => props.theme.colors.bodyTextExtraLight};
+      color: var(--color_body-text--light);
 
       img,
       .author {

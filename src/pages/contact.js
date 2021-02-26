@@ -22,7 +22,7 @@ const Contact = styled.div`
     }
   }
 
-  .grid {
+  form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -85,11 +85,13 @@ const Contact = styled.div`
   }
 
   button {
+    grid-column: 2 / 3;
     color: #fff;
     padding: 15px 30px;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 3px;
+    text-align: center;
     font-size: var(--font-size__small);
     background-color: var(--color_red);
     border: none;
@@ -97,6 +99,12 @@ const Contact = styled.div`
     margin: 30px 0 0 auto;
     outline: 0;
     cursor: pointer;
+
+    @media (max-width: 600px) {
+      grid-column: 1 / 2;
+      margin-left: 0;
+      display: block;
+    }
   }
 `
 
@@ -110,69 +118,68 @@ const ContactPage = () => (
         drop a line, shoot me a message via the contact form below.
       </p>
       <form
-        netlify
-        name="contact"
         method="POST"
         netlify-honeypot="bot-field"
+        data-netlify="true"
         action="/thanks"
+        name="contact"
       >
-        <input type="hidden" name="bot-field" placeholder="Phone" />
         <input type="hidden" name="form-name" value="contact" />
-        <div className="grid">
-          <div>
-            <label>
-              Your name{' '}
-              <span>
-                <input type="text" name="name" required />
-              </span>
-            </label>
-          </div>
-          <div>
-            <label>
-              Email{' '}
-              <span>
-                <input type="email" name="email" required />
-              </span>
-            </label>
-          </div>
-          <div>
-            <label>
-              What brings you here?
-              <span>
-                <select name="reason" required>
-                  <option value="newdesign">New website design</option>
-                  <option value="redesign">Current website redesign</option>
-                  <option value="webapp">Custom web application</option>
-                  <option value="consulting">Consulting</option>
-                  <option value="hello">Just saying hey!</option>
-                </select>
-              </span>
-            </label>
-          </div>
-          <div>
-            <label>
-              What's your budget?
-              <span>
-                <select name="budget" required>
-                  <option value="2k-5k">$2,500-$5,000</option>
-                  <option value="5k-7500">$5,000-$7,500</option>
-                  <option value="7500-10k">$7,500-$10,000</option>
-                  <option value="10k-plus">$10,000+</option>
-                </select>
-              </span>
-            </label>
-          </div>
-          <div>
-            <label>
-              Additional details{' '}
-              <span>
-                <textarea
-                  name="message"
-                  placeholder="Current website link, current pain-points, etc"
-                ></textarea>
-              </span>
-            </label>
-          </div>
+        <input type="hidden" name="bot-field" placeholder="Phone" />
+
+        <div>
+          <label>
+            Your name{' '}
+            <span>
+              <input type="text" name="name" required />
+            </span>
+          </label>
+        </div>
+        <div>
+          <label>
+            Email{' '}
+            <span>
+              <input type="email" name="email" required />
+            </span>
+          </label>
+        </div>
+        <div>
+          <label>
+            What brings you here?
+            <span>
+              <select name="reason" required>
+                <option value="newdesign">New website design</option>
+                <option value="redesign">Current website redesign</option>
+                <option value="webapp">Custom web application</option>
+                <option value="consulting">Consulting</option>
+                <option value="hello">Just saying hey!</option>
+              </select>
+            </span>
+          </label>
+        </div>
+        <div>
+          <label>
+            What's your budget?
+            <span>
+              <select name="budget" required>
+                <option value="2k-5k">$2,500-$5,000</option>
+                <option value="5k-7500">$5,000-$7,500</option>
+                <option value="7500-10k">$7,500-$10,000</option>
+                <option value="10k-plus">$10,000+</option>
+              </select>
+            </span>
+          </label>
+        </div>
+        <div>
+          <label>
+            Additional details{' '}
+            <span>
+              <textarea
+                name="message"
+                placeholder="Current website link, current pain-points, etc"
+              ></textarea>
+            </span>
+          </label>
         </div>
         <button type="submit">Send</button>
       </form>

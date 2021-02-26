@@ -30,7 +30,6 @@ const WorkPage = () => {
   }
 
   const red = 'rgb(252, 0, 85)'
-  const yellow = 'rgb(255, 234, 159)'
   const blue = 'rgb(86, 203, 249)'
   const green = 'rgb(6, 214, 160)'
 

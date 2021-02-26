@@ -108,83 +108,85 @@ const Contact = styled.div`
   }
 `
 
-const ContactPage = () => (
-  <div className="container">
-    <Contact>
-      <SEO title="Contact" />
-      <h1>Get in touch</h1>
-      <p>
-        Whether it’s a new project, consulting inquiries, or you’d just like to
-        drop a line, shoot me a message via the contact form below.
-      </p>
-      <form
-        method="POST"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
-        action="/thanks"
-        name="contact"
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="hidden" name="bot-field" placeholder="Phone" />
+const ContactPage = () => {
+  return (
+    <div className="container">
+      <Contact>
+        <SEO title="Contact" />
+        <h1>Get in touch</h1>
+        <p>
+          Whether it’s a new project, consulting inquiries, or you’d just like
+          to drop a line, shoot me a message via the contact form below.
+        </p>
+        <form
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          action="/thanks"
+          name="tg-contact"
+        >
+          <input name="form-name" type="hidden" value="tg-contact" />
+          <input name="bot-field" type="hidden" placeholder="Phone" />
 
-        <div>
-          <label>
-            Your name{' '}
-            <span>
-              <input type="text" name="name" required />
-            </span>
-          </label>
-        </div>
-        <div>
-          <label>
-            Email{' '}
-            <span>
-              <input type="email" name="email" required />
-            </span>
-          </label>
-        </div>
-        <div>
-          <label>
-            What brings you here?
-            <span>
-              <select name="reason" required>
-                <option value="newdesign">New website design</option>
-                <option value="redesign">Current website redesign</option>
-                <option value="webapp">Custom web application</option>
-                <option value="consulting">Consulting</option>
-                <option value="hello">Just saying hey!</option>
-              </select>
-            </span>
-          </label>
-        </div>
-        <div>
-          <label>
-            What's your budget?
-            <span>
-              <select name="budget" required>
-                <option value="2k-5k">$2,500-$5,000</option>
-                <option value="5k-7500">$5,000-$7,500</option>
-                <option value="7500-10k">$7,500-$10,000</option>
-                <option value="10k-plus">$10,000+</option>
-              </select>
-            </span>
-          </label>
-        </div>
-        <div>
-          <label>
-            Additional details{' '}
-            <span>
-              <textarea
-                name="message"
-                placeholder="Current website link, current pain-points, etc"
-              ></textarea>
-            </span>
-          </label>
-        </div>
-        <button type="submit">Send</button>
-      </form>
-    </Contact>
-  </div>
-)
+          <div>
+            <label>
+              Your name{' '}
+              <span>
+                <input name="name" type="text" required />
+              </span>
+            </label>
+          </div>
+          <div>
+            <label>
+              Email{' '}
+              <span>
+                <input name="email" type="email" required />
+              </span>
+            </label>
+          </div>
+          <div>
+            <label>
+              What brings you here?
+              <span>
+                <select name="reason" required>
+                  <option value="newdesign">New website design</option>
+                  <option value="redesign">Current website redesign</option>
+                  <option value="webapp">Custom web application</option>
+                  <option value="consulting">Consulting</option>
+                  <option value="hello">Just saying hey!</option>
+                </select>
+              </span>
+            </label>
+          </div>
+          <div>
+            <label>
+              What's your budget?
+              <span>
+                <select name="budget" required>
+                  <option value="2k-5k">$2,500-$5,000</option>
+                  <option value="5k-7500">$5,000-$7,500</option>
+                  <option value="7500-10k">$7,500-$10,000</option>
+                  <option value="10k-plus">$10,000+</option>
+                </select>
+              </span>
+            </label>
+          </div>
+          <div>
+            <label>
+              Additional details{' '}
+              <span>
+                <textarea
+                  name="message"
+                  placeholder="Current website link, current pain-points, etc"
+                ></textarea>
+              </span>
+            </label>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </Contact>
+    </div>
+  )
+}
 
 export default ContactPage

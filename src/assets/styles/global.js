@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
     --color_text--heading: #00171f;
 
     /* fonts */
-
     --font-size__extra-big-ass: 5.16rem;
     --font-size__big-ass: 3.583rem;
     --font-size__medium-ass: 2.488rem;

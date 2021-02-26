@@ -123,32 +123,32 @@ const ContactPage = () => {
           netlify-honeypot="bot-field"
           data-netlify="true"
           action="/thanks"
-          name="tg-contact"
+          name="contact"
         >
-          <input name="form-name" type="hidden" value="tg-contact" />
+          <input name="form-name" type="hidden" value="contact" />
           <input name="bot-field" type="hidden" placeholder="Phone" />
 
           <div>
-            <label>
+            <label labelFor="name">
               Your name{' '}
               <span>
-                <input name="name" type="text" required />
+                <input id="name" name="name" type="text" required />
               </span>
             </label>
           </div>
           <div>
-            <label>
+            <label labelFor="email">
               Email{' '}
               <span>
-                <input name="email" type="email" required />
+                <input id="email" name="email" type="email" required />
               </span>
             </label>
           </div>
           <div>
-            <label>
+            <label labelFor="reason">
               What brings you here?
               <span>
-                <select name="reason" required>
+                <select id="reason" name="reason" required>
                   <option value="newdesign">New website design</option>
                   <option value="redesign">Current website redesign</option>
                   <option value="webapp">Custom web application</option>
@@ -159,10 +159,10 @@ const ContactPage = () => {
             </label>
           </div>
           <div>
-            <label>
+            <label labelFor="budget">
               What's your budget?
               <span>
-                <select name="budget" required>
+                <select id="budget" name="budget" required>
                   <option value="2k-5k">$2,500-$5,000</option>
                   <option value="5k-7500">$5,000-$7,500</option>
                   <option value="7500-10k">$7,500-$10,000</option>
@@ -172,10 +172,11 @@ const ContactPage = () => {
             </label>
           </div>
           <div>
-            <label>
+            <label labelFor="message">
               Additional details{' '}
               <span>
                 <textarea
+                  id="message"
                   name="message"
                   placeholder="Current website link, current pain-points, etc"
                 ></textarea>

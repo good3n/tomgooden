@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
           <span className="text">
             <ReactRotatingText
               items={['storyteller', 'creative', 'strategist', 'thing maker']}
-              typingInterval="100"
+              typingInterval={100}
             />
           </span>
         </h1>

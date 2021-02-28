@@ -44,6 +44,7 @@ const GlobalStyle = createGlobalStyle`
     --color_heading-text: #fbf7f2;
     --color_link: rgba(136, 221, 255, 0.5);
     --color_border: rgba(255, 255, 255, 0.15);
+    --color_dark-block: var(--color_background);
   }
 
   ${Fonts}

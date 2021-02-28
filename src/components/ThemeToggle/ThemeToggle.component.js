@@ -3,6 +3,7 @@ import { func, string } from 'prop-types'
 import { Toggle } from './ThemeToggle.styles'
 
 const ThemeToggle = ({ theme, toggleTheme }) => {
+  theme = theme ? `dark` : `light`
   return (
     <Toggle onClick={toggleTheme} className={theme}>
       <svg

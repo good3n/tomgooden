@@ -16,12 +16,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve(`./src/components/layout`),
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-layout`,
+    //   options: {
+    //     component: require.resolve(`./src/components/layout`),
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,8 +44,9 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -72,7 +73,6 @@ module.exports = {
         // Plugins configs
         plugins: [
           `gatsby-remark-relative-images`,
-          `gatsby-remark-reading-time`,
           `gatsby-remark-check-links`,
           {
             resolve: 'gatsby-remark-external-links',
@@ -106,20 +106,20 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    {
-      resolve: `gatsby-plugin-advanced-sitemap`,
-      options: {
-        exclude: [
-          `/dev-404-page`,
-          `/404`,
-          `/404.html`,
-          `/offline-plugin-app-shell-fallback`,
-          /(\/)?hash-\S*/, // you can also pass valid RegExp to exclude internal tags for example
-        ],
-        createLinkInHead: true, // optional: create a link in the `<head>` of your site
-        addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-advanced-sitemap`,
+    //   options: {
+    //     exclude: [
+    //       `/dev-404-page`,
+    //       `/404`,
+    //       `/404.html`,
+    //       `/offline-plugin-app-shell-fallback`,
+    //       /(\/)?hash-\S*/, // you can also pass valid RegExp to exclude internal tags for example
+    //     ],
+    //     createLinkInHead: true, // optional: create a link in the `<head>` of your site
+    //     addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

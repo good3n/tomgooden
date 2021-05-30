@@ -7,8 +7,12 @@ export const StyledHeader = styled.header`
   position: relative;
   z-index: 998;
 
+  @media (max-width: 1199px) {
+    padding: 50px 90px;
+  }
+
   @media (max-width: 899px) {
-    padding: 50px;
+    padding: 50px 30px;
   }
 
   @media (max-width: 600px) {

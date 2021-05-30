@@ -7,7 +7,7 @@ export const Nav = styled.nav`
 
   @media (max-width: 899px) {
     order: 3;
-    margin-left: 20px;
+    margin-left: auto;
   }
 
   ul {

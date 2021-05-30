@@ -3,11 +3,9 @@ import styled from 'styled-components'
 export const StyledWork = styled.div`
   position: relative;
   z-index: 10;
-  padding: 100px 0 200px;
+  padding-bottom: 200px;
 
   @media (max-width: 899px) {
-    padding-top: 50px;
-
     .container {
       padding-right: 50px;
       padding-left: 50px;

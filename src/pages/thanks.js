@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import SEO from '../components/seo'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 import styled from 'styled-components'
 import cobraKai from '../assets/images/send-it-to-the-internet.gif'
 
@@ -24,8 +25,8 @@ const Thanks = styled.div`
 `
 
 const ThanksPage = ({ data }) => (
-  <>
-    <SEO title="Thank you!" />
+  <Layout>
+    <Seo title="Thank you!" />
     <Thanks className="container">
       <h1>Sent!</h1>
       <p>
@@ -56,7 +57,7 @@ const ThanksPage = ({ data }) => (
           <li>Backpack</li>
         </ul> */}
     </Thanks>
-  </>
+  </Layout>
 )
 
 export default ThanksPage

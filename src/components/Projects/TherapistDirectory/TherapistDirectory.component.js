@@ -1,19 +1,15 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { StyledWork, MainImage } from './TherapistDirectory.styles'
-import { ListItem } from '../../../pages/work'
+import { getImage } from 'gatsby-plugin-image'
+import { MainImage } from '../../../assets/styles/pages/Work.styles'
+import { StyledWork } from './TherapistDirectory.styles'
+import { ListItem } from '../../../utils/idk'
 
-const TherapistDirectory = ({
-  className,
-  dataBackgroundColor,
-  dataBackgroundColorTwo,
-}) => {
+const TherapistDirectory = () => {
   const data = useStaticQuery(graphql`
     fragment workTwoImage on File {
       childImageSharp {
-        fluid(maxWidth: 900, quality: 90) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
     query {
@@ -27,11 +23,10 @@ const TherapistDirectory = ({
     }
   `)
 
+  const image = getImage(data.image1)
+
   return (
-    <StyledWork
-      className={className}
-      data-background-color={dataBackgroundColor}
-    >
+    <StyledWork>
       <div className="container">
         <div className="grid">
           <div>
@@ -52,9 +47,11 @@ const TherapistDirectory = ({
           </div>
           <div>
             <MainImage
-              fluid={data.image1.childImageSharp.fluid}
-              imgStyle={{ objectFit: `cover` }}
+              image={image}
               alt="Tom Gooden GLPG Therapist Directory Design Laptop"
+              objectFit="cover"
+              objectPosition="50% 50%"
+              style={{ maxWidth: `1100px` }}
             />
           </div>
         </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import SEO from '../components/seo'
+// import { StaticImage } from 'gatsby-plugin-image'
+import Seo from '../components/Seo'
+import Layout from '../components/Layout'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -35,12 +37,13 @@ const Wrapper = styled.div`
 `
 
 const NotFoundPage = () => (
-  <>
-    <SEO title="404 Error - Page Not Found" />
+  <Layout>
+    <Seo title="404 Error - Page Not Found" />
     <Wrapper>
       <div>
+        {/* <StaticImage src="../images/404.png" alt="404 not found" /> */}
         <h1>404</h1>
-        <p>Insert corny semi-creative 404 page text here. ¯\_(ツ)_/¯</p>
+        <p>Insert corny semi-creative 404 page text here. ¯\_(ツ)_/¯ !</p>
         <Link
           to="/"
           style={{
@@ -61,7 +64,7 @@ const NotFoundPage = () => (
         </Link>
       </div>
     </Wrapper>
-  </>
+  </Layout>
 )
 
 export default NotFoundPage

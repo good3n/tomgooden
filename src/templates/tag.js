@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import { PostTags } from '../components/PostTags'
 
@@ -83,10 +83,12 @@ const Tags = ({ pageContext, data }) => {
                 tags,
                 featuredImage,
               } = node.frontmatter
+              const image = getImage(featuredImage)
               return (
                 <div key={path}>
                   <Link to={path}>
-                    <Img sizes={featuredImage.childImageSharp.sizes} />
+                    {/* maxwidth 830 */}
+                    <GatsbyImage image={image} alt="" />
                     <h2>{title}</h2>
                   </Link>
                   <PostMeta>
@@ -145,9 +147,11 @@ export const pageQuery = graphql`
             author
             featuredImage {
               childImageSharp {
-                sizes(maxWidth: 830, quality: 90) {
-                  ...GatsbyImageSharpSizes
-                }
+                gatsbyImageData(
+                  width: 200
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }

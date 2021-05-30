@@ -2,9 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Navigation } from '../Navigation'
 import { StyledHeader } from './Header.styles'
-import { ThemeToggle } from '../../components/ThemeToggle'
 
-const Header = props => (
+const Header = () => (
   <StyledHeader>
     <div>
       <Link to="/">
@@ -30,7 +29,6 @@ const Header = props => (
       </Link>
     </div>
     <Navigation />
-    <ThemeToggle theme={props.theme} toggleTheme={props.toggleTheme} />
   </StyledHeader>
 )
 

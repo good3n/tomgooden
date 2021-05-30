@@ -37,16 +37,6 @@ const GlobalStyle = createGlobalStyle`
     --font-size__small: 0.833rem;
   }
 
-  .dark {
-    --color_background: #2c2836;
-    --color_body-text: #f3f1eb;
-    --color_body-text--light: #fbf7f2;
-    --color_heading-text: #fbf7f2;
-    --color_link: rgba(136, 221, 255, 0.5);
-    --color_border: rgba(255, 255, 255, 0.15);
-    --color_dark-block: var(--color_background);
-  }
-
   ${Fonts}
 
   body {
@@ -99,6 +89,15 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: var(--color_body-text);
+  }
+
+  button,
+  .button,
+  a.button {
+    background: var(--color_red);
+    color: #fff;
+    padding: 15px 40px;
+    font-weight: 700;
   }
 
   blockquote {

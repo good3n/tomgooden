@@ -1,7 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import SEO from '../components/seo'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 import { PostTags } from '../components/PostTags'
 import { Title, PostMeta, Content } from '../page-styles/blogPost.styles'
 
@@ -10,47 +11,47 @@ export default function Template({ data }) {
 
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-  const metaImagePath = frontmatter.featuredImage.childImageSharp.sizes.src
+  // const metaImagePath = frontmatter.featuredImage.childImageSharp.sizes.src
+  const featuredImage = getImage(frontmatter.featuredImage)
+  const avatar = getImage(data.placeholderImage)
 
   return (
-    <div className="container" slug={data.markdownRemark.fields.slug}>
-      <SEO
-        title={frontmatter.title}
-        image={metaImagePath}
-        description={frontmatter.description}
-      />
-      <div className="blog-post">
-        <Img
-          sizes={frontmatter.featuredImage.childImageSharp.sizes}
-          style={{ marginBottom: `20px` }}
+    <Layout>
+      {/* <div className="container" slug={data.markdownRemark.fields.slug}> */}
+      <div className="container">
+        <Seo
+          title={frontmatter.title}
+          // image={metaImagePath}
+          description={frontmatter.description}
         />
-        <Title>{frontmatter.title}</Title>
-        <PostMeta>
-          <Img
-            fluid={data.placeholderImage.childImageSharp.fluid}
-            style={{
-              width: `60px`,
-              borderRadius: `60px`,
-            }}
+        <div className="blog-post">
+          {/* maxwidth 830px */}
+          {/* margin-bottom 20px */}
+          <GatsbyImage image={featuredImage} alt="" />
+
+          <Title>{frontmatter.title}</Title>
+          <PostMeta>
+            {/* maxwidth 60px - width 60px - borderradius 60px */}
+            <GatsbyImage image={avatar} alt="" />
+            <div>
+              <span className="post-author">Tom Gooden</span>
+              <span className="post-date">
+                {frontmatter.date}{' '}
+                <span style={{ margin: `0 5px` }}>&middot;</span>
+              </span>
+              <span className="read-time">
+                {/* {data.markdownRemark.fields.readingTime.text} */}
+              </span>
+              <PostTags tags={frontmatter.tags} />
+            </div>
+          </PostMeta>
+          <Content
+            className={`blog-post-content`}
+            dangerouslySetInnerHTML={{ __html: html }}
           />
-          <div>
-            <span className="post-author">Tom Gooden</span>
-            <span className="post-date">
-              {frontmatter.date}{' '}
-              <span style={{ margin: `0 5px` }}>&middot;</span>
-            </span>
-            <span className="read-time">
-              {data.markdownRemark.fields.readingTime.text}
-            </span>
-            <PostTags tags={frontmatter.tags} />
-          </div>
-        </PostMeta>
-        <Content
-          className={`blog-post-content`}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 
@@ -58,9 +59,7 @@ export const pageQuery = graphql`
   query($path: String!) {
     placeholderImage: file(relativePath: { eq: "avatar-tom-gooden.png" }) {
       childImageSharp {
-        fluid(maxWidth: 60, quality: 70) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
@@ -74,16 +73,8 @@ export const pageQuery = graphql`
         description
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 830, quality: 90) {
-              ...GatsbyImageSharpSizes
-              src
-            }
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
-        }
-      }
-      fields {
-        readingTime {
-          text
         }
       }
     }

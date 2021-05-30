@@ -1,40 +1,15 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-import { useSpring, animated } from 'react-spring'
-import SEO from '../components/seo'
+import Seo from '../components/Seo'
 import ReactRotatingText from 'react-rotating-text'
-import { Hero, Services, Roadmap, Cta } from '../page-styles/index.styles'
+import Layout from '../components/Layout'
+import { Hero, Services } from '../page-styles/index.styles'
+import { ProjectRoadmap } from '../components/ProjectRoadmap'
+import { Cta } from '../components/Cta'
 
-export const data = graphql`
-  query {
-    file(relativePath: { eq: "border.png" }) {
-      childImageSharp {
-        fixed(width: 1300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
-
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1.1,
-]
-const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
-
-const IndexPage = ({ data }) => {
-  const [props, set] = useSpring(() => ({
-    xys: [0, 0, 1],
-    config: { mass: 3, tension: 350, friction: 40 },
-  }))
-
+const IndexPage = () => {
   return (
-    <>
-      <SEO title="Web Developer + Designer" />
+    <Layout>
+      <Seo title="Web Developer + Designer" />
       <Hero className="container">
         <h1>
           <span className="block">Digital</span>{' '}
@@ -156,68 +131,9 @@ const IndexPage = ({ data }) => {
           </p>
         </div>
       </Services>
-      <Roadmap>
-        <div>
-          <h2>Project roadmap</h2>
-          <p>
-            The "4 D's" as some call it, a common approach to deciphering the
-            lifecycle of a website or application project. However more often
-            than not, it's become lip service. That's not the case here.
-            Planning is everything. Without implementing and executing a real
-            plan of action, your project will begin to take on water.
-          </p>
-        </div>
-        <div className="container">
-          <Img fixed={data.file.childImageSharp.fixed} />
-          <ul>
-            <li>
-              <h3>1. Discover</h3>
-              <p>
-                To determine the real scope of the work, we'll work closely
-                together to learn your goals and pain points. This step is
-                important to ensure we identify what problems we will be
-                solving.
-              </p>
-            </li>
-            <li>
-              <h3>2. Design</h3>
-              <p>
-                Based on the findings of discovery, your project will be planned
-                from start to finish. Deliverable timelines will be established,
-                as well as initial concepts created.
-              </p>
-            </li>
-            <li>
-              <h3>3. Develop</h3>
-              <p>
-                With the planning done, it's time to start bringing these ideas
-                to life. Each project has a strict development process to ensure
-                quality is met.
-              </p>
-            </li>
-            <li>
-              <h3>4. Deploy</h3>
-              <p>
-                The final phase in the roadmap. Your application will be tested
-                and then deployed. This isn't the end of the overall journey
-                however. Digital tools require ongoing attention and care.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </Roadmap>
-      <Cta className="container">
-        <h2>Let's talk about your next project</h2>
-        <animated.div
-          className="card"
-          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-          onMouseLeave={() => set({ xys: [0, 0, 1] })}
-          style={{ transform: props.xys.interpolate(trans) }}
-        >
-          <Link to="/contact">Get in touch</Link>
-        </animated.div>
-      </Cta>
-    </>
+      <ProjectRoadmap />
+      <Cta />
+    </Layout>
   )
 }
 

@@ -1,14 +1,11 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 
 export const StyledWork = styled.div`
   position: relative;
   padding: 100px 0 200px;
-  margin-top: 100px;
 
   @media (max-width: 899px) {
     padding: 0 0 50px;
-    margin-top: 50px;
 
     .container {
       padding-right: 50px;
@@ -61,7 +58,8 @@ export const StyledWork = styled.div`
   }
 `
 
-export const MainImage = styled(Img)`
+// former gatsby-image
+export const MainImage = styled.div`
   max-width: 900px;
   margin: 0 auto;
   position: relative;

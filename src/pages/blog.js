@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
 import { PostLink } from '../components/PostLink'
 import AllPostTags from '../components/PostTags/AllPostTags.component'
 import { Grid, Block } from '../page-styles/blog.styles'
@@ -18,15 +19,11 @@ export const pageQuery = graphql`
             tags
             featuredImage {
               childImageSharp {
-                sizes(maxWidth: 830, quality: 90) {
-                  ...GatsbyImageSharpSizes
-                }
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
-            }
-          }
-          fields {
-            readingTime {
-              text
             }
           }
         }
@@ -44,16 +41,18 @@ const BlogListPage = ({
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   return (
-    <div className="container">
-      <h1>Blog</h1>
-      <Grid>
-        <Block>
-          <h3>Tags</h3>
-          <AllPostTags />
-        </Block>
-        {Posts}
-      </Grid>
-    </div>
+    <Layout>
+      <div className="container">
+        <h1>Blog</h1>
+        <Grid>
+          <Block>
+            <h3>Tags</h3>
+            <AllPostTags />
+          </Block>
+          {Posts}
+        </Grid>
+      </div>
+    </Layout>
   )
 }
 

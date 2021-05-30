@@ -1,16 +1,15 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { StyledWork } from './CheckInPortal.styles'
+import { getImage } from 'gatsby-plugin-image'
 import { MainImage } from '../../../assets/styles/pages/Work.styles'
-import { ListItem } from '../../../pages/work'
+import { StyledWork } from './CheckInPortal.styles'
+import { ListItem } from '../../../utils/idk'
 
-const CheckInPortal = ({ className, dataBackgroundColor }) => {
+const CheckInPortal = () => {
   const data = useStaticQuery(graphql`
     fragment workImage on File {
       childImageSharp {
-        fluid(maxWidth: 730, quality: 90) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
     query {
@@ -22,18 +21,19 @@ const CheckInPortal = ({ className, dataBackgroundColor }) => {
     }
   `)
 
+  const image = getImage(data.image1)
+
   return (
-    <StyledWork
-      className={className}
-      data-background-color={dataBackgroundColor}
-    >
+    <StyledWork>
       <div className="container red">
         <div className="grid">
           <div>
             <MainImage
-              fluid={data.image1.childImageSharp.fluid}
-              imgStyle={{ objectFit: `cover` }}
+              image={image}
               alt="Tom Gooden GLPG Check-in Portal Design iPad"
+              objectFit="cover"
+              objectPosition="50% 50%"
+              style={{ maxWidth: `730px` }}
             />
           </div>
           <div>

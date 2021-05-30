@@ -1,16 +1,31 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import SEO from '../components/seo'
+import { StaticImage } from 'gatsby-plugin-image'
+import Seo from '../components/Seo'
+import Layout from '../components/Layout'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+  padding-top: 100px;
+
+  @media (max-width: 899px) {
+    padding-top: 50px;
+  }
+
   h1 {
     padding-right: 180px;
 
     @media (max-width: 899px) {
       padding-right: 0;
       font-size: 1.5rem;
+    }
+
+    span {
+      display: block;
+      font-size: 6rem;
+
+      @media (max-width: 899px) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -59,18 +74,20 @@ const Wrapper = styled.div`
   }
 `
 
-const AboutPage = ({ data }) => (
-  <>
-    <SEO title="About" />
+const AboutPage = () => (
+  <Layout>
+    <Seo title="About" />
     <Wrapper className="container">
-      <h1>I'm Tom, and I build scalable custom web applications and sites.</h1>
+      <h1>
+        <span>I'm Tom</span>I build scalable custom web applications and sites.
+      </h1>
       <div className="image-wrapper">
-        <Img fluid={data.image1.childImageSharp.fluid} alt="" />
-        <Img fluid={data.image2.childImageSharp.fluid} alt="" />
-        <Img fluid={data.image3.childImageSharp.fluid} alt="" />
-        <Img fluid={data.image4.childImageSharp.fluid} alt="" />
-        <Img fluid={data.image5.childImageSharp.fluid} alt="" />
-        <Img fluid={data.image6.childImageSharp.fluid} alt="" />
+        <StaticImage src="../assets/images/about/about1.jpg" alt="" />
+        <StaticImage src="../assets/images/about/about2.jpg" alt="" />
+        <StaticImage src="../assets/images/about/about3.jpg" alt="" />
+        <StaticImage src="../assets/images/about/about4.jpg" alt="" />
+        <StaticImage src="../assets/images/about/about5.jpg" alt="" />
+        <StaticImage src="../assets/images/about/about6.jpg" alt="" />
       </div>
 
       <main>
@@ -86,23 +103,9 @@ const AboutPage = ({ data }) => (
         <p>
           I am the father of two daughters, which has shaped me in ways that I
           never would have imagined. During my downtime, I like to spend time
-          with my family and <del>dog</del> two dogs. When time permits, I also
+          with my family and <del>dog</del> dogs. When time permits, I also
           enjoy fishing, camping, reading, watching sports, fantasy football,
-          home automation, and expanding my development skill set. I enjoy
-          gaming, whether it's flying circles in <del>Stormwind</del> Orgrimmar,
-          or cooking up some Dubious Food{' '}
-          <Img
-            fluid={data.food.childImageSharp.fluid}
-            alt="Dubious Food"
-            style={{
-              width: `32px`,
-              display: `inline-block`,
-              position: `relative`,
-              top: `9px`,
-              margin: `0 5px 0 0`,
-            }}
-          />
-          on the Switch.
+          home automation, gaming, and expanding my development skill set.
         </p>
         <p>
           You can usually catch me hanging out in the{' '}
@@ -143,43 +146,7 @@ const AboutPage = ({ data }) => (
           <li>Backpack</li>
         </ul> */}
     </Wrapper>
-  </>
+  </Layout>
 )
 
 export default AboutPage
-
-export const aboutImage = graphql`
-  fragment aboutImage on File {
-    childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-
-export const query = graphql`
-  query {
-    image1: file(relativePath: { eq: "about/about1.jpg" }) {
-      ...aboutImage
-    }
-    image2: file(relativePath: { eq: "about/about2.jpg" }) {
-      ...aboutImage
-    }
-    image3: file(relativePath: { eq: "about/about3.jpg" }) {
-      ...aboutImage
-    }
-    image4: file(relativePath: { eq: "about/about4.jpg" }) {
-      ...aboutImage
-    }
-    image5: file(relativePath: { eq: "about/about5.jpg" }) {
-      ...aboutImage
-    }
-    image6: file(relativePath: { eq: "about/about6.jpg" }) {
-      ...aboutImage
-    }
-    food: file(relativePath: { eq: "about/dubious-food.png" }) {
-      ...aboutImage
-    }
-  }
-`

@@ -22,13 +22,15 @@ export const StyledFooter = styled.footer`
   }
 
   > div:first-of-type {
-    display: grid;
-    grid-template-columns: 24px 24px 24px;
-    gap: 20px;
+    display: flex;
     justify-content: center;
     margin-bottom: 15px;
 
-    a,
+    a {
+      display: block;
+      margin: 0 7px;
+    }
+
     img {
       display: block;
       margin: 0;

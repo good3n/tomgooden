@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
   margin-left: auto;
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 700;
 
   @media (max-width: 899px) {
     order: 3;
@@ -53,20 +52,25 @@ export const Nav = styled.nav`
       color: #fff;
       padding: 7px 0;
       display: block;
+    }
 
-      &.is-active {
-        position: relative;
+    &.is-active {
+      position: relative;
 
+      @media (min-width: 899px) {
         &::after {
           content: '';
-          width: 5px;
-          height: 100%;
-          background-color: red;
+          width: 100%;
+          height: 3px;
+          background-color: var(--color_red);
           position: absolute;
-          top: 0;
-          right: -30px;
+          top: calc(100% + 10px);
+          right: 0;
+          left: 0;
         }
+      }
 
+      @media (max-width: 899px) {
         &::before {
           content: '';
           width: calc(100% + 110px);
@@ -76,6 +80,16 @@ export const Nav = styled.nav`
           top: 0;
           left: -80px;
           z-index: -1;
+        }
+
+        &::after {
+          content: '';
+          width: 5px;
+          height: 100%;
+          background-color: var(--color_red);
+          position: absolute;
+          top: 0;
+          right: -30px;
         }
       }
     }

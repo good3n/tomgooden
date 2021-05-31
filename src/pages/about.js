@@ -44,7 +44,7 @@ const Wrapper = styled.div`
     }
 
     div {
-      background: #000;
+      background: var(--color_heading-text);
       min-height: 150px;
 
       @media (max-width: 1080px) {

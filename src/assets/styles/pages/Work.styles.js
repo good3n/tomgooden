@@ -25,6 +25,7 @@ export const Work = styled.div`
 
   h1 {
     font-size: var(--font-size__big-ass);
+    line-height: 1;
 
     @media (max-width: 1175px) {
       font-size: var(--font-size__medium-ass);
@@ -40,6 +41,7 @@ export const Work = styled.div`
       font-size: var(--font-size__h5);
       letter-spacing: 3px;
       font-weight: bold;
+      margin-bottom: 20px;
     }
   }
 

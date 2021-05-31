@@ -30,20 +30,20 @@ export const NotFound = styled.div`
     span {
       position: relative;
       display: inline-block;
-    }
 
-    span:nth-of-type(1) {
-      top: 30px;
-      transform: rotate(-20deg);
-    }
+      &:nth-of-type(1) {
+        top: 30px;
+        transform: rotate(-20deg);
+      }
 
-    span:nth-of-type(2) {
-      left: 20px;
-    }
+      &:nth-of-type(2) {
+        left: 20px;
+      }
 
-    span:nth-of-type(3) {
-      left: 50px;
-      transform: rotate(20deg);
+      &:nth-of-type(3) {
+        left: 50px;
+        transform: rotate(20deg);
+      }
     }
   }
 
@@ -57,8 +57,21 @@ export const NotFound = styled.div`
     z-index: 2;
     text-align: center;
 
-    &:nth-of-type(2) span {
-      background: var(--color_red);
+    &:nth-of-type(2) {
+      padding-left: 150px;
+      transform: rotate(2deg);
+      margin-top: -8px;
+
+      @media (max-width: 540px) {
+        padding-left: 0;
+        margin-top: 0;
+        transform: rotate(4deg);
+      }
+
+      span {
+        background: var(--color_red);
+        padding: 7px 30px;
+      }
     }
 
     span {
@@ -71,7 +84,6 @@ export const NotFound = styled.div`
     a {
       color: #fff;
       display: inline-block;
-      font-weight: 600;
     }
   }
 

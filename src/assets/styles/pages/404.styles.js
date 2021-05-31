@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 export const NotFound = styled.div`
   min-height: calc(100vh - 300px);
-  /* display: flex;
-  align-items: center; */
+  overflow: hidden;
 
   @media (max-width: 899px) {
     min-height: calc(100vh - 272px);

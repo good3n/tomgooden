@@ -25,10 +25,6 @@ export const StyledHeader = styled.header`
       position: relative;
       top: 5px;
 
-      @media (max-width: 600px) {
-        width: 100px;
-      }
-
       path {
         fill: var(--color_heading-text);
       }

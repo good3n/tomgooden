@@ -22,15 +22,14 @@ export const Nav = styled.nav`
     @media (max-width: 899px) {
       display: none;
       position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0, 23, 31, 0.95);
+      right: 20px;
+      bottom: 90px;
+      background: var(--color_heading-text);
       z-index: 998;
-      text-align: center;
-      padding: 150px 60px 100px;
-      font-size: var(--font-size__h3);
+      text-align: right;
+      padding: 20px 30px 20px 80px;
+      font-size: var(--font-size__h4);
+      border-radius: 30px 30px 0 30px;
 
       &.true {
         display: block;
@@ -43,7 +42,7 @@ export const Nav = styled.nav`
     margin: 0 40px 0 0;
 
     @media (max-width: 899px) {
-      margin: 0 0 20px;
+      margin: 5px 0;
     }
   }
 
@@ -52,32 +51,55 @@ export const Nav = styled.nav`
 
     @media (max-width: 899px) {
       color: #fff;
+      padding: 7px 0;
+      display: block;
+
+      &.is-active {
+        position: relative;
+
+        &::after {
+          content: '';
+          width: 5px;
+          height: 100%;
+          background-color: red;
+          position: absolute;
+          top: 0;
+          right: -30px;
+        }
+
+        &::before {
+          content: '';
+          width: calc(100% + 110px);
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.1);
+          position: absolute;
+          top: 0;
+          left: -80px;
+          z-index: -1;
+        }
+      }
     }
   }
 `
 
 export const NavToggle = styled.button`
   display: none;
-  background: var(--color_red);
+  background: var(--color_heading-text);
   border: none;
-  padding: 10px;
-  height: 44px;
-  width: 44px;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
   cursor: pointer;
   font-size: var(--font-size__base);
   outline: 0;
-  position: relative;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   z-index: 999;
+  padding: 0;
 
-  &.in-nav {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-
-    @media (max-width: 600px) {
-      top: 30px;
-      right: 30px;
-    }
+  &.true {
+    background: var(--color_red);
   }
 
   svg {
@@ -86,6 +108,8 @@ export const NavToggle = styled.button`
   }
 
   @media (max-width: 899px) {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `

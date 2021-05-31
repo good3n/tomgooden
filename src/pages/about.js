@@ -13,18 +13,19 @@ const Wrapper = styled.div`
 
   h1 {
     padding-right: 180px;
+    font-size: var(--font-size__h2);
 
     @media (max-width: 899px) {
       padding-right: 0;
-      font-size: 1.5rem;
+      font-size: var(--font-size__h3);
     }
 
     span {
       display: block;
-      font-size: 6rem;
+      font-size: var(--font-size__extra-big-ass);
 
       @media (max-width: 899px) {
-        font-size: 3rem;
+        font-size: var(--font-size__h1);
       }
     }
   }

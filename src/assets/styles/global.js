@@ -15,8 +15,8 @@ const GlobalStyle = createGlobalStyle`
     --color_text--base: #353839;
     --color_text--heading: #00171f;
 
-    /* theme light */
-    --color_background: #fbf7f2;
+    /* theme */
+    --color_background: #fff;
     --color_body-text: #5d6770;
     --color_body-text--light: #b4b9be;
     --color_heading-text: #00171f;
@@ -133,6 +133,10 @@ const GlobalStyle = createGlobalStyle`
     @media (max-width: 899px) {
       padding-right: 30px;
       padding-left: 30px;
+    }
+
+    &--skinny {
+      max-width: 1000px;
     }
   }
 `

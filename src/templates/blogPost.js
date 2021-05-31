@@ -18,7 +18,7 @@ export default function Template({ data }) {
   return (
     <Layout>
       {/* <div className="container" slug={data.markdownRemark.fields.slug}> */}
-      <div className="container">
+      <div className="container container--skinny">
         <Seo
           title={frontmatter.title}
           // image={metaImagePath}

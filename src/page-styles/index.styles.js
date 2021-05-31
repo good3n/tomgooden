@@ -5,7 +5,8 @@ export const Hero = styled.div`
   text-align: center;
 
   @media (max-width: 899px) {
-    margin: 5rem auto 7rem;
+    margin: 0;
+    padding: 7rem 30px;
   }
 
   h1 {
@@ -16,6 +17,7 @@ export const Hero = styled.div`
 
     @media (max-width: 899px) {
       font-size: var(--font-size__big-ass);
+      margin-bottom: 4rem;
     }
 
     span.block {
@@ -114,7 +116,7 @@ export const Services = styled.div`
     flex-wrap: wrap;
 
     @media (max-width: 899px) {
-      padding: 70px 60px;
+      padding: 70px 30px;
     }
 
     &:nth-of-type(1) {

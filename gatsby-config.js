@@ -100,20 +100,20 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-advanced-sitemap`,
-    //   options: {
-    //     exclude: [
-    //       `/dev-404-page`,
-    //       `/404`,
-    //       `/404.html`,
-    //       `/offline-plugin-app-shell-fallback`,
-    //       /(\/)?hash-\S*/, // you can also pass valid RegExp to exclude internal tags for example
-    //     ],
-    //     createLinkInHead: true, // optional: create a link in the `<head>` of your site
-    //     addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        exclude: [
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          `/offline-plugin-app-shell-fallback`,
+          /(\/)?hash-\S*/, // you can also pass valid RegExp to exclude internal tags for example
+        ],
+        createLinkInHead: true, // optional: create a link in the `<head>` of your site
+        addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

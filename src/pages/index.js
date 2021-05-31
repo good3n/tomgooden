@@ -2,7 +2,7 @@ import React from 'react'
 import Seo from '../components/Seo'
 import ReactRotatingText from 'react-rotating-text'
 import Layout from '../components/Layout'
-import { Hero, Services } from '../page-styles/index.styles'
+import { Hero, Services } from '../assets/styles/pages/Index.styles'
 import { ProjectRoadmap } from '../components/ProjectRoadmap'
 import { Cta } from '../components/Cta'
 
@@ -20,7 +20,10 @@ const IndexPage = () => {
             />
           </span>
         </h1>
-        <p>User-focused strategies and solutions for people and businesses.</p>
+        <p>
+          Making the web a better place by crafting custom websites and
+          applications for people and businesses.
+        </p>
       </Hero>
       <Services>
         <div>

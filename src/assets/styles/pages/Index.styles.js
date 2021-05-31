@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Hero = styled.div`
-  padding: 10rem 0 12rem;
+  padding: 9rem 10vw 10rem;
   text-align: center;
 
   @media (max-width: 899px) {

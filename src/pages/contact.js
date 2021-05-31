@@ -5,10 +5,13 @@ import styled from 'styled-components'
 
 const Contact = styled.div`
   margin: 100px 0;
-  padding: 0 200px;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 70px;
+  align-items: center;
 
   @media (max-width: 1175px) {
-    padding: 0;
+    display: block;
   }
 
   @media (max-width: 600px) {
@@ -20,6 +23,14 @@ const Contact = styled.div`
 
     @media (max-width: 600px) {
       font-size: var(--font-size__h1);
+    }
+
+    + p {
+      margin-bottom: 200px;
+
+      @media (max-width: 1175px) {
+        margin-bottom: 50px;
+      }
     }
   }
 
@@ -50,6 +61,9 @@ const Contact = styled.div`
   span {
     background: #fff;
     display: block;
+    position: relative;
+    background-color: #f5f8f9;
+    z-index: 1;
   }
 
   input,
@@ -68,6 +82,7 @@ const Contact = styled.div`
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    background: none;
   }
 
   input,
@@ -75,6 +90,18 @@ const Contact = styled.div`
     height: 60px;
     line-height: 60px;
     padding: 0 20px;
+  }
+
+  select + svg {
+    position: absolute;
+    right: 15px;
+    top: 17px;
+    width: 21px;
+    z-index: -1;
+
+    path {
+      fill: var(--color_blue);
+    }
   }
 
   textarea {
@@ -115,11 +142,13 @@ const ContactPage = () => {
       <div className="container">
         <Contact>
           <Seo title="Contact" />
-          <h1>Get in touch</h1>
-          <p>
-            Whether it’s a new project, consulting inquiries, or you’d just like
-            to drop a line, shoot me a message via the contact form below.
-          </p>
+          <div>
+            <h1>Get in touch</h1>
+            <p>
+              Whether it’s a new project, consulting inquiries, or you’d just
+              like to drop a line, shoot me a message via the contact form.
+            </p>
+          </div>
           <form
             method="POST"
             data-netlify="true"
@@ -157,6 +186,16 @@ const ContactPage = () => {
                     <option value="consulting">Consulting</option>
                     <option value="hello">Just saying hey!</option>
                   </select>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 21.825 21.825"
+                  >
+                    <defs />
+                    <path
+                      fill="#1e201d"
+                      d="M16.791 13.254a1.112 1.112 0 011.587 0 1.14 1.14 0 010 1.587l-6.65 6.651a1.14 1.14 0 01-.809.333c-.317 0-.603-.127-.81-.333l-6.65-6.651c-.444-.444-.444-1.143 0-1.587s1.143-.444 1.587 0l4.746 4.762V1.111A1.116 1.116 0 0110.918 0c.619 0 1.111.492 1.111 1.111v16.904l4.762-4.761z"
+                    />
+                  </svg>
                 </span>
               </label>
             </div>
@@ -170,6 +209,16 @@ const ContactPage = () => {
                     <option value="7500-10k">$7,500-$10,000</option>
                     <option value="10k-plus">$10,000+</option>
                   </select>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 21.825 21.825"
+                  >
+                    <defs />
+                    <path
+                      fill="#1e201d"
+                      d="M16.791 13.254a1.112 1.112 0 011.587 0 1.14 1.14 0 010 1.587l-6.65 6.651a1.14 1.14 0 01-.809.333c-.317 0-.603-.127-.81-.333l-6.65-6.651c-.444-.444-.444-1.143 0-1.587s1.143-.444 1.587 0l4.746 4.762V1.111A1.116 1.116 0 0110.918 0c.619 0 1.111.492 1.111 1.111v16.904l4.762-4.761z"
+                    />
+                  </svg>
                 </span>
               </label>
             </div>

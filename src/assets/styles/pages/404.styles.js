@@ -86,5 +86,10 @@ export const NotFound = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+
+    @media (max-width: 600px) {
+      right: -200px;
+      top: -50px;
+    }
   }
 `

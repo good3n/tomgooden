@@ -31,6 +31,10 @@ const Contact = styled.div`
       @media (max-width: 1175px) {
         margin-bottom: 50px;
       }
+
+      strong {
+        color: var(--color_heading-text);
+      }
     }
   }
 
@@ -145,8 +149,8 @@ const ContactPage = () => {
           <div>
             <h1>Get in touch</h1>
             <p>
-              Whether it’s a new project, consulting inquiries, or you’d just
-              like to drop a line, shoot me a message via the contact form.
+              Contact me today for a <strong>free quote</strong> on website and
+              custom application development services.
             </p>
           </div>
           <form
@@ -160,7 +164,7 @@ const ContactPage = () => {
             <input name="bot-field" type="hidden" placeholder="Phone" />
 
             <div>
-              <label labelfor="name">
+              <label labelFor="name">
                 Your name{' '}
                 <span>
                   <input id="name" name="name" type="text" required />
@@ -168,7 +172,7 @@ const ContactPage = () => {
               </label>
             </div>
             <div>
-              <label labelfor="email">
+              <label labelFor="email">
                 Email{' '}
                 <span>
                   <input id="email" name="email" type="email" required />
@@ -176,7 +180,7 @@ const ContactPage = () => {
               </label>
             </div>
             <div>
-              <label labelfor="reason">
+              <label labelFor="reason">
                 What brings you here?
                 <span>
                   <select id="reason" name="reason" required>
@@ -200,7 +204,7 @@ const ContactPage = () => {
               </label>
             </div>
             <div>
-              <label labelfor="budget">
+              <label labelFor="budget">
                 What's your budget?
                 <span>
                   <select id="budget" name="budget" required>
@@ -223,7 +227,7 @@ const ContactPage = () => {
               </label>
             </div>
             <div>
-              <label labelfor="message">
+              <label labelFor="message">
                 Additional details{' '}
                 <span>
                   <textarea

@@ -10,7 +10,24 @@ export const StyledCta = styled.div`
   }
 
   h2 {
-    margin-top: 0;
+    margin: 0 0 2rem;
+
+    span {
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        height: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        left: 0;
+        background-color: var(--color_yellow);
+        z-index: -1;
+      }
+    }
   }
 
   .card {

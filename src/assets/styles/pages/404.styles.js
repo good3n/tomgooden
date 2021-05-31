@@ -65,12 +65,12 @@ export const NotFound = styled.div`
       background: #000;
       color: #fff;
       padding: 10px 20px;
+      display: inline-block;
     }
 
     a {
       color: #fff;
       display: inline-block;
-      margin-top: 10px;
       font-weight: 600;
     }
   }

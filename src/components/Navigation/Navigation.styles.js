@@ -27,7 +27,7 @@ export const Nav = styled.nav`
       bottom: 0;
       left: 0;
       background: rgba(0, 23, 31, 0.95);
-      z-index: 999;
+      z-index: 998;
       text-align: center;
       padding: 150px 60px 100px;
       font-size: var(--font-size__h3);
@@ -66,6 +66,8 @@ export const NavToggle = styled.button`
   cursor: pointer;
   font-size: var(--font-size__base);
   outline: 0;
+  position: relative;
+  z-index: 999;
 
   &.in-nav {
     position: absolute;

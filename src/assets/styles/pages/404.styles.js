@@ -62,7 +62,7 @@ export const NotFound = styled.div`
     }
 
     span {
-      background: #000;
+      background: var(--color_heading-text);
       color: #fff;
       padding: 10px 20px;
       display: inline-block;

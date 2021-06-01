@@ -65,7 +65,7 @@ const UsesPage = () => {
                             ) : (
                               title
                             )}
-                            {description && <span> - {description}</span>}
+                            {description && <span>{description}</span>}
                           </li>
                         )
                       })}

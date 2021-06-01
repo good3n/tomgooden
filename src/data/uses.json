@@ -59,22 +59,22 @@
           "items": [
             {
               "title": "iTerm2",
-              "description": "",
+              "description": "Solid terminal replacement.",
               "link": "https://iterm2.com/"
             },
             {
               "title": "Alfred",
-              "description": "",
+              "description": "Spotlight replacement with workflows.",
               "link": "https://www.alfredapp.com/"
             },
             {
               "title": "Sizzy",
-              "description": "",
+              "description": "Cross-browser testing and development.",
               "link": "https://sizzy.co/"
             },
             {
               "title": "Bitwarden",
-              "description": "",
+              "description": "Password manager because ain't nobody got time for that.",
               "link": "https://bitwarden.com/"
             }
           ]
@@ -84,12 +84,12 @@
           "items": [
             {
               "title": "Figma",
-              "description": "",
+              "description": "Better than Sketch, imo.",
               "link": "https://www.figma.com/"
             },
             {
               "title": "SVGOMG",
-              "description": "",
+              "description": "I'd literally die without this. Optimizes SVG's.",
               "link": "https://jakearchibald.github.io/svgomg/"
             }
           ]
@@ -99,12 +99,12 @@
           "items": [
             {
               "title": "SEMrush",
-              "description": "",
+              "description": "SEO tool for ranking monitoring, etc.",
               "link": "https://www.semrush.com/"
             },
             {
               "title": "Screaming Frog",
-              "description": "",
+              "description": "Best crawler on the web.",
               "link": "https://www.screamingfrog.co.uk/seo-spider/"
             }
           ]
@@ -114,32 +114,32 @@
           "items": [
             {
               "title": "Github",
-              "description": "",
+              "description": "Version control.",
               "link": "https://github.com/"
             },
             {
               "title": "TravisCI",
-              "description": "",
+              "description": "Testing and CI/CD.",
               "link": "https://www.travis-ci.com/"
             },
             {
               "title": "Gatsby Cloud",
-              "description": "",
+              "description": "Building all the things.",
               "link": "https://www.gatsbyjs.com/products/cloud/"
             },
             {
               "title": "Netlify",
-              "description": "",
+              "description": "Hosting all the things.",
               "link": "https://www.netlify.com/"
             },
             {
               "title": "Sentry",
-              "description": "",
+              "description": "Tracks and reports bugs and errors.",
               "link": "https://sentry.io/"
             },
             {
               "title": "AWS S3 & Amplify",
-              "description": "",
+              "description": "So many tools that I get lost.",
               "link": "https://aws.amazon.com/"
             }
           ]
@@ -149,22 +149,27 @@
           "items": [
             {
               "title": "Ender 3",
-              "description": "Heavily modded",
+              "description": "Heavily modded I might add. See below.",
               "link": "https://smile.amazon.com/gp/product/B07BR3F9N6/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07BR3F9N6&linkCode=as2&tag=tgooden-20&linkId=acd0ba95f8fa59072a88b9d49b039e6a"
             },
             {
               "title": "BLTouch",
-              "description": "",
+              "description": "An auto mesh leveling sensor.",
               "link": "https://smile.amazon.com/gp/product/B076PQG1FF/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B076PQG1FF&linkCode=as2&tag=tgooden-20&linkId=b0f2493a144383ea43c8dd3de90c3a49"
             },
             {
               "title": "SKR Mini E3 V2",
-              "description": "",
+              "description": "A quiet board replacement.",
               "link": "https://smile.amazon.com/gp/product/B088CQJWRP/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B088CQJWRP&linkCode=as2&tag=tgooden-20&linkId=b60a50307a72b4e42eb9f9f85801a7c7"
             },
             {
+              "title": "TFT35 E3 V3.0 Touchscreen",
+              "description": "Much prettier than the stock display.",
+              "link": "https://smile.amazon.com/gp/product/B082YPF5YV/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B082YPF5YV&linkCode=as2&tag=tgooden-20&linkId=1f23162ed86361acc69e901408e32210"
+            },
+            {
               "title": "Ultimaker Cura",
-              "description": "",
+              "description": "Pretty great for free software. PrusaSlicer is another alternative.",
               "link": "https://ultimaker.com/software/ultimaker-cura"
             }
           ]
@@ -179,42 +184,42 @@
           "items": [
             {
               "title": "VSCode",
-              "description": "",
+              "description": "Pretty sure it's taken over as the king of IDE's.",
               "link": "https://code.visualstudio.com/"
             },
             {
               "title": "Dracula Theme",
-              "description": "",
+              "description": "I absolutely love this theme on everything.",
               "link": "https://draculatheme.com/"
             },
             {
               "title": "Operator Mono Font",
-              "description": "",
+              "description": "A premium alternative to Fira Code.",
               "link": "http://www.typography.com/fonts/operator/overview/"
             },
             {
               "title": "Better Comments",
-              "description": "",
+              "description": "Colors comments based on prefix.",
               "link": "https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments"
             },
             {
               "title": "Auto Rename Tag",
-              "description": "",
+              "description": "Super helpful but can also get you into trouble.",
               "link": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
             },
             {
               "title": "GitLens",
-              "description": "",
+              "description": "Really useful on large projects or working with teams.",
               "link": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens"
             },
             {
               "title": "Import Cost",
-              "description": "",
+              "description": "Shows the file size of imports.",
               "link": "https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost"
             },
             {
               "title": "Prettier",
-              "description": "",
+              "description": "I use the AirBnB standard.",
               "link": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
             },
             {
@@ -224,7 +229,7 @@
             },
             {
               "title": "Rainbow Brackets",
-              "description": "",
+              "description": "Makes it easier to identify bracket pairs.",
               "link": "https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets"
             }
           ]
@@ -234,12 +239,12 @@
           "items": [
             {
               "title": "GatsbyJS",
-              "description": "",
+              "description": "My go-to static site generator, like this website.",
               "link": "https://www.gatsbyjs.com/"
             },
             {
               "title": "NextJS",
-              "description": "",
+              "description": "My go-to for anything but static.",
               "link": "https://nextjs.org/"
             }
           ]
@@ -249,22 +254,22 @@
           "items": [
             {
               "title": "Underscores",
-              "description": "",
+              "description": "A nearly bare bones template generator.",
               "link": "https://underscores.me/"
             },
             {
               "title": "Laravel Valet",
-              "description": "",
+              "description": "A must for local WordPress development.",
               "link": "https://laravel.com/docs/8.x/valet"
             },
             {
               "title": "Advanced Custom Fields",
-              "description": "",
+              "description": "Create custom fields in WordPress. Extremely useful.",
               "link": "https://www.advancedcustomfields.com/pro/"
             },
             {
               "title": "WPGraphQL",
-              "description": "",
+              "description": "Great for headless WP. Turns your site into a GraphQL endpoint.",
               "link": "https://www.wpgraphql.com/"
             }
           ]
@@ -274,17 +279,17 @@
           "items": [
             {
               "title": "Home Assistant",
-              "description": "",
+              "description": "Set up and manage multiple custom automations.",
               "link": "https://www.home-assistant.io/"
             },
             {
               "title": "Wyze",
-              "description": "",
+              "description": "Super affordable awesome smart products.",
               "link": "https://wyze.com/"
             },
             {
               "title": "Raspberry Pi 4 Model B",
-              "description": "Multiple",
+              "description": "Use them for everything. From a DNS sinkhole to retro gaming console.",
               "link": "https://smile.amazon.com/gp/product/B07TC2BK1X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07TC2BK1X&linkCode=as2&tag=tgooden-20&linkId=9d6e90d7e08bb21b29526cd852dbe5f3"
             }
           ]
@@ -294,12 +299,12 @@
           "items": [
             {
               "title": "Rode PSA1 Boom Arm",
-              "description": "",
+              "description": "Expensive but no other arm does the trick.",
               "link": "https://smile.amazon.com/gp/product/B001D7UYBO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B001D7UYBO&linkCode=as2&tag=tgooden-20&linkId=093b6c0d61a068b4fb0da9ea7e975f9a"
             },
             {
               "title": "Nulaxy Laptop Stand",
-              "description": "",
+              "description": "Cheap laptop stand, looks ok.",
               "link": "https://smile.amazon.com/gp/product/B07P54RSPY/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07P54RSPY&linkCode=as2&tag=tgooden-20&linkId=6eb158d961ad94cc72a8b0727766778c"
             }
           ]

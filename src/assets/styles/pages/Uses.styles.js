@@ -30,6 +30,8 @@ export const StyledUses = styled.div`
 
     span {
       font-weight: normal;
+      display: block;
+      font-size: var(--font-size__small);
     }
 
     a {
@@ -105,6 +107,25 @@ export const StyledUses = styled.div`
       li {
         font-weight: 700;
         display: block;
+
+        span {
+          display: inline-block;
+          font-size: var(--font-size__base);
+
+          &::before {
+            content: '-';
+            margin: 0 7px;
+          }
+
+          @media (max-width: 899px) {
+            display: block;
+            font-size: var(--font-size__small);
+
+            &::before {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const StyledUses = styled.div`
+  margin-bottom: 100px;
+
   header {
     display: grid;
     grid-template-columns: 50% 1fr;
@@ -28,9 +30,6 @@ export const StyledUses = styled.div`
 
     span {
       font-weight: normal;
-      &::before {
-        content: ' - ';
-      }
     }
   }
 
@@ -72,10 +71,14 @@ export const StyledUses = styled.div`
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    column-gap: 50px;
 
     @media (max-width: 440px) {
       display: block;
+    }
+
+    > div:first-of-type {
+      grid-column: 1 / 3;
     }
 
     li {

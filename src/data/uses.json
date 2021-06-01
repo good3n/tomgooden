@@ -1,0 +1,310 @@
+{
+"data":
+  [
+    {
+      "column": 0,
+      "categories": [
+        {
+          "name": "Hardware",
+          "items": [
+            {
+              "title": "💻 MacBookPro 15\" 2015 and 15\" 2017",
+              "description": "2015 MBP is the best machine ever made, change my mind.",
+              "link": "https://mashable.com/article/rip-2015-15-inch-retina-macbook-pro/"
+            },
+            {
+              "title": "🖥 x2 Dell U2719D Monitor's",
+              "description": "In my experience, Dell's monitor quality is unmatched.",
+              "link": "https://smile.amazon.com/gp/product/B01D402Z28/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01D402Z28&linkCode=as2&tag=tgooden-20&linkId=383ca364fe780e6d2ae11e1a2104aaa7"
+            },
+            {
+              "title": "⌨️ Apple Magic Keyboard",
+              "description": "I enjoy the simplicity.",
+              "link": "https://smile.amazon.com/gp/product/B016QO64FI/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B016QO64FI&linkCode=as2&tag=tgooden-20&linkId=577a9630097a81b45c1a1301952f2fb7"
+            },
+            {
+              "title": "🖱 Apple Magic Mouse",
+              "description": "I still enjoy the simplicity.",
+              "link": "https://smile.amazon.com/gp/product/B016QO5YNG/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B016QO5YNG&linkCode=as2&tag=tgooden-20&linkId=a47a57e32da738ce52823fd86ec691f7"
+            },
+            {
+              "title": "🎤 Blue Yeti Microphone",
+              "description": "Not bad for a USB mic.",
+              "link": "https://smile.amazon.com/gp/product/B00N1YPXW2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00N1YPXW2&linkCode=as2&tag=tgooden-20&linkId=91ed94dc897efa77afc65e51b5950ee0"
+            },
+            {
+              "title": "🎥 Logitech C920 Pro HD Webcam",
+              "description": "Solid quality for less than a hundred bucks.",
+              "link": "https://smile.amazon.com/gp/product/B085TFF7M1/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B085TFF7M1&linkCode=as2&tag=tgooden-20&linkId=c3d157044aa332af607e4d68e990050f"
+            },
+            {
+              "title": "💺 Secretlab Titan 2020",
+              "description": "Comfortable awesome looking chair.",
+              "link": "https://secretlab.co/collections/titan-series/"
+            },
+            {
+              "title": "🎒 eBags Pro Laptop Backpack",
+              "description": "Extremely awesome tech backpack.",
+              "link": "https://smile.amazon.com/gp/product/B00OKXYUJ0/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00OKXYUJ0&linkCode=as2&tag=tgooden-20&linkId=9a3dc494303f5fd835bd973fce23fddc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "column": 1,
+      "categories": [
+        {
+          "name": "Software & Apps",
+          "items": [
+            {
+              "title": "iTerm2",
+              "description": "",
+              "link": "https://iterm2.com/"
+            },
+            {
+              "title": "Alfred",
+              "description": "",
+              "link": "https://www.alfredapp.com/"
+            },
+            {
+              "title": "Sizzy",
+              "description": "",
+              "link": "https://sizzy.co/"
+            },
+            {
+              "title": "Bitwarden",
+              "description": "",
+              "link": "https://bitwarden.com/"
+            }
+          ]
+        },
+        {
+          "name": "Design",
+          "items": [
+            {
+              "title": "Figma",
+              "description": "",
+              "link": "https://www.figma.com/"
+            },
+            {
+              "title": "SVGOMG",
+              "description": "",
+              "link": "https://jakearchibald.github.io/svgomg/"
+            }
+          ]
+        },
+        {
+          "name": "SEO & Marketing",
+          "items": [
+            {
+              "title": "SEMrush",
+              "description": "",
+              "link": "https://www.semrush.com/"
+            },
+            {
+              "title": "Screaming Frog",
+              "description": "",
+              "link": "https://www.screamingfrog.co.uk/seo-spider/"
+            }
+          ]
+        },
+        {
+          "name": "Git, Building, Hosting, Monitoring",
+          "items": [
+            {
+              "title": "Github",
+              "description": "",
+              "link": "https://github.com/"
+            },
+            {
+              "title": "TravisCI",
+              "description": "",
+              "link": "https://www.travis-ci.com/"
+            },
+            {
+              "title": "Gatsby Cloud",
+              "description": "",
+              "link": "https://www.gatsbyjs.com/products/cloud/"
+            },
+            {
+              "title": "Netlify",
+              "description": "",
+              "link": "https://www.netlify.com/"
+            },
+            {
+              "title": "Sentry",
+              "description": "",
+              "link": "https://sentry.io/"
+            },
+            {
+              "title": "AWS S3 & Amplify",
+              "description": "",
+              "link": "https://aws.amazon.com/"
+            }
+          ]
+        },
+        {
+          "name": "3D Printing",
+          "items": [
+            {
+              "title": "Ender 3",
+              "description": "Heavily modded",
+              "link": "https://smile.amazon.com/gp/product/B07BR3F9N6/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07BR3F9N6&linkCode=as2&tag=tgooden-20&linkId=acd0ba95f8fa59072a88b9d49b039e6a"
+            },
+            {
+              "title": "BLTouch",
+              "description": "",
+              "link": "https://smile.amazon.com/gp/product/B076PQG1FF/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B076PQG1FF&linkCode=as2&tag=tgooden-20&linkId=b0f2493a144383ea43c8dd3de90c3a49"
+            },
+            {
+              "title": "SKR Mini E3 V2",
+              "description": "",
+              "link": "https://smile.amazon.com/gp/product/B088CQJWRP/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B088CQJWRP&linkCode=as2&tag=tgooden-20&linkId=b60a50307a72b4e42eb9f9f85801a7c7"
+            },
+            {
+              "title": "Ultimaker Cura",
+              "description": "",
+              "link": "https://ultimaker.com/software/ultimaker-cura"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "column": 2,
+      "categories": [
+        {
+          "name": "ID & Extensions",
+          "items": [
+            {
+              "title": "VSCode",
+              "description": "",
+              "link": "https://code.visualstudio.com/"
+            },
+            {
+              "title": "Dracula Theme",
+              "description": "",
+              "link": "https://draculatheme.com/"
+            },
+            {
+              "title": "Operator Mono Font",
+              "description": "",
+              "link": "http://www.typography.com/fonts/operator/overview/"
+            },
+            {
+              "title": "Better Comments",
+              "description": "",
+              "link": "https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments"
+            },
+            {
+              "title": "Auto Rename Tag",
+              "description": "",
+              "link": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
+            },
+            {
+              "title": "GitLens",
+              "description": "",
+              "link": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens"
+            },
+            {
+              "title": "Import Cost",
+              "description": "",
+              "link": "https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost"
+            },
+            {
+              "title": "Prettier",
+              "description": "",
+              "link": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+            },
+            {
+              "title": "ESLint",
+              "description": "",
+              "link": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+            },
+            {
+              "title": "Rainbow Brackets",
+              "description": "",
+              "link": "https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets"
+            }
+          ]
+        },
+        {
+          "name": "React",
+          "items": [
+            {
+              "title": "GatsbyJS",
+              "description": "",
+              "link": "https://www.gatsbyjs.com/"
+            },
+            {
+              "title": "NextJS",
+              "description": "",
+              "link": "https://nextjs.org/"
+            }
+          ]
+        },
+        {
+          "name": "WordPress",
+          "items": [
+            {
+              "title": "Underscores",
+              "description": "",
+              "link": "https://underscores.me/"
+            },
+            {
+              "title": "Laravel Valet",
+              "description": "",
+              "link": "https://laravel.com/docs/8.x/valet"
+            },
+            {
+              "title": "Advanced Custom Fields",
+              "description": "",
+              "link": "https://www.advancedcustomfields.com/pro/"
+            },
+            {
+              "title": "WPGraphQL",
+              "description": "",
+              "link": "https://www.wpgraphql.com/"
+            }
+          ]
+        },
+        {
+          "name": "Automation",
+          "items": [
+            {
+              "title": "Home Assistant",
+              "description": "",
+              "link": "https://www.home-assistant.io/"
+            },
+            {
+              "title": "Wyze",
+              "description": "",
+              "link": "https://wyze.com/"
+            },
+            {
+              "title": "Raspberry Pi 4 Model B",
+              "description": "Multiple",
+              "link": "https://smile.amazon.com/gp/product/B07TC2BK1X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07TC2BK1X&linkCode=as2&tag=tgooden-20&linkId=9d6e90d7e08bb21b29526cd852dbe5f3"
+            }
+          ]
+        },
+        {
+          "name": "Misc",
+          "items": [
+            {
+              "title": "Rode PSA1 Boom Arm",
+              "description": "",
+              "link": "https://smile.amazon.com/gp/product/B001D7UYBO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B001D7UYBO&linkCode=as2&tag=tgooden-20&linkId=093b6c0d61a068b4fb0da9ea7e975f9a"
+            },
+            {
+              "title": "Nulaxy Laptop Stand",
+              "description": "",
+              "link": "https://smile.amazon.com/gp/product/B07P54RSPY/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07P54RSPY&linkCode=as2&tag=tgooden-20&linkId=6eb158d961ad94cc72a8b0727766778c"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

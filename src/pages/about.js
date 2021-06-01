@@ -125,27 +125,6 @@ const AboutPage = () => (
           hardware I use to go about my development day. Stay tuned.
         </p>
       </main>
-
-      {/*
-        <ul>
-          <li>MacBookPro 15" 2015 and 15" 2018</li>
-          <li>Monitors</li>
-          <li>Keyboard &amp; Mouse</li>
-          <li>Webcam / Mic</li>
-          <li>Desk / Chair</li>
-          <li>Alfred</li>
-          <li>VS Code</li>
-          <li>Dracula Theme</li>
-          <li>Fira Code</li>
-          <li>Sketch</li>
-          <li>Discord / Slack</li>
-          <li>Screaming Frog</li>
-          <li>GatsbyJS</li>
-          <li>Firefox</li>
-          <li>SVGOMG</li>
-          <li>Dropbox</li>
-          <li>Backpack</li>
-        </ul> */}
     </Wrapper>
   </Layout>
 )

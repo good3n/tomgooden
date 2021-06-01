@@ -42,38 +42,36 @@ const UsesPage = () => {
         <div className="container container--skinny">
           <div className="grid">
             {uniques.map(({ categories, column }) => (
-              <div key={column} className={column}>
-                {categories.map(({ name, items }) => {
-                  return (
-                    <div key={name}>
-                      <h2>{name}</h2>
-                      <ul>
-                        {items.map(({ title, description, link }) => {
-                          const newLink =
-                            link +
-                            (link.match(/\?./) ? `&` : `?`) +
-                            `from=tomgooden.net`
-                          return (
-                            <li key={title}>
-                              {link ? (
-                                <a
-                                  href={newLink}
-                                  rel="nofollow noreferrer"
-                                  target="_blank"
-                                >
-                                  {title}
-                                </a>
-                              ) : (
-                                title
-                              )}
-                              {description && <span> - {description}</span>}
-                            </li>
-                          )
-                        })}
-                      </ul>
-                    </div>
-                  )
-                })}
+              <div key={column}>
+                {categories.map(({ name, items }) => (
+                  <div key={name}>
+                    <h2>{name}</h2>
+                    <ul>
+                      {items.map(({ title, description, link }) => {
+                        const fromLink =
+                          link +
+                          (link.match(/\?./) ? `&` : `?`) +
+                          `from=tomgooden.net`
+                        return (
+                          <li key={title}>
+                            {link ? (
+                              <a
+                                href={fromLink}
+                                rel="nofollow noreferrer"
+                                target="_blank"
+                              >
+                                {title}
+                              </a>
+                            ) : (
+                              title
+                            )}
+                            {description && <span> - {description}</span>}
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </div>
+                ))}
               </div>
             ))}
           </div>

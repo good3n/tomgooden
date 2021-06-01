@@ -64,7 +64,7 @@ export const Nav = styled.nav`
           height: 3px;
           background-color: var(--color_red);
           position: absolute;
-          top: calc(100% + 10px);
+          top: calc(100% + 5px);
           right: 0;
           left: 0;
         }

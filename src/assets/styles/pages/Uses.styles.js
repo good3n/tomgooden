@@ -26,6 +26,7 @@ export const StyledUses = styled.div`
 
   li {
     font-weight: 600;
+    display: block;
 
     span {
       font-weight: normal;

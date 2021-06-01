@@ -60,7 +60,7 @@ export const StyledUses = styled.div`
     }
 
     @media (max-width: 600px) {
-      height: 300px;
+      height: 300px !important;
     }
 
     + div {

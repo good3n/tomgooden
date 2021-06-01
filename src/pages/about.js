@@ -119,11 +119,6 @@ const AboutPage = () => (
           </a>{' '}
           discord server.
         </p>
-        <h2>Uses</h2>
-        <p>
-          I plan on populating this section with some of the software and
-          hardware I use to go about my development day. Stay tuned.
-        </p>
       </main>
     </Wrapper>
   </Layout>

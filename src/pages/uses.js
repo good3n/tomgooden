@@ -29,7 +29,7 @@ const UsesPage = () => {
               <strong>
                 <a
                   href="https://uses.tech/?from=tomgooden.net"
-                  rel="nofollow"
+                  rel="nofollow noreferrer"
                   target="_blank"
                 >
                   uses.tech

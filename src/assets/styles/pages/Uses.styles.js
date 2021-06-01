@@ -25,11 +25,32 @@ export const StyledUses = styled.div`
   }
 
   li {
-    font-weight: 700;
-    display: block;
+    font-weight: 600;
 
     span {
       font-weight: normal;
+    }
+
+    a {
+      position: relative;
+
+      &::after {
+        content: '';
+        height: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: var(--color_blue);
+        opacity: 0.3;
+        transition: height 0.2s ease;
+        z-index: -1;
+      }
+
+      &:hover::after {
+        height: 7px;
+      }
     }
   }
 
@@ -79,10 +100,11 @@ export const StyledUses = styled.div`
 
     > div:first-of-type {
       grid-column: 1 / 3;
-    }
 
-    li {
-      font-weight: 600;
+      li {
+        font-weight: 700;
+        display: block;
+      }
     }
   }
 `

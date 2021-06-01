@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
@@ -118,6 +119,13 @@ const AboutPage = () => (
             CodeHelp
           </a>{' '}
           discord server.
+        </p>
+        <p>
+          Check out my{' '}
+          <strong>
+            <Link to="/uses">/uses</Link>
+          </strong>{' '}
+          page for a list of stuff I use day-to-day.
         </p>
       </main>
     </Wrapper>

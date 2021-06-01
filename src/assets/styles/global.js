@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: var(--color_background);
-    color: var(--color_body-text);
+    color: var(--color_heading-text);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -92,7 +92,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--color_body-text);
+    color: var(--color_heading-text);
   }
 
   button,
@@ -111,6 +111,10 @@ const GlobalStyle = createGlobalStyle`
     background: #f7f7f7;
     color: #444;
     font-size: 21px;
+  }
+
+  del {
+    color: var(--color_body-text);
   }
 
   /* code */

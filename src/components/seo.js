@@ -14,7 +14,7 @@ import defaultImage from '../assets/images/default-image.png'
 function Seo({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
     graphql`
-      query {
+      {
         site {
           siteMetadata {
             title

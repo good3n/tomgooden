@@ -114,7 +114,7 @@
           "items": [
             {
               "title": "Github",
-              "description": "Version control.",
+              "description": "Duh.",
               "link": "https://github.com/"
             },
             {
@@ -129,7 +129,7 @@
             },
             {
               "title": "Netlify",
-              "description": "Hosting all the things.",
+              "description": "My go-to for static hosting.",
               "link": "https://www.netlify.com/"
             },
             {
@@ -173,6 +173,21 @@
               "link": "https://ultimaker.com/software/ultimaker-cura"
             }
           ]
+        },
+        {
+          "name": "Would love to learn more about...",
+          "items": [
+            {
+              "title": "Svelte",
+              "description": "",
+              "link": "https://svelte.dev/"
+            },
+            {
+              "title": "11ty",
+              "description": "",
+              "link": "https://www.11ty.dev/"
+            }
+          ]
         }
       ]
     },
@@ -199,7 +214,7 @@
             },
             {
               "title": "Better Comments",
-              "description": "Colors comments based on prefix.",
+              "description": "Color comments based on prefix.",
               "link": "https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments"
             },
             {
@@ -259,7 +274,7 @@
             },
             {
               "title": "Laravel Valet",
-              "description": "A must for local WordPress development.",
+              "description": "A must for local WordPress development. Hard pass on LocalWP due to restrictive hosting.",
               "link": "https://laravel.com/docs/8.x/valet"
             },
             {
@@ -289,7 +304,7 @@
             },
             {
               "title": "Raspberry Pi 4 Model B",
-              "description": "Use them for everything. From a DNS sinkhole to retro gaming console.",
+              "description": "Use them for everything from a DNS sinkhole to retro gaming console.",
               "link": "https://smile.amazon.com/gp/product/B07TC2BK1X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07TC2BK1X&linkCode=as2&tag=tgooden-20&linkId=9d6e90d7e08bb21b29526cd852dbe5f3"
             }
           ]

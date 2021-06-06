@@ -30,7 +30,6 @@ export const Hero = styled.div`
       right: 0;
       left: 0;
       z-index: 1;
-      white-space: nowrap;
 
       @media (max-width: 899px) {
         top: calc(100% - 1rem);
@@ -38,12 +37,18 @@ export const Hero = styled.div`
 
       > span {
         position: relative;
+        display: inline-block;
+        height: 116px;
+
+        @media (max-width: 899px) {
+          height: 83px;
+        }
 
         &:after {
           content: '';
           height: 10px;
           width: 100%;
-          background-color: var(--color_red); // fallback
+          background-color: var(--color_red);
           animation-name: underline-color;
           animation-duration: 5s;
           animation-timing-function: ease-in-out;
@@ -63,9 +68,15 @@ export const Hero = styled.div`
 
     span.react-rotating-text-cursor {
       position: absolute;
+      right: -20px;
+      top: 0;
       font-weight: normal;
       animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
         infinite;
+
+      @media (max-width: 899px) {
+        right: -10px;
+      }
     }
   }
 

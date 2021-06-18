@@ -71,7 +71,13 @@ const AboutPage = () => (
   <Layout>
     <Seo title="About" />
     <Wrapper className="container">
-      <h1>Hi 👋 I'm Tom.</h1>
+      <h1>
+        Hi{' '}
+        <span role="img" aria-label="wave">
+          👋
+        </span>{' '}
+        I'm Tom.
+      </h1>
       <div className="image-wrapper">
         <StaticImage src="../assets/images/about/about1.jpg" alt="" />
         <StaticImage src="../assets/images/about/about2.jpg" alt="" />

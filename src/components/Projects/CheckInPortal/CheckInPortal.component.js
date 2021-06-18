@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
-import { MainImage } from '../../../assets/styles/pages/Work.styles'
+import { MainImage } from '../../../assets/styles/pages/Projects.styles'
 import { StyledWork } from './CheckInPortal.styles'
 import { ListItem } from '../../../utils/idk'
 

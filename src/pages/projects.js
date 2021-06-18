@@ -5,16 +5,16 @@ import { CheckInPortal } from '../components/Projects/CheckInPortal'
 import { TherapistDirectory } from '../components/Projects/TherapistDirectory'
 import { ProjectRoadmap } from '../components/ProjectRoadmap'
 import { Cta } from '../components/Cta'
-import { Work } from '../assets/styles/pages/Work.styles'
+import { Projects } from '../assets/styles/pages/Projects.styles'
 
 const WorkPage = () => {
   return (
     <Layout>
-      <Seo title="Work" />
-      <Work>
+      <Seo title="Projects" />
+      <Projects>
         <TherapistDirectory />
         <CheckInPortal />
-      </Work>
+      </Projects>
       <ProjectRoadmap />
       <Cta />
     </Layout>

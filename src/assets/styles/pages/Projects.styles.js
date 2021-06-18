@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-export const Work = styled.div`
+export const Projects = styled.div`
   overflow: hidden;
 
   > section:nth-of-type(1) {
@@ -41,7 +41,7 @@ export const Work = styled.div`
       font-size: var(--font-size__h5);
       letter-spacing: 3px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
   }
 
@@ -63,7 +63,7 @@ export const Work = styled.div`
     margin: 0;
     display: flex;
     align-items: center;
-    line-height: 40px;
+    line-height: 2.074rem;
 
     svg {
       height: 24px;
@@ -82,23 +82,5 @@ export const MainImage = styled(GatsbyImage)`
   @media (max-width: 600px) {
     left: -30px;
     left: -6%;
-  }
-`
-
-// former gatsby-image
-export const SubImage = styled.div`
-  max-width: 760px;
-  position: relative;
-  right: -50px;
-
-  @media (max-width: 899px) {
-    right: auto;
-    left: -70px;
-    margin-top: -200px;
-  }
-
-  @media (max-width: 600px) {
-    left: 0;
-    margin-top: -100px;
   }
 `

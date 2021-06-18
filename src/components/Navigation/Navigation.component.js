@@ -35,13 +35,13 @@ const Navigation = () => {
         </li>
         <li>
           <Link
-            to="/work/"
+            to="/projects/"
             activeClassName="is-active"
             onClick={() => {
               setIsNavOpen(false)
             }}
           >
-            Work
+            Projects
           </Link>
         </li>
         <li>

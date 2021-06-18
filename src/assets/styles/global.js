@@ -35,13 +35,21 @@ const GlobalStyle = createGlobalStyle`
     --font-size__h5: 1rem;
     --font-size__base: 1rem;
     --font-size__small: 0.833rem;
+
+    /* margins */
+    --margin: 2.074rem 0 1rem;
   }
 
   ${Fonts}
 
+  html {
+    font-size: 112.5%; /*18px*/
+  }
+
   body {
     background-color: var(--color_background);
     color: var(--color_heading-text);
+    line-height: 1.75;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -56,7 +64,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--color_heading-text);
     font-weight: 900;
     line-height: 1.3;
-    margin: 3rem 0 1.38rem;
+    margin: var(--margin);
   }
 
   h1,
@@ -100,17 +108,17 @@ const GlobalStyle = createGlobalStyle`
   a.button {
     background: var(--color_red);
     color: #fff;
-    padding: 15px 40px;
+    padding: 0.833rem 40px;
     font-weight: 700;
   }
 
   blockquote {
     border-left: 5px solid #e863a6;
-    margin: 50px auto;
-    padding: 40px;
+    margin: 2.074rem auto;
+    padding: 2.074rem;
     background: #f7f7f7;
     color: #444;
-    font-size: 21px;
+    font-size: var(--font-size__h4);
   }
 
   del {
@@ -120,12 +128,6 @@ const GlobalStyle = createGlobalStyle`
   /* code */
   .gatsby-highlight {
     position: relative;
-  }
-
-  @media (max-width: 899px) {
-    pre[class*=language-] {
-      padding: 2.5em 1.5em 1.5em;
-    }
   }
 
   .container {

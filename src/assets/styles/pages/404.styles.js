@@ -11,11 +11,11 @@ export const NotFound = styled.div`
   .container {
     position: relative;
     height: 100%;
-    padding-top: 300px;
+    padding-top: 15.407rem;
   }
 
   h1 {
-    font-size: 150px;
+    font-size: 7.43rem;
     font-weight: 700;
     line-height: 1;
     margin: 0;
@@ -48,7 +48,7 @@ export const NotFound = styled.div`
 
   p {
     font-weight: 300;
-    font-size: 21px;
+    font-size: var(--font-size__h4);
     line-height: 1.6;
     color: #777;
     margin: 0 auto;
@@ -69,14 +69,14 @@ export const NotFound = styled.div`
 
       span {
         background: var(--color_red);
-        padding: 7px 30px;
+        padding: 0.402rem 30px;
       }
     }
 
     span {
       background: var(--color_heading-text);
       color: #fff;
-      padding: 10px 20px;
+      padding: 0.579rem 20px;
       display: inline-block;
     }
 

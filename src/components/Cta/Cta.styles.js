@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledCta = styled.div`
   text-align: center;
-  padding: 110px 0 60px;
+  padding: 5.16rem 0 2.986rem;
 
   @media (max-width: 600px) {
     padding-right: 30px;
@@ -10,7 +10,7 @@ export const StyledCta = styled.div`
   }
 
   h2 {
-    margin: 0 0 2rem;
+    margin: 0 0 2.074rem;
 
     span {
       position: relative;
@@ -47,7 +47,7 @@ export const StyledCta = styled.div`
 
     a {
       color: #fff;
-      padding: 15px 30px;
+      padding: 0.833rem 30px;
       display: block;
     }
   }

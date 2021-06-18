@@ -1,15 +1,7 @@
 import styled from 'styled-components'
 
-export const PostWrap = styled.article`
-  &:first-of-type {
-    h1 {
-      font-size: 36px;
-    }
-  }
-`
-
 export const Title = styled.h1`
-  margin: 20px 0 30px;
+  margin: 1rem 0 1.728rem;
 `
 
 export const BlogMeta = styled.div`
@@ -17,7 +9,7 @@ export const BlogMeta = styled.div`
   grid-template-columns: 60px 1fr;
   column-gap: 15px;
   align-items: center;
-  font-size: 16px;
+  font-size: var(--font-size__small);
   color: var(--color_body-text--light);
   font-family: var(--font_heading);
 

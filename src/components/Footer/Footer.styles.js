@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledFooter = styled.footer`
-  margin: 50px auto;
+  margin: 2.488rem auto;
   text-align: center;
   font-size: var(--font-size__small);
   color: var(--color_body-text--light);
@@ -24,7 +24,7 @@ export const StyledFooter = styled.footer`
   > div:first-of-type {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 0.833rem;
 
     a {
       display: block;

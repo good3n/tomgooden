@@ -145,7 +145,6 @@ const Contact = styled.div`
 const ContactPage = () => {
   return (
     <Layout>
-      <ServicesBlocks />
       <div className="container">
         <Contact>
           <Seo title="Contact" />
@@ -245,6 +244,7 @@ const ContactPage = () => {
           </form>
         </Contact>
       </div>
+      <ServicesBlocks />
       <ProjectRoadmap />
     </Layout>
   )

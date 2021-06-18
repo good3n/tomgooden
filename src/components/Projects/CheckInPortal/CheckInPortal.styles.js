@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const StyledWork = styled.div`
   position: relative;
   z-index: 10;
-  padding-bottom: 200px;
+  padding-bottom: 10.699rem;
 
   @media (max-width: 899px) {
     .container {
@@ -13,7 +13,7 @@ export const StyledWork = styled.div`
   }
 
   @media (max-width: 600px) {
-    padding-top: 30px;
+    padding-top: 1.44rem;
 
     .container {
       padding-right: 30px;
@@ -25,7 +25,7 @@ export const StyledWork = styled.div`
     display: grid;
     grid-template-columns: 550px 1fr;
     gap: 50px;
-    margin-top: 50px;
+    margin-top: 2.488rem;
     position: relative;
 
     @media (max-width: 1090px) {

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Roadmap = styled.div`
   background-color: var(--color_dark-block);
-  padding: 130px 0;
+  padding: 6.192rem 0;
   overflow: hidden;
   color: var(--color_offWhite);
 
@@ -31,7 +31,7 @@ export const Roadmap = styled.div`
 
   .container {
     position: relative;
-    margin-top: 90px;
+    margin-top: 5.16rem;
 
     .gatsby-image-wrapper {
       position: absolute !important;
@@ -84,12 +84,12 @@ export const Roadmap = styled.div`
     }
 
     p {
-      margin: 90px 0 0;
+      margin: 5.16rem 0 0;
       font-size: var(--font-size__small);
       opacity: 0.7;
 
       @media (max-width: 1175px) {
-        margin-top: 20px;
+        margin-top: 1.2rem;
       }
     }
   }

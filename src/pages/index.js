@@ -3,7 +3,6 @@ import Seo from '../components/Seo'
 import ReactRotatingText from 'react-rotating-text'
 import Layout from '../components/Layout'
 import { Hero } from '../assets/styles/pages/Index.styles'
-import { Cta } from '../components/Cta'
 
 const IndexPage = () => {
   return (
@@ -24,7 +23,6 @@ const IndexPage = () => {
           applications for people and businesses.
         </p>
       </Hero>
-      <Cta />
     </Layout>
   )
 }

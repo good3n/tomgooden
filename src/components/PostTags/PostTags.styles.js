@@ -6,7 +6,7 @@ export const StyledTags = styled.div`
 
   a {
     display: inline-block;
-    font-size: 14px;
+    font-size: var(--font-size__small);
     font-weight: 500;
     padding: 3px 7px;
     margin-right: 5px;

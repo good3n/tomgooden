@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const StyledWork = styled.div`
   position: relative;
-  padding: 100px 0 200px;
+  padding: 5.16rem 0 10.699rem;
 
   @media (max-width: 899px) {
-    padding: 0 0 50px;
+    padding: 0 0 2.488rem;
 
     .container {
       padding-right: 50px;
@@ -27,7 +27,7 @@ export const StyledWork = styled.div`
     grid-template-columns: 1fr 1.5fr;
     gap: 50px;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 2.488rem;
     position: relative;
     z-index: 10;
 

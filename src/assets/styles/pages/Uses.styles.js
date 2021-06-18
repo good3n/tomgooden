@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledUses = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 5.16rem;
 
   header {
     display: grid;
@@ -16,7 +16,7 @@ export const StyledUses = styled.div`
     }
 
     + .container {
-      margin-top: 40px;
+      margin-top: 2.074rem;
     }
   }
 

@@ -26,7 +26,7 @@ export const Nav = styled.nav`
       background: var(--color_heading-text);
       z-index: 998;
       text-align: right;
-      padding: 20px 30px 20px 80px;
+      padding: 1rem 30px 1rem 80px;
       font-size: var(--font-size__h4);
       border-radius: 30px 30px 0 30px;
 

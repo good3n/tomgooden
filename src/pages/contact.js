@@ -166,7 +166,7 @@ const ContactPage = () => {
             <input name="bot-field" type="hidden" placeholder="Phone" />
 
             <div>
-              <label labelFor="name">
+              <label htmlFor="name">
                 Your name{' '}
                 <span>
                   <input id="name" name="name" type="text" required />
@@ -174,7 +174,7 @@ const ContactPage = () => {
               </label>
             </div>
             <div>
-              <label labelFor="email">
+              <label htmlFor="email">
                 Email{' '}
                 <span>
                   <input id="email" name="email" type="email" required />
@@ -182,7 +182,7 @@ const ContactPage = () => {
               </label>
             </div>
             <div>
-              <label labelFor="reason">
+              <label htmlFor="reason">
                 What brings you here?
                 <span>
                   <select id="reason" name="reason" required>
@@ -206,7 +206,7 @@ const ContactPage = () => {
               </label>
             </div>
             <div>
-              <label labelFor="budget">
+              <label htmlFor="budget">
                 What's your budget?
                 <span>
                   <select id="budget" name="budget" required>
@@ -229,7 +229,7 @@ const ContactPage = () => {
               </label>
             </div>
             <div>
-              <label labelFor="message">
+              <label htmlFor="message">
                 Additional details{' '}
                 <span>
                   <textarea

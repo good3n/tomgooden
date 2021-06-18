@@ -13,21 +13,10 @@ const Wrapper = styled.div`
   }
 
   h1 {
-    padding-right: 180px;
-    font-size: var(--font-size__h2);
+    font-size: var(--font-size__big-ass);
 
     @media (max-width: 899px) {
-      padding-right: 0;
-      font-size: var(--font-size__h3);
-    }
-
-    span {
-      display: block;
-      font-size: var(--font-size__extra-big-ass);
-
-      @media (max-width: 899px) {
-        font-size: var(--font-size__h1);
-      }
+      font-size: var(--font-size__h1);
     }
   }
 
@@ -53,22 +42,24 @@ const Wrapper = styled.div`
         min-height: 0;
       }
 
-      &:nth-of-type(1) {
-      }
       &:nth-of-type(2) {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
       }
+
       &:nth-of-type(3) {
         grid-row: 1 / 3;
         margin-top: -30px;
       }
+
       &:nth-of-type(4) {
         grid-row: 1 / 3;
       }
+
       &:nth-of-type(5) {
         margin-top: -70px;
       }
+
       &:nth-of-type(6) {
         grid-row: 2 / 3;
       }
@@ -80,9 +71,7 @@ const AboutPage = () => (
   <Layout>
     <Seo title="About" />
     <Wrapper className="container">
-      <h1>
-        <span>I'm Tom</span>I build scalable custom web applications and sites.
-      </h1>
+      <h1>Hi 👋 I'm Tom.</h1>
       <div className="image-wrapper">
         <StaticImage src="../assets/images/about/about1.jpg" alt="" />
         <StaticImage src="../assets/images/about/about2.jpg" alt="" />

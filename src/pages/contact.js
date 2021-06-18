@@ -1,6 +1,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import { ServicesBlocks } from '../components/ServicesBlocks'
+import { ProjectRoadmap } from '../components/ProjectRoadmap'
 import styled from 'styled-components'
 
 const Contact = styled.div`
@@ -143,6 +145,7 @@ const Contact = styled.div`
 const ContactPage = () => {
   return (
     <Layout>
+      <ServicesBlocks />
       <div className="container">
         <Contact>
           <Seo title="Contact" />
@@ -242,6 +245,7 @@ const ContactPage = () => {
           </form>
         </Contact>
       </div>
+      <ProjectRoadmap />
     </Layout>
   )
 }

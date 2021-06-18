@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Hero = styled.div`
-  padding: 8.916rem 10vw;
+  padding: 7.43rem 11vw 5.16rem;
   text-align: center;
 
   @media (max-width: 899px) {
@@ -82,6 +82,7 @@ export const Hero = styled.div`
 
   p {
     font-size: var(--font-size__h3);
+    color: #495057;
 
     @media (max-width: 899px) {
       font-size: var(--font-size__base);

@@ -18,7 +18,7 @@ const UsesPage = () => {
             alt="Tom Gooden Uses"
             objectFit="cover"
             objectPosition="center -50px"
-            style={{ height: `470px` }}
+            height={470}
           />
           <div>
             <h1>/uses</h1>

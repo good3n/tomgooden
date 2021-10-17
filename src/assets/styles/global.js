@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import { Fonts } from '../fonts/fonts'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -16,39 +15,46 @@ const GlobalStyle = createGlobalStyle`
     --color_text--heading: #00171f;
 
     /* theme */
-    --color_background: #fff;
-    --color_body-text: #5d6770;
-    --color_body-text--light: #b4b9be;
-    --color_heading-text: #00171f;
+    --color__base: #646C76;
+    --color__background: #fff;
+    --color__headline: #1F1E4E;
+  
+    --color__base--light: #b4b9be;
     --color_link: rgba(136, 221, 255, 0.5);
     --color_border: rgba(0, 0, 0, 0.15);
     --color_dark-block: #353839;
 
     /* fonts */
-    --font-size__extra-big-ass: 5.16rem;
-    --font-size__big-ass: 3.583rem;
-    --font-size__medium-ass: 2.488rem;
-    --font-size__h1: 2.074rem;
-    --font-size__h2: 1.728rem;
-    --font-size__h3: 1.44rem;
-    --font-size__h4: 1.2rem;
-    --font-size__h5: 1rem;
+    --font-size__h0: 5.96rem;
+    --font-size__h1: 3.052rem;
+    --font-size__h2: 2.441rem;
+    --font-size__h3: 1.953rem;
+    --font-size__h4: 1.563rem;
+    --font-size__h5: 1.25rem;
     --font-size__base: 1rem;
-    --font-size__small: 0.833rem;
+    --font-size__base--lg: 1.167rem;
+    --font-size__base--sm: 0.889rem;
+
+    --font-family__heading: "Inter", sans-serif;
+    --font-family__body: "Inter", sans-serif;
+    --font-family__code: "Fira Code", monospace;
 
     /* margins */
     --margin: 2.074rem 0 1rem;
   }
 
-  ${Fonts}
-
   html {
-    font-size: 112.5%; /*18px*/
+    font-size: 112.5%; /* 18px */
+
+    @media (max-width: 999px) {
+      font-size: 100% /* 16px */
+    }
   }
 
   body {
-    background-color: var(--color_background);
-    color: var(--color_heading-text);
+    background: var(--color__background);
+    color: var(--color__base);
+    font-family: var(--font-family__body);
     line-height: 1.75;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -61,35 +67,32 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5 {
-    color: var(--color_heading-text);
+    margin: 3rem 0 1.38rem;
+    color: var(--color__headline);
+    font-family: var(--font-family__heading);
     font-weight: 900;
     line-height: 1.3;
-    margin: var(--margin);
+    letter-spacing: -0.025em;
   }
 
-  h1,
-  .h1 {
+  h1 {
     margin-top: 0;
     font-size: var(--font-size__h1);
   }
 
-  h2,
-  .h2 {
+  h2 {
     font-size: var(--font-size__h2);
   }
 
-  h3,
-  .h3 {
+  h3 {
     font-size: var(--font-size__h3);
   }
 
-  h4,
-  .h4 {
+  h4 {
     font-size: var(--font-size__h4);
   }
 
-  h5,
-  .h5 {
+  h5 {
     font-size: var(--font-size__h5);
   }
 
@@ -98,18 +101,40 @@ const GlobalStyle = createGlobalStyle`
     font-size: var(--font-size__small);
   }
 
+  .subheader {
+    font-size: var(--font-size__base--sm);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+  }
+
+  p {
+    margin-bottom: 1rem;
+
+    strong {
+      color: var(--color__headline);
+    }
+  }
+
   a {
     text-decoration: none;
-    color: var(--color_heading-text);
+    color: var(--color__headline);
   }
 
   button,
   .button,
   a.button {
-    background: var(--color_red);
+    display: inline-block;
+    background: #f52d86;
     color: #fff;
-    padding: 0.833rem 40px;
+    padding: 0 50px;
     font-weight: 700;
+    line-height: 2.441rem;
+    height: 2.441rem;
+    border-radius: 8px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
   }
 
   blockquote {
@@ -122,7 +147,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   del {
-    color: var(--color_body-text);
+    color: var(--color__base);
   }
 
   /* code */
@@ -132,21 +157,12 @@ const GlobalStyle = createGlobalStyle`
 
   .container {
     margin: 0 auto;
-    max-width: 1300px;
-    padding-right: 90px;
-    padding-left: 90px;
+    max-width: 1060px;
+    padding-right: 30px;
+    padding-left: 30px;
 
-    @media (max-width: 1175px) {
+    @media (max-width: 999px) {
       max-width: 100%;
-    }
-
-    @media (max-width: 899px) {
-      padding-right: 30px;
-      padding-left: 30px;
-    }
-
-    &--skinny {
-      max-width: 1000px;
     }
   }
 `

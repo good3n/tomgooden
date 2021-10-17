@@ -56,6 +56,14 @@ export const StyledWork = styled.div`
       }
     }
   }
+
+  h1 span {
+    color: #53caee;
+  }
+
+  svg path {
+    stroke: #53caee;
+  }
 `
 
 // former gatsby-image

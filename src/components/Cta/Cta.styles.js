@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledCta = styled.div`
   text-align: center;
-  padding: 5.16rem 0 2.986rem;
+  padding: 7rem 0 3rem;
 
   @media (max-width: 600px) {
     padding-right: 30px;
@@ -10,7 +10,8 @@ export const StyledCta = styled.div`
   }
 
   h2 {
-    margin: 0 0 2.074rem;
+    margin-top: 0;
+    font-size: var(--font-size__h3);
 
     span {
       position: relative;
@@ -24,7 +25,8 @@ export const StyledCta = styled.div`
         bottom: 5px;
         right: 0;
         left: 0;
-        background-color: var(--color_yellow);
+        background-color: #53caee;
+        opacity: 0.3;
         z-index: -1;
       }
     }

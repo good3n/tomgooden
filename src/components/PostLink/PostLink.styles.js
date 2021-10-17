@@ -10,8 +10,8 @@ export const BlogMeta = styled.div`
   column-gap: 15px;
   align-items: center;
   font-size: var(--font-size__small);
-  color: var(--color_body-text--light);
-  font-family: var(--font_heading);
+  color: var(--color__base--light);
+  font-family: var(--font-family__heading);
 
   img {
     display: block;
@@ -20,7 +20,7 @@ export const BlogMeta = styled.div`
   }
 
   .author {
-    color: var(--color_body-text);
+    color: var(--color__base);
     font-weight: 600;
   }
 `

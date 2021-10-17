@@ -14,8 +14,8 @@ export const PostMeta = styled.div`
   margin-bottom: 40px;
   border-top: 1px solid var(--color_border);
   padding-top: 30px;
-  color: var(--color_body-text--light);
-  font-family: var(--font_heading);
+  color: var(--color__base--light);
+  font-family: var(--font-family__heading);
 
   /* layout */
   display: grid;
@@ -29,7 +29,7 @@ export const PostMeta = styled.div`
 
   .post-author {
     font-weight: 600;
-    color: var(--color_body-text);
+    color: var(--color__base);
     margin-right: 10px;
 
     @media (max-width: 899px) {

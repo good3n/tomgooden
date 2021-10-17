@@ -52,10 +52,10 @@ export const StyledWork = styled.div`
   }
 
   h1 span {
-    color: var(--color_red);
+    color: #f52d86;
   }
 
   svg path {
-    stroke: var(--color_red);
+    stroke: #f52d86;
   }
 `

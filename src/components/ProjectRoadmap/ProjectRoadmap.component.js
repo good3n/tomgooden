@@ -24,10 +24,9 @@ const ProjectRoadmap = () => {
         <h2>Project roadmap</h2>
         <p>
           The "4 D's" as some call it, a common approach to deciphering the
-          lifecycle of a website or application project. However more often than
-          not, it's become lip service. That's not the case here. Planning is
-          everything. Without implementing and executing a real plan of action,
-          your project will begin to take on water.
+          lifecycle of a website or application project. Planning is everything.
+          Without implementing and executing a real plan of action, your project
+          will begin to take on water.
         </p>
       </div>
       <div className="container">

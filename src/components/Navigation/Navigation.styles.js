@@ -1,129 +1,104 @@
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
-  margin-left: auto;
-  font-weight: 700;
+  position: absolute;
+  top: 2rem;
+  right: 30px;
+  text-align: right;
+  opacity: 0;
+  visibility: 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 20px 0;
+  border-radius: 20px 0 20px 20px;
+  background: #f9f3f6;
+  font-weight: bold;
+  transition: 0.2s ease-in-out top, 0.2s ease-in-out opacity,
+    0.2s ease-in-out visibility;
+  font-size: var(--font-size__base--sm);
 
-  @media (max-width: 899px) {
-    order: 3;
-    margin-left: auto;
+  &.true {
+    opacity: 1;
+    visibility: visible;
+    top: 3rem;
   }
 
   ul {
     margin: 0;
     padding: 0;
-    flex-direction: row;
-
-    @media (min-width: 900px) {
-      display: flex !important;
-    }
-
-    @media (max-width: 899px) {
-      display: none;
-      position: fixed;
-      right: 20px;
-      bottom: 90px;
-      background: var(--color_heading-text);
-      z-index: 998;
-      text-align: right;
-      padding: 1rem 30px 1rem 80px;
-      font-size: var(--font-size__h4);
-      border-radius: 30px 30px 0 30px;
-
-      &.true {
-        display: block;
-      }
-    }
   }
 
   li {
     display: block;
-    margin: 0 40px 0 0;
-
-    @media (max-width: 899px) {
-      margin: 5px 0;
-    }
+    margin: 0;
   }
 
   a {
-    color: var(--color_heading-text);
+    display: block;
+    padding: 5px 50px;
 
-    @media (max-width: 899px) {
-      color: #fff;
-      padding: 7px 0;
-      display: block;
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
     }
 
     &.is-active {
       position: relative;
-
-      @media (min-width: 899px) {
-        &::after {
-          content: '';
-          width: 100%;
-          height: 3px;
-          background-color: var(--color_red);
-          position: absolute;
-          top: calc(100% + 5px);
-          right: 0;
-          left: 0;
-        }
-      }
-
-      @media (max-width: 899px) {
-        &::before {
-          content: '';
-          width: calc(100% + 110px);
-          height: 100%;
-          background-color: rgba(255, 255, 255, 0.1);
-          position: absolute;
-          top: 0;
-          left: -80px;
-          z-index: -1;
-        }
-
-        &::after {
-          content: '';
-          width: 5px;
-          height: 100%;
-          background-color: var(--color_red);
-          position: absolute;
-          top: 0;
-          right: -30px;
-        }
-      }
     }
   }
 `
 
-export const NavToggle = styled.button`
-  display: none;
-  background: var(--color_heading-text);
-  border: none;
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
+export const NavToggle = styled.div`
+  position: relative;
+  z-index: 1;
+  height: 23px;
+  width: 30px;
   cursor: pointer;
-  font-size: var(--font-size__base);
-  outline: 0;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  padding: 0;
+  margin-left: auto;
 
-  &.true {
-    background: var(--color_red);
+  &:hover {
+    div {
+      width: 30px;
+
+      &::before {
+        width: 20px;
+      }
+
+      &::after {
+        width: 25px;
+      }
+    }
   }
 
-  svg {
-    width: 24px;
-    height: 24px;
-  }
+  div {
+    position: absolute;
+    background: #000;
+    height: 3px;
+    width: 25px;
+    transition: width 0.2s ease-in-out;
+    top: 0;
+    right: 0;
+    border-radius: 1.5px;
 
-  @media (max-width: 899px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      background: #000;
+      height: 3px;
+      display: block;
+      transition: width 0.2s ease-in-out;
+      border-radius: 1.5px;
+    }
+
+    &::before {
+      top: 10px;
+      width: 30px;
+    }
+
+    &::after {
+      top: 20px;
+      width: 20px;
+    }
   }
 `

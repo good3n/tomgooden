@@ -12,7 +12,7 @@ const Grid = styled.div`
   row-gap: 50px;
   font-size: 16px;
   color: #777;
-  font-family: var(--font_heading);
+  font-family: var(--font-family__heading);
 
   @media (max-width: 599px) {
     grid-template-columns: 1fr;
@@ -54,7 +54,7 @@ const Wrapper = styled.div`
 const PostMeta = styled.header`
   div:first-of-type {
     font-weight: 700;
-    color: var(--color_body-text);
+    color: var(--color__base);
   }
 
   div:last-of-type {
@@ -75,14 +75,8 @@ const Tags = ({ pageContext, data }) => {
           <h1>{tagHeader}</h1>
           <Grid>
             {edges.map(({ node }) => {
-              const {
-                path,
-                title,
-                author,
-                date,
-                tags,
-                featuredImage,
-              } = node.frontmatter
+              const { path, title, author, date, tags, featuredImage } =
+                node.frontmatter
               const image = getImage(featuredImage)
               return (
                 <div key={path}>
@@ -130,7 +124,7 @@ Tags.propTypes = {
 export default Tags
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query ($tag: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }

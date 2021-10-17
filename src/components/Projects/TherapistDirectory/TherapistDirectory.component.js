@@ -31,7 +31,7 @@ const TherapistDirectory = () => {
         <div className="grid">
           <div>
             <h1>
-              <span>GLPG</span>Therapist Directory
+              <span className="subheader">GLPG</span>Therapist Directory
             </h1>
             <p>
               Searchable directory of therapists that allows users to filter or

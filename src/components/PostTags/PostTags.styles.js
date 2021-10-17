@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledTags = styled.div`
   margin-top: 5px;
-  font-family: var(--font_heading);
+  font-family: var(--font-family__heading);
 
   a {
     display: inline-block;

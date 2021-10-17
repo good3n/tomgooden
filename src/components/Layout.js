@@ -1,4 +1,5 @@
 import React from 'react'
+import 'normalize.css'
 import GlobalStyle from '../assets/styles/global'
 import { Header } from './Header'
 import { Footer } from './Footer'

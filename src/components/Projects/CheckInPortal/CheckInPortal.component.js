@@ -38,7 +38,7 @@ const CheckInPortal = () => {
           </div>
           <div>
             <h1>
-              <span>GLPG</span>Patient check-in portal
+              <span className="subheader">GLPG</span>Patient check-in portal
             </h1>
             <p>
               A portal designed and developed allowing patients to self check-in

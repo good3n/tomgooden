@@ -6,38 +6,17 @@ import { ProjectRoadmap } from '../components/ProjectRoadmap'
 import styled from 'styled-components'
 
 const Contact = styled.div`
-  margin: 100px 0;
+  margin: 5rem 0;
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   gap: 70px;
-  align-items: center;
 
   @media (max-width: 1175px) {
     display: block;
   }
 
   @media (max-width: 600px) {
-    margin: 50px 0;
-  }
-
-  h1 {
-    font-size: var(--font-size__big-ass);
-
-    @media (max-width: 600px) {
-      font-size: var(--font-size__h1);
-    }
-
-    + p {
-      margin-bottom: 200px;
-
-      @media (max-width: 1175px) {
-        margin-bottom: 50px;
-      }
-
-      strong {
-        color: var(--color_heading-text);
-      }
-    }
+    margin: 3rem 0;
   }
 
   form {
@@ -61,7 +40,8 @@ const Contact = styled.div`
 
   label {
     font-weight: bold;
-    color: var(--color_heading-text);
+    font-size: var(--font-size__base--sm);
+    color: var(--color__headline);
   }
 
   span {
@@ -70,6 +50,7 @@ const Contact = styled.div`
     position: relative;
     background-color: #f5f8f9;
     z-index: 1;
+    border-radius: 10px;
   }
 
   input,
@@ -78,13 +59,12 @@ const Contact = styled.div`
     display: block;
     width: 100% !important;
     border: none;
-    border-bottom: 3px solid var(--color_blue);
     font-weight: normal;
-    padding: 20px;
+    padding: 1rem 20px;
     outline: 0;
     margin-top: 7px;
     resize: none;
-    border-radius: 0;
+    border-radius: 8px;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -93,25 +73,25 @@ const Contact = styled.div`
 
   input,
   select {
-    height: 60px;
-    line-height: 60px;
+    height: 3rem;
+    line-height: 3rem;
     padding: 0 20px;
   }
 
   select + svg {
     position: absolute;
     right: 15px;
-    top: 17px;
+    top: 16px;
     width: 21px;
     z-index: -1;
 
     path {
-      fill: var(--color_blue);
+      fill: #53caee;
     }
   }
 
   textarea {
-    min-height: 200px;
+    min-height: 10rem;
 
     @media (max-width: 600px) {
       height: 100px;
@@ -120,18 +100,7 @@ const Contact = styled.div`
 
   button {
     grid-column: 2 / 3;
-    color: #fff;
-    padding: 15px 30px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-align: center;
-    font-size: var(--font-size__small);
-    background-color: var(--color_red);
-    border: none;
-    display: flex;
-    margin: 30px 0 0 auto;
-    outline: 0;
+    margin: 1rem 0 0 auto;
     cursor: pointer;
 
     @media (max-width: 600px) {
@@ -189,6 +158,9 @@ const ContactPage = () => {
                     <option value="newdesign">New website design</option>
                     <option value="redesign">Current website redesign</option>
                     <option value="webapp">Custom web application</option>
+                    <option value="consulting">
+                      Search engine optimzation
+                    </option>
                     <option value="consulting">Consulting</option>
                     <option value="hello">Just saying hey!</option>
                   </select>
@@ -211,9 +183,10 @@ const ContactPage = () => {
                 <span>
                   <select id="budget" name="budget" required>
                     <option value="2k-5k">$2,500-$5,000</option>
-                    <option value="5k-7500">$5,000-$7,500</option>
-                    <option value="7500-10k">$7,500-$10,000</option>
-                    <option value="10k-plus">$10,000+</option>
+                    <option value="5k-7500">$5,000-$10,000</option>
+                    <option value="7500-10k">$10,000-$20,000</option>
+                    <option value="10k-plus">$20,000+</option>
+                    <option value="na">n/a</option>
                   </select>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -244,7 +217,7 @@ const ContactPage = () => {
           </form>
         </Contact>
       </div>
-      <ServicesBlocks />
+      {/* <ServicesBlocks /> */}
       <ProjectRoadmap />
     </Layout>
   )

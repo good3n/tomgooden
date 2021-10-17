@@ -76,11 +76,11 @@ export const StyledUses = styled.div`
   }
 
   h1 {
-    font-size: var(--font-size__extra-big-ass);
+    font-size: var(--font-size__h0);
     margin: 0;
 
     @media (max-width: 899px) {
-      font-size: var(--font-size__medium-ass);
+      font-size: var(--font-size__h0);
     }
 
     + p {

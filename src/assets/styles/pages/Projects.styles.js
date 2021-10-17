@@ -24,38 +24,17 @@ export const Projects = styled.div`
   }
 
   h1 {
-    font-size: var(--font-size__big-ass);
-    line-height: 1;
-
-    @media (max-width: 1175px) {
-      font-size: var(--font-size__medium-ass);
-    }
-
-    @media (max-width: 899px) {
-      font-size: var(--font-size__h1);
-    }
-
     span {
       display: block;
-      color: var(--color_blue);
-      font-size: var(--font-size__h5);
-      letter-spacing: 3px;
-      font-weight: bold;
       margin-bottom: 1rem;
     }
-  }
-
-  p {
-    font-weight: 500;
-    color: var(--color_heading-text);
   }
 
   ul {
     margin: 0;
     padding: 0;
     font-weight: bold;
-    font-size: var(--font-size__h4);
-    color: var(--color_heading-text);
+    color: var(--color__headline);
   }
 
   li {

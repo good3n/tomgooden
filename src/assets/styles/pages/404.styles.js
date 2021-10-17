@@ -74,7 +74,7 @@ export const NotFound = styled.div`
     }
 
     span {
-      background: var(--color_heading-text);
+      background: var(--color__headline);
       color: #fff;
       padding: 0.579rem 20px;
       display: inline-block;

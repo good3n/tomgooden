@@ -9,7 +9,7 @@ const Thanks = styled.div`
   text-align: center;
 
   h1 {
-    font-size: var(--font-size__big-ass);
+    font-size: var(--font-size__h0);
   }
 
   a {

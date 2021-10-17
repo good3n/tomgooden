@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledUses = styled.div`
-  margin-bottom: 5.16rem;
+  margin-bottom: 5.5rem;
 
   header {
     display: grid;
@@ -16,7 +16,7 @@ export const StyledUses = styled.div`
     }
 
     + .container {
-      margin-top: 2.074rem;
+      margin-top: 2rem;
     }
   }
 
@@ -27,6 +27,7 @@ export const StyledUses = styled.div`
   li {
     font-weight: 600;
     display: block;
+    margin-bottom: 1rem;
 
     span {
       font-weight: normal;
@@ -76,7 +77,6 @@ export const StyledUses = styled.div`
   }
 
   h1 {
-    font-size: var(--font-size__h0);
     margin: 0;
 
     @media (max-width: 899px) {
@@ -89,7 +89,7 @@ export const StyledUses = styled.div`
   }
 
   h2 {
-    font-size: var(--font-size__h3);
+    font-size: var(--font-size__h5);
   }
 
   .grid {

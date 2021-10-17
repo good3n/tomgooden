@@ -6,12 +6,13 @@ export const StyledHeader = styled.header`
   padding: 2rem 0 3rem;
 
   .container {
-    position: relative;
     display: flex;
     align-items: center;
     max-width: 1200px;
 
     > div:first-of-type {
+      position: relative;
+
       svg {
         position: absolute;
         top: 0;

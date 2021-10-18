@@ -13,7 +13,7 @@ export const StyledHeader = styled.header`
 
     > div:first-of-type {
       position: relative;
-      top: -30px;
+      top: -20px;
 
       @media (max-width: 700px) {
         transform: scale(0.7);
@@ -75,46 +75,50 @@ export const StyledHeader = styled.header`
   }
 
   @keyframes triangle {
-    0% {
-      transform: translate(0, 0);
-    }
-
-    20% {
+    10% {
       transform: translate(5%, -10%);
     }
 
-    40% {
+    30% {
       transform: translate(10%, 5%);
     }
 
-    60% {
+    50% {
       transform: translate(-10%, -5%);
     }
 
-    80% {
+    70% {
       transform: translate(0%, 10%);
+    }
+
+    90% {
+      transform: translate(-5%, 0%);
     }
   }
 
   @keyframes circle {
-    0% {
+    5% {
       transform: translate(0, 0);
     }
 
-    20% {
+    15% {
       transform: translate(0%, 20%);
     }
 
-    40% {
+    35% {
       transform: translate(10%, 0%);
     }
 
-    60% {
+    55% {
       transform: translate(0%, 20%);
     }
 
-    80% {
+    75% {
       transform: translate(5%, 0%);
+    }
+
+    95% {
+      transform: translate(0%, 5%);
     }
   }
 `

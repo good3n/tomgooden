@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Nav = styled.nav`
   position: absolute;
   top: 2rem;
+  z-index: 999;
   right: 30px;
   text-align: right;
   opacity: 0;
@@ -66,6 +67,30 @@ export const NavToggle = styled.div`
       &::after {
         width: 25px;
       }
+    }
+  }
+
+  &::before {
+    content: '';
+    background: linear-gradient(
+      45deg,
+      rgba(58, 26, 160, 1) 0%,
+      rgba(64, 62, 198, 1) 100%
+    );
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+
+  &.true {
+    &::before {
+      opacity: 0.7;
+      visibility: visible;
     }
   }
 

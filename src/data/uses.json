@@ -8,7 +8,12 @@
           "name": "Hardware",
           "items": [
             {
-              "title": "💻 MacBookPro 15\" 2015 and 15\" 2017",
+              "title": "💻 2021 MacBook Pro 16\" PRO MAX",
+              "description": "The new hotness. 🔥",
+              "link": "https://www.reviewed.com/laptops/content/apple-macbook-pro-16-m1-max-review"
+            },
+            {
+              "title": "💻 2015 MacBook Pro 15\"",
               "description": "2015 MBP is the best machine ever made, change my mind.",
               "link": "https://mashable.com/article/rip-2015-15-inch-retina-macbook-pro/"
             },
@@ -186,11 +191,6 @@
               "title": "Svelte",
               "description": "",
               "link": "https://svelte.dev/"
-            },
-            {
-              "title": "11ty",
-              "description": "",
-              "link": "https://www.11ty.dev/"
             }
           ]
         }
@@ -301,11 +301,6 @@
               "title": "Home Assistant",
               "description": "Set up and manage multiple custom automations.",
               "link": "https://www.home-assistant.io/"
-            },
-            {
-              "title": "Wyze",
-              "description": "Super affordable awesome smart products.",
-              "link": "https://wyze.com/"
             },
             {
               "title": "Raspberry Pi 4 Model B",

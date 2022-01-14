@@ -12,21 +12,19 @@ import { useStaticQuery, graphql } from 'gatsby'
 import defaultImage from '../assets/images/default-image.png'
 
 function Seo({ description, lang, meta, title, image }) {
-  const { site } = useStaticQuery(
-    graphql`
-      {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            twitterUsername
-            siteUrl
-          }
+  const { site } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          twitterUsername
+          siteUrl
         }
       }
-    `
-  )
+    }
+  `)
 
   const metaDescription = description || site.siteMetadata.description
   const defaultImageUrl = site.siteMetadata.siteUrl + (image || defaultImage)

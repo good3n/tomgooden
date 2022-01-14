@@ -1,24 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import cobraKai from '../assets/images/send-it-to-the-internet.gif'
-
-const Thanks = styled.div`
-  text-align: center;
-
-  a {
-    color: var(--color_blue);
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  img {
-    display: block;
-    margin: 50px auto 100px;
-  }
-`
+import { Thanks } from '../assets/styles/pages/Thanks.styles'
 
 const ThanksPage = () => (
   <Layout>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const StyledHeader = styled.header`
   position: relative;
   z-index: 998;
-  padding: 2rem 0 3rem;
+  padding: 2rem 0;
 
   .container {
     position: relative;
@@ -13,10 +13,11 @@ export const StyledHeader = styled.header`
 
     > div:first-of-type {
       position: relative;
-      top: -20px;
+      top: -30px;
 
-      @media (max-width: 700px) {
+      @media (max-width: 900px) {
         transform: scale(0.7);
+        top: -25px;
       }
 
       svg {

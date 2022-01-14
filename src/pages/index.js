@@ -16,7 +16,7 @@ const IndexPage = () => {
       <Home>
         <div className="container">
           <div>
-            <p>
+            <div className="type">
               <ReactTypingEffect
                 text={[
                   "import { Development } from 'tom-gooden'",
@@ -26,7 +26,7 @@ const IndexPage = () => {
                 speed={100}
                 eraseSpeed={30}
               />
-            </p>
+            </div>
             <h2>
               Digital <br />
               Thing-maker
@@ -87,15 +87,14 @@ const IndexPage = () => {
             <StaticImage
               src="../assets/images/tom-gooden-web-design-development.png"
               alt="Tom Gooden"
-              placeholder="blurred"
+              placeholder="tracedSVG"
               aspectRatio={1 / 1}
               width={499}
               imgStyle={{
                 filter: `grayscale(100%) contrast(150%)`,
               }}
-              loading="lazy"
-              objectFit="cover"
-              objectPosition="50% 50%"
+              // objectFit="cover"
+              // objectPosition="50% 50%"
             />
           </div>
         </div>

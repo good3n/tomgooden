@@ -7,14 +7,7 @@ module.exports = {
     twitterUsername: '@good3n',
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          '/*': [`Referrer-Policy: strict-origin-when-cross-origin`],
-        },
-      },
-    },
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

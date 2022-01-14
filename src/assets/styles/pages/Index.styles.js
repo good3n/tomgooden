@@ -22,7 +22,7 @@ export const Home = styled.div`
     }
   }
 
-  p {
+  .type {
     margin: 0;
     font-family: var(--font-family__code);
     font-size: var(--font-size__base--sm);

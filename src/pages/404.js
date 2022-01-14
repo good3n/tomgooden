@@ -21,6 +21,7 @@ const NotFoundPage = () => (
           alt="404 not found"
           width={400}
           className="lost-man"
+          backgroundColor="#D5E9F6"
         />
         <h1>
           <span>4</span>
@@ -40,6 +41,7 @@ const NotFoundPage = () => (
           alt="404 not found"
           width={400}
           className="balloon"
+          backgroundColor="#D5E9F6"
         />
       </div>
     </NotFound>

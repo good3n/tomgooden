@@ -5,11 +5,9 @@ export const StyledUses = styled.div`
 
   header {
     display: grid;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 1fr 600px;
     align-items: center;
     gap: 100px;
-    background: var(--color_offWhite);
-    padding: 0;
 
     @media (max-width: 899px) {
       display: block;
@@ -20,45 +18,30 @@ export const StyledUses = styled.div`
     }
   }
 
-  ul {
-    margin: 0;
-  }
-
-  li {
-    font-weight: 600;
-    display: block;
+  h1 {
     margin-bottom: 1rem;
 
-    span {
-      font-weight: normal;
-      display: block;
-      font-size: var(--font-size__small);
+    @media (max-width: 899px) {
+      font-size: var(--font-size__h2);
     }
 
-    a {
-      position: relative;
+    + p {
+      margin: 0;
 
-      &::after {
-        content: '';
-        height: 0;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background-color: var(--color_blue);
-        opacity: 0.3;
-        transition: height 0.2s ease;
-        z-index: -1;
-      }
-
-      &:hover::after {
-        height: 7px;
+      @media (max-width: 899px) {
+        margin-bottom: 2rem;
       }
     }
+  }
+
+  h2 {
+    font-size: var(--font-size__h5);
+    margin-bottom: 2rem;
   }
 
   .gatsby-image-wrapper {
+    border-radius: 40px 0 40px 0;
+
     @media (max-width: 899px) {
       width: 100%;
     }
@@ -74,18 +57,6 @@ export const StyledUses = styled.div`
         padding: 50px 30px;
       }
     }
-  }
-
-  h1 {
-    margin: 0;
-
-    + p {
-      margin: 0;
-    }
-  }
-
-  h2 {
-    font-size: var(--font-size__h5);
   }
 
   .grid {
@@ -122,6 +93,45 @@ export const StyledUses = styled.div`
             }
           }
         }
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  li {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+
+    span {
+      font-weight: normal;
+      display: block;
+      font-size: var(--font-size__small);
+    }
+
+    a {
+      position: relative;
+
+      &::after {
+        content: '';
+        height: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: var(--color_blue);
+        opacity: 0.3;
+        transition: height 0.2s ease;
+        z-index: -1;
+      }
+
+      &:hover::after {
+        height: 7px;
       }
     }
   }

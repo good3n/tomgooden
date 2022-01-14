@@ -13,13 +13,6 @@ const UsesPage = () => {
       <Seo title="Uses" />
       <StyledUses>
         <header className="container">
-          <StaticImage
-            src="../assets/images/uses.jpeg"
-            alt="Tom Gooden Uses"
-            objectFit="cover"
-            objectPosition="center -50px"
-            height={470}
-          />
           <div>
             <h1>/uses</h1>
             <p>
@@ -38,6 +31,13 @@ const UsesPage = () => {
               .
             </p>
           </div>
+          <StaticImage
+            src="../assets/images/uses.jpeg"
+            alt="Tom Gooden Uses"
+            objectFit="cover"
+            objectPosition="center -50px"
+            height={470}
+          />
         </header>
         <div className="container container--skinny">
           <div className="grid">

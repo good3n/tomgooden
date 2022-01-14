@@ -1,17 +1,25 @@
-// import React from 'react'
+import React from 'react'
 // import PropTypes from 'prop-types'
 // import kebabCase from 'lodash/kebabCase'
 // import Layout from '../components/Layout'
 // import { Link, graphql } from 'gatsby'
 
-// const TagsPage = ({
-//   data: {
-//     allMarkdownRemark: { group },
-//     site: {
-//       siteMetadata: { title },
-//     },
-//   },
-// }) => (
+const TagsPage = (
+  {
+    //   data: {
+    //     allMarkdownRemark: { group },
+    //     site: {
+    //       siteMetadata: { title },
+    //     },
+    //   },
+  }
+) => (
+  <Layout>
+    <div className="container">
+      <p>This page is under construction</p>
+    </div>
+  </Layout>
+)
 //   <Layout>
 //     <div className="container">
 //       <h1>Tags</h1>
@@ -46,7 +54,7 @@
 //   }),
 // }
 
-// export default TagsPage
+export default TagsPage
 
 // export const pageQuery = graphql`
 //   query {

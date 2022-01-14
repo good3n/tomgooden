@@ -32,15 +32,24 @@
 //   }
 // `
 
-// const BlogListPage = ({
-//   data: {
-//     allMarkdownRemark: { edges },
-//   },
-// }) => {
-//   const Posts = edges
-//     .filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-//     .map((edge) => <PostLink key={edge.node.id} post={edge.node} />)
-//   return (
+const BlogListPage = (
+  {
+    //   data: {
+    //     allMarkdownRemark: { edges },
+    //   },
+  }
+) => {
+  //   const Posts = edges
+  //     .filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+  //     .map((edge) => <PostLink key={edge.node.id} post={edge.node} />)
+  return (
+    <Layout>
+      <div className="container">
+        <p>This page is under construction</p>
+      </div>
+    </Layout>
+  )
+}
 //     <Layout>
 //       <div className="container">
 //         <h1>Blog</h1>
@@ -56,4 +65,4 @@
 //   )
 // }
 
-// export default BlogListPage
+export default BlogListPage

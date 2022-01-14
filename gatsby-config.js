@@ -62,13 +62,13 @@ module.exports = {
             /* Exact name of the font as defied in @font-face CSS rule */
             name: 'Inter',
             /* URL to the font CSS file with @font-face definition */
-            file: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap',
+            file: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=block',
           },
           {
             /* Exact name of the font as defied in @font-face CSS rule */
             name: 'Fira Code',
             /* URL to the font CSS file with @font-face definition */
-            file: 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap',
+            file: 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=block',
           },
         ],
       },
@@ -130,20 +130,20 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    {
-      resolve: `gatsby-plugin-advanced-sitemap`,
-      options: {
-        exclude: [
-          `/dev-404-page`,
-          `/404`,
-          `/404.html`,
-          `/offline-plugin-app-shell-fallback`,
-          /(\/)?hash-\S*/, // you can also pass valid RegExp to exclude internal tags for example
-        ],
-        createLinkInHead: true, // optional: create a link in the `<head>` of your site
-        addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-advanced-sitemap`,
+    //   options: {
+    //     exclude: [
+    //       `/dev-404-page`,
+    //       `/404`,
+    //       `/404.html`,
+    //       `/offline-plugin-app-shell-fallback`,
+    //       /(\/)?hash-\S*/, // you can also pass valid RegExp to exclude internal tags for example
+    //     ],
+    //     createLinkInHead: true, // optional: create a link in the `<head>` of your site
+    //     addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

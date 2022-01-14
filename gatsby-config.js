@@ -7,14 +7,14 @@ module.exports = {
     twitterUsername: '@good3n',
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          '/*': [`Referrer-Policy: strict-origin-when-cross-origin`],
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-netlify`,
+    //   options: {
+    //     headers: {
+    //       '/*': [`Referrer-Policy: strict-origin-when-cross-origin`],
+    //     },
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -89,39 +89,39 @@ module.exports = {
         icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        // CommonMark mode (default: true)
-        commonmark: true,
-        // Footnotes mode (default: true)
-        footnotes: true,
-        // Pedantic mode (default: true)
-        pedantic: true,
-        // GitHub Flavored Markdown mode (default: true)
-        gfm: true,
-        // Plugins configs
-        plugins: [
-          `gatsby-remark-relative-images`,
-          `gatsby-remark-check-links`,
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_self',
-              rel: 'nofollow',
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              quality: 70,
-              maxWidth: 670,
-              wrapperStyle: `display: block;`,
-            },
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     // CommonMark mode (default: true)
+    //     commonmark: true,
+    //     // Footnotes mode (default: true)
+    //     footnotes: true,
+    //     // Pedantic mode (default: true)
+    //     pedantic: true,
+    //     // GitHub Flavored Markdown mode (default: true)
+    //     gfm: true,
+    //     // Plugins configs
+    //     plugins: [
+    //       `gatsby-remark-relative-images`,
+    //       `gatsby-remark-check-links`,
+    //       {
+    //         resolve: 'gatsby-remark-external-links',
+    //         options: {
+    //           target: '_self',
+    //           rel: 'nofollow',
+    //         },
+    //       },
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           quality: 70,
+    //           maxWidth: 670,
+    //           wrapperStyle: `display: block;`,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

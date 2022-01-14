@@ -51,7 +51,7 @@ const ServicesBlocks = () => (
       </h2>
       <p>
         Creating a digital product or application is more than just putting good
-        ideas together. It’s a thought and data driven system.
+        ideas together. It's a thought and data driven system.
       </p>
     </div>
     <div>

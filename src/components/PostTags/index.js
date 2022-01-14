@@ -1,1 +1,1 @@
-export { default as PostTags } from "./PostTags.component"
+// export { default as PostTags } from "./PostTags.component"

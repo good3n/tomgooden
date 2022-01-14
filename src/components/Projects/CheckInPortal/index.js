@@ -1,1 +1,1 @@
-export { default as CheckInPortal } from './CheckInPortal.component.js'
+export { default as CheckInPortal } from './CheckInPortal.component'

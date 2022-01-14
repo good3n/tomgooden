@@ -32,22 +32,22 @@ const UsesPage = () => {
             </p>
           </div>
           <StaticImage
-            src="../assets/images/uses.jpeg"
             alt="Tom Gooden Uses"
+            height={470}
             objectFit="cover"
             objectPosition="center -50px"
-            height={470}
+            src="../assets/images/uses.jpeg"
           />
         </header>
         <div className="container container--skinny">
           <div className="grid">
             {uniques.map(({ categories, column }) => (
               <div key={column}>
-                {categories.map(({ name, items }) => (
+                {categories.map(({ name, items: catItems }) => (
                   <div key={name}>
                     <h2>{name}</h2>
                     <ul>
-                      {items.map(({ title, description, link }) => {
+                      {catItems.map(({ title, description, link }) => {
                         const fromLink =
                           link +
                           (link.match(/\?./) ? `&` : `?`) +

@@ -7,7 +7,7 @@ const Cta = () => (
     <h2>
       Get a <span>free quote</span> for your next project
     </h2>
-    <Link to="/contact" className="button">
+    <Link className="button" to="/contact">
       Get in touch
     </Link>
   </StyledCta>

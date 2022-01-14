@@ -8,10 +8,10 @@ const Navigation = () => {
   return (
     <>
       <NavToggle
+        className={isNavOpen}
         onClick={() => {
           setIsNavOpen(!isNavOpen)
         }}
-        className={isNavOpen}
       >
         <div></div>
       </NavToggle>
@@ -20,33 +20,33 @@ const Navigation = () => {
         <ul className={isNavOpen ? `true` : ``}>
           <li>
             <Link
-              to="/about/"
               activeClassName="is-active"
               onClick={() => {
                 setIsNavOpen(false)
               }}
+              to="/about/"
             >
               About
             </Link>
           </li>
           <li>
             <Link
-              to="/projects/"
               activeClassName="is-active"
               onClick={() => {
                 setIsNavOpen(false)
               }}
+              to="/projects/"
             >
               Projects
             </Link>
           </li>
           <li>
             <Link
-              to="/contact/"
               activeClassName="is-active"
               onClick={() => {
                 setIsNavOpen(false)
               }}
+              to="/contact/"
             >
               Contact
             </Link>

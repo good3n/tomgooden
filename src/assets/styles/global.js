@@ -121,6 +121,10 @@ const GlobalStyle = createGlobalStyle`
     color: var(--color__headline);
   }
 
+  img {
+    max-width: 100%;
+  }
+
   button,
   .button,
   a.button {

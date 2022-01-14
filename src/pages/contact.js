@@ -1,8 +1,8 @@
 import React from 'react'
+import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { ProjectRoadmap } from '../components/ProjectRoadmap'
-import styled from 'styled-components'
 
 const Contact = styled.div`
   margin: 5rem 0;
@@ -124,20 +124,20 @@ const ContactPage = () => {
             </p>
           </div>
           <form
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
             action="/thanks"
+            data-netlify="true"
+            method="POST"
             name="contact"
+            netlify-honeypot="bot-field"
           >
             <input name="form-name" type="hidden" value="contact" />
-            <input name="bot-field" type="hidden" placeholder="Phone" />
+            <input name="bot-field" placeholder="Phone" type="hidden" />
 
             <div>
               <label htmlFor="name">
                 Your name{' '}
                 <span>
-                  <input id="name" name="name" type="text" required />
+                  <input id="name" name="name" required type="text" />
                 </span>
               </label>
             </div>
@@ -145,7 +145,7 @@ const ContactPage = () => {
               <label htmlFor="email">
                 Email{' '}
                 <span>
-                  <input id="email" name="email" type="email" required />
+                  <input id="email" name="email" required type="email" />
                 </span>
               </label>
             </div>
@@ -164,13 +164,13 @@ const ContactPage = () => {
                     <option value="hello">Just saying hey!</option>
                   </select>
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 21.825 21.825"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <defs />
                     <path
-                      fill="#1e201d"
                       d="M16.791 13.254a1.112 1.112 0 011.587 0 1.14 1.14 0 010 1.587l-6.65 6.651a1.14 1.14 0 01-.809.333c-.317 0-.603-.127-.81-.333l-6.65-6.651c-.444-.444-.444-1.143 0-1.587s1.143-.444 1.587 0l4.746 4.762V1.111A1.116 1.116 0 0110.918 0c.619 0 1.111.492 1.111 1.111v16.904l4.762-4.761z"
+                      fill="#1e201d"
                     />
                   </svg>
                 </span>
@@ -178,7 +178,7 @@ const ContactPage = () => {
             </div>
             <div>
               <label htmlFor="budget">
-                What's your budget?
+                What&apos;s your budget?
                 <span>
                   <select id="budget" name="budget" required>
                     <option value="2k-5k">$2,500-$5,000</option>
@@ -188,13 +188,13 @@ const ContactPage = () => {
                     <option value="na">n/a</option>
                   </select>
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 21.825 21.825"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <defs />
                     <path
-                      fill="#1e201d"
                       d="M16.791 13.254a1.112 1.112 0 011.587 0 1.14 1.14 0 010 1.587l-6.65 6.651a1.14 1.14 0 01-.809.333c-.317 0-.603-.127-.81-.333l-6.65-6.651c-.444-.444-.444-1.143 0-1.587s1.143-.444 1.587 0l4.746 4.762V1.111A1.116 1.116 0 0110.918 0c.619 0 1.111.492 1.111 1.111v16.904l4.762-4.761z"
+                      fill="#1e201d"
                     />
                   </svg>
                 </span>

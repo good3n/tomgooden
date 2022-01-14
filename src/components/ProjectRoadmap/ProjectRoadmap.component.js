@@ -23,19 +23,19 @@ const ProjectRoadmap = () => {
       <div>
         <h2>Project roadmap</h2>
         <p>
-          The "4 D's" as some call it, a common approach to deciphering the
-          lifecycle of a website or application project. Planning is everything.
-          Without implementing and executing a real plan of action, your project
-          will begin to take on water.
+          The &quot;4 D&apos;s&quot; as some call it, a common approach to
+          deciphering the lifecycle of a website or application project.
+          Planning is everything. Without implementing and executing a real plan
+          of action, your project will begin to take on water.
         </p>
       </div>
       <div className="container">
-        <GatsbyImage image={image} alt="" />
+        <GatsbyImage alt="Lines" image={image} />
         <ul>
           <li>
             <h3>1. Discover</h3>
             <p>
-              To determine the real scope of the work, we'll work closely
+              To determine the real scope of the work, we&apos;ll work closely
               together to learn your goals and pain points. This step is
               important to ensure we identify what problems we will be solving.
             </p>
@@ -51,16 +51,16 @@ const ProjectRoadmap = () => {
           <li>
             <h3>3. Develop</h3>
             <p>
-              With the planning done, it's time to start bringing these ideas to
-              life. Each project has a strict development process to ensure
-              quality is met.
+              With the planning done, it&apos;s time to start bringing these
+              ideas to life. Each project has a strict development process to
+              ensure quality is met.
             </p>
           </li>
           <li>
             <h3>4. Deploy</h3>
             <p>
               The final phase in the roadmap. Your application will be tested
-              and then deployed. This isn't the end of the overall journey
+              and then deployed. This isn&apos;t the end of the overall journey
               however. Digital tools require ongoing attention and care.
             </p>
           </li>

@@ -34,8 +34,6 @@ function Seo({ description, lang, meta, title, image }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -82,6 +80,8 @@ function Seo({ description, lang, meta, title, image }) {
           content: defaultImageUrl,
         },
       ].concat(meta)}
+      title={title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
     />
   )
 }
@@ -97,6 +97,7 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 }
 
 export default Seo

@@ -47,8 +47,8 @@ const TherapistDirectory = () => {
           </div>
           <div>
             <MainImage
-              image={image}
               alt="Tom Gooden GLPG Therapist Directory Design Laptop"
+              image={image}
               objectFit="cover"
               objectPosition="50% 50%"
               style={{ maxWidth: `1100px` }}

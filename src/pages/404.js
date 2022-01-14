@@ -17,11 +17,11 @@ const NotFoundPage = () => (
     <NotFound>
       <div className="container">
         <StaticImage
-          src="../assets/images/404.png"
           alt="404 not found"
-          width={400}
-          className="lost-man"
           backgroundColor="#D5E9F6"
+          className="lost-man"
+          src="../assets/images/404.png"
+          width={400}
         />
         <h1>
           <span>4</span>
@@ -37,11 +37,11 @@ const NotFoundPage = () => (
           </span>
         </p>
         <StaticImage
-          src="../assets/images/balloon.png"
           alt="404 not found"
-          width={400}
-          className="balloon"
           backgroundColor="#D5E9F6"
+          className="balloon"
+          src="../assets/images/balloon.png"
+          width={400}
         />
       </div>
     </NotFound>

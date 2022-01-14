@@ -29,8 +29,8 @@ const CheckInPortal = () => {
         <div className="grid">
           <div>
             <MainImage
-              image={image}
               alt="Tom Gooden GLPG Check-in Portal Design iPad"
+              image={image}
               objectFit="cover"
               objectPosition="50% 50%"
               style={{ maxWidth: `730px` }}

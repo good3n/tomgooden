@@ -1,1 +1,1 @@
-export { default as TherapistDirectory } from './TherapistDirectory.component.js'
+export { default as TherapistDirectory } from './TherapistDirectory.component'

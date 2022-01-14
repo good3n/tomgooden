@@ -4,16 +4,15 @@ import React from 'react'
 import Layout from '../components/Layout'
 // import { Link, graphql } from 'gatsby'
 
-const TagsPage = (
-  {
-    //   data: {
-    //     allMarkdownRemark: { group },
-    //     site: {
-    //       siteMetadata: { title },
-    //     },
-    //   },
-  }
-) => (
+const TagsPage = () => (
+  // {
+  //   data: {
+  //     allMarkdownRemark: { group },
+  //     site: {
+  //       siteMetadata: { title },
+  //     },
+  //   },
+  // }
   <Layout>
     <div className="container">
       <p>This page is under construction</p>

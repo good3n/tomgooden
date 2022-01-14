@@ -37,7 +37,7 @@ const IndexPage = () => (
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path fill="#F52D86" d="M0 0h16v16H0z" />
+              <path d="M0 0h16v16H0z" fill="#F52D86" />
             </svg>
             <Link to="/uses">Uses</Link>
             <svg
@@ -45,7 +45,7 @@ const IndexPage = () => (
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <circle cx="8" cy="8" r="8" fill="#53CAEE" />
+              <circle cx="8" cy="8" fill="#53CAEE" r="8" />
             </svg>
             <Link to="/projects">Projects</Link>
             <svg
@@ -53,7 +53,7 @@ const IndexPage = () => (
               viewBox="0 0 17 15"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path fill="#711CB4" d="m8.24 0 8.17 14.46H.21L8.24 0Z" />
+              <path d="m8.24 0 8.17 14.46H.21L8.24 0Z" fill="#711CB4" />
             </svg>
             <Link to="/contact">Contact</Link>
           </nav>
@@ -74,7 +74,7 @@ const IndexPage = () => (
               fill="#711CB4"
               fillOpacity=".1"
             />
-            <path fill="#53CAEE" fillOpacity=".1" d="M0 28h268v268H0z" />
+            <path d="M0 28h268v268H0z" fill="#53CAEE" fillOpacity=".1" />
             <circle
               cx="313.5"
               cy="216.5"

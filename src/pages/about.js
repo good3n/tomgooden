@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Seo from '../components/Seo'
-import Layout from '../components/Layout'
 import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import Seo from '../components/Seo'
+import Layout from '../components/Layout'
 import whoAreYou from '../assets/images/parks-and-rec-craig-who-even-are-you.gif'
 
 const Wrapper = styled.div`
@@ -28,7 +28,6 @@ const Wrapper = styled.div`
     }
 
     img {
-      max-width: 100%;
       border-radius: 40px 0 40px 0;
     }
   }
@@ -109,12 +108,12 @@ const AboutPage = () => (
     <Wrapper className="container">
       <header>
         <div>
-          <img src={whoAreYou} alt="Who even are you" />
+          <img alt="Who even are you" src={whoAreYou} />
         </div>
         <div>
           <h1>About me</h1>
           <p>
-            My name is Tom Gooden and I'm a Michigan based Developer and
+            My name is Tom Gooden and I&apos;m a Michigan based Developer and
             Designer who specializes in custom solutions for businesses
             including internal tooling a customer facing applications.
           </p>
@@ -122,16 +121,16 @@ const AboutPage = () => (
       </header>
       <main>
         <p>
-          I’m a user-experience junkie, and for the past{' '}
-          {new Date().getFullYear() - 2007}+ years I've been professionally
+          I&apos;m a user-experience junkie, and for the past{' '}
+          {new Date().getFullYear() - 2007}+ years I&apos;ve been professionally
           creating websites and applications for businesses and governments of
           all sizes. My passion is coming up with ideas to make processes more
           efficient utilizing the JAMstack. You can usually catch me hanging out
           in the{' '}
           <OutboundLink
             href="https://discord.gg/KntFa9p"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
             CodeHelp discord server
           </OutboundLink>
@@ -143,8 +142,8 @@ const AboutPage = () => (
             <OutboundLink
               className="button"
               href="https://discord.gg/KntFa9p"
-              target="_blank"
               rel="noopener noreferrer"
+              target="_blank"
             >
               Join
             </OutboundLink>

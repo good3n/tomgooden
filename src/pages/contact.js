@@ -52,7 +52,7 @@ const ContactPage = () => {
                     <option value="redesign">Current website redesign</option>
                     <option value="webapp">Custom web application</option>
                     <option value="consulting">
-                      Search engine optimzation
+                      Search engine optimization
                     </option>
                     <option value="consulting">Consulting</option>
                     <option value="hello">Just saying hey!</option>

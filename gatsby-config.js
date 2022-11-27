@@ -7,7 +7,6 @@ module.exports = {
     twitterUsername: '@good3n',
   },
   plugins: [
-    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

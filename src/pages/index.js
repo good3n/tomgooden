@@ -59,7 +59,7 @@ const IndexPage = () => (
           </nav>
           <h1>
             I&apos;m a Michigan based Developer and Designer who specializes in
-            custom solutions for businesses including internal tooling a
+            custom solutions for businesses including internal tooling and
             customer facing applications.
           </h1>
         </div>

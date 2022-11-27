@@ -24,25 +24,23 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-webfonts`,
+      resolve: 'gatsby-omni-font-loader',
       options: {
-        fonts: {
-          google2: [
-            {
-              family: 'Inter',
-              axes: 'wght@400;700;900',
-              fontDisplay: 'block',
-            },
-            {
-              family: 'Fira Code',
-              axes: 'wght@600',
-              fontDisplay: 'block',
-            },
-          ],
-        },
+        mode: 'async',
+        enableListener: true,
+        preconnect: ['https://fonts.gstatic.com'],
+        web: [
+          {
+            name: 'Inter',
+            file: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900',
+          },
+          {
+            name: 'Fira Code',
+            file: 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@600',
+          },
+        ],
       },
-    },
-    `gatsby-plugin-styled-components`,
+    }`gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

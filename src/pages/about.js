@@ -19,7 +19,7 @@ const AboutPage = () => (
           <p>
             My name is Tom Gooden and I&apos;m a Michigan based Developer and
             Designer who specializes in custom solutions for businesses
-            including internal tooling a customer facing applications.
+            including internal tooling and customer facing applications.
           </p>
         </div>
       </header>

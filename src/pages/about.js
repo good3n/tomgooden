@@ -17,7 +17,7 @@ const AboutPage = () => (
         <div>
           <h1>About me</h1>
           <p>
-            My name is Tom Gooden and I&apos;m a Michigan based Developer and
+            My name is Tom Gooden and I&apos;m a Texas based Developer and
             Designer who specializes in custom solutions for businesses
             including internal tooling and customer facing applications.
           </p>

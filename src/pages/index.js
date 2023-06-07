@@ -9,7 +9,7 @@ import { Home } from '../assets/styles/pages/Index.styles'
 const IndexPage = () => (
   <Layout>
     <Seo
-      description="I'm a Michigan based Developer and Designer who specializes in custom solutions for businesses including internal tooling and customer facing applications."
+      description="I'm a Texas based Developer and Designer who specializes in custom solutions for businesses including internal tooling and customer facing applications."
       title="Web Developer / Designer"
     />
     <Home>
@@ -58,7 +58,7 @@ const IndexPage = () => (
             <Link to="/contact">Contact</Link>
           </nav>
           <h1>
-            I&apos;m a Michigan based Developer and Designer who specializes in
+            I&apos;m a Texas based Developer and Designer who specializes in
             custom solutions for businesses including internal tooling and
             customer facing applications.
           </h1>

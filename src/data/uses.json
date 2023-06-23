@@ -1,6 +1,5 @@
 {
-"data":
-  [
+  "data": [
     {
       "column": 0,
       "categories": [
@@ -18,7 +17,7 @@
               "link": "https://mashable.com/article/rip-2015-15-inch-retina-macbook-pro/"
             },
             {
-              "title": "🖥 x2 Dell U2719D Monitor's",
+              "title": "🖥 x2 Dell U2719D Monitors",
               "description": "In my experience, Dell's monitor quality is unmatched.",
               "link": "https://smile.amazon.com/gp/product/B01D402Z28/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01D402Z28&linkCode=as2&tag=tgooden-20&linkId=383ca364fe780e6d2ae11e1a2104aaa7"
             },
@@ -114,7 +113,7 @@
             },
             {
               "title": "Screaming Frog",
-              "description": "Best crawler on the web.",
+              "description": "Best crawler for the web.",
               "link": "https://www.screamingfrog.co.uk/seo-spider/"
             }
           ]
@@ -133,13 +132,8 @@
               "link": "https://www.travis-ci.com/"
             },
             {
-              "title": "Gatsby Cloud",
-              "description": "Building all the things.",
-              "link": "https://www.gatsbyjs.com/products/cloud/"
-            },
-            {
               "title": "Netlify",
-              "description": "My go-to for static hosting.",
+              "description": "Building all the things.",
               "link": "https://www.netlify.com/"
             },
             {

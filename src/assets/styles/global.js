@@ -169,6 +169,10 @@ const GlobalStyle = createGlobalStyle`
       max-width: 100%;
     }
   }
+
+  .strike { 
+    text-decoration: line-through;
+  }
 `
 
 export default GlobalStyle

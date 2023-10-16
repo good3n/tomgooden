@@ -65,10 +65,11 @@ const AboutPage = () => (
 
         <h2>A little more...</h2>
         <p>
-          Above all else I am a Dad to 3 kids and 2 dogs. During my downtime I
-          like to learn new things that help expand my development skill-set,
-          spend time outside doing things like fishing, camping, or small
-          projects around the home.
+          Above all else I am a Dad to 3 kids and{' '}
+          <span className="strike">2</span> <span className="strike">3</span>5
+          dogs. During my downtime I like to learn new things that help expand
+          my development skill-set, comic and MTG collecting, spending time
+          outside, fishing and camping.
         </p>
       </main>
     </About>

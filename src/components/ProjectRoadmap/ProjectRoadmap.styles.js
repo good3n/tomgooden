@@ -5,6 +5,7 @@ export const Roadmap = styled.div`
   padding: 6rem 0;
   overflow: hidden;
   color: #e5e5f8;
+  overflow-x: clip;
 
   > div:first-of-type {
     margin: 0 auto;

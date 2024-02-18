@@ -23,7 +23,8 @@ const TherapistDirectory = () => {
         <div className="grid">
           <div>
             <h1>
-              <span className="subheader">GLPG</span>FindMyTherapist.com
+              <span className="subheader">FindMyTherapist.com</span>Find My
+              Therapist
             </h1>
             <p>
               Searchable directory of therapists that allows users to filter or

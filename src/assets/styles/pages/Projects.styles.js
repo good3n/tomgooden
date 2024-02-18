@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 export const Projects = styled.div`
   overflow: hidden;
@@ -49,17 +49,5 @@ export const Projects = styled.div`
       width: 24px;
       margin-right: 20px;
     }
-  }
-`
-
-// former gatsby-image
-export const MainImage = styled(GatsbyImage)`
-  margin: 0 auto;
-  position: relative;
-  left: -40px;
-
-  @media (max-width: 600px) {
-    left: -30px;
-    left: -6%;
   }
 `

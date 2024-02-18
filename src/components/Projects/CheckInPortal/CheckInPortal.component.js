@@ -1,54 +1,46 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { getImage } from 'gatsby-plugin-image'
-import { MainImage } from '../../../assets/styles/pages/Projects.styles'
+import { StaticImage } from 'gatsby-plugin-image'
 import { StyledWork } from './CheckInPortal.styles'
 import { ListItem } from '../../../utils/idk'
 
+const imageStyles = {
+  maxWidth: `730px`,
+  objectFit: `cover`,
+  objectPosition: `50% 50%`,
+  margin: `0 auto`,
+  position: `relative`,
+  left: `-40px`,
+
+  '@media (max-width: 600px)': {
+    left: `-6%`,
+  },
+}
+
 const CheckInPortal = () => {
-  const data = useStaticQuery(graphql`
-    fragment workImage on File {
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-      }
-    }
-    query {
-      image1: file(
-        relativePath: { eq: "mockups/checkin-portal-glpg-ipad-mockup.png" }
-      ) {
-        ...workImage
-      }
-    }
-  `)
-
-  const image = getImage(data.image1)
-
   return (
     <StyledWork>
       <div className="container red">
         <div className="grid">
           <div>
-            <MainImage
+            <StaticImage
               alt="Tom Gooden GLPG Check-in Portal Design iPad"
-              image={image}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              style={{ maxWidth: `730px` }}
+              src="../../../../static/images/checkin-portal-glpg-mobile-mockup.png"
+              style={imageStyles}
             />
           </div>
           <div>
             <h1>
-              <span className="subheader">GLPG</span>Patient check-in portal
+              <span className="subheader">GLPG</span>Mobile Patient check-in
             </h1>
             <p>
-              A portal designed and developed allowing patients to self check-in
-              via an in-office kiosk, or mobile check-in in advance.
+              A progressive web app designed and developed to allow patients to
+              self check-in for their appointments.
             </p>
             <ul>
-              <ListItem text="React" />
-              <ListItem text="GatsbyJS" />
-              <ListItem text="AWS Amplify" />
-              <ListItem text="Podio API" />
+              <ListItem text="Svelte" />
+              <ListItem text="MongoDB" />
+              <ListItem text="NodeJS" />
+              <ListItem text="Salesforce" />
             </ul>
           </div>
         </div>

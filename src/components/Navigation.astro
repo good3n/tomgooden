@@ -1,0 +1,193 @@
+---
+const currentPath = Astro.url.pathname
+---
+
+<div class="nav-toggle" id="nav-toggle">
+  <div></div>
+</div>
+
+<nav class="site-nav" id="site-nav">
+  <ul>
+    <li>
+      <a class:list={[{ 'is-active': currentPath.startsWith('/about') }]} href="/about/">About</a>
+    </li>
+    <li>
+      <a class:list={[{ 'is-active': currentPath.startsWith('/projects') }]} href="/projects/">Projects</a>
+    </li>
+    <li>
+      <a class:list={[{ 'is-active': currentPath.startsWith('/contact') }]} href="/contact/">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  const toggle = document.getElementById('nav-toggle')!
+  const nav = document.getElementById('site-nav')!
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open')
+    toggle.classList.toggle('open', isOpen)
+    document.body.classList.toggle('nav-open', isOpen)
+  })
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open')
+      toggle.classList.remove('open')
+      document.body.classList.remove('nav-open')
+    })
+  })
+</script>
+
+<style>
+  .site-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 10vw;
+    background: linear-gradient(
+      45deg,
+      rgba(30, 40, 120, 0.92) 0%,
+      rgba(40, 60, 160, 0.88) 100%
+    );
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .site-nav.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-nav li {
+    display: block;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .site-nav.open li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .site-nav.open li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .site-nav.open li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  .site-nav.open li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 15px 50px;
+    color: #fff;
+    font-size: var(--font-size__h2);
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+  }
+
+  @media (max-width: 600px) {
+    .site-nav {
+      padding-left: 6vw;
+      align-items: flex-start;
+      padding-top: 25vh;
+    }
+
+    .site-nav a {
+      font-size: var(--font-size__h3);
+      padding: 12px 20px;
+    }
+  }
+
+  .site-nav a:hover {
+    opacity: 0.7;
+  }
+
+  .site-nav a.is-active {
+    position: relative;
+  }
+
+  .nav-toggle {
+    position: relative;
+    z-index: 1000;
+    height: 23px;
+    width: 30px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-toggle:hover div {
+    width: 30px;
+  }
+
+  .nav-toggle:hover div::before {
+    width: 20px;
+  }
+
+  .nav-toggle:hover div::after {
+    width: 25px;
+  }
+
+  .nav-toggle div {
+    position: absolute;
+    background: #000;
+    height: 3px;
+    width: 25px;
+    transition: width 0.2s ease-in-out, background 0.2s ease-in-out;
+    top: 0;
+    right: 0;
+    border-radius: 1.5px;
+  }
+
+  .nav-toggle.open div,
+  .nav-toggle.open div::before,
+  .nav-toggle.open div::after {
+    background: #fff;
+  }
+
+  .nav-toggle div::before,
+  .nav-toggle div::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    background: #000;
+    height: 3px;
+    display: block;
+    transition: width 0.2s ease-in-out, background 0.2s ease-in-out;
+    border-radius: 1.5px;
+  }
+
+  .nav-toggle div::before {
+    top: 10px;
+    width: 30px;
+  }
+
+  .nav-toggle div::after {
+    top: 20px;
+    width: 20px;
+  }
+</style>

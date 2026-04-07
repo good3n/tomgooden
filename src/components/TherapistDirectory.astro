@@ -1,0 +1,120 @@
+---
+import ListItem from './ListItem.astro'
+---
+
+<section class="therapist-directory">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h1>
+          <span class="subheader">FindMyTherapist.com</span>Find My Therapist
+        </h1>
+        <p>
+          Searchable directory of therapists that allows users to filter or
+          search based on location, issues, insurance, and more.
+        </p>
+        <ul>
+          <ListItem text="React" />
+          <ListItem text="AstroJS" />
+          <ListItem text="Tailwind" />
+          <ListItem text="Salesforce" />
+          <ListItem text="Algolia" />
+        </ul>
+      </div>
+      <div>
+        <img
+          alt="Tom Gooden Find My Therapist Design Laptop"
+          src="/images/fmt-mockup.png"
+          class="mockup-img"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .therapist-directory {
+    position: relative;
+    padding: 5.16rem 0 10.699rem;
+  }
+
+  @media (max-width: 899px) {
+    .therapist-directory {
+      padding: 0;
+    }
+
+    .therapist-directory .container {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 2.488rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  @media (max-width: 899px) {
+    .grid {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+
+  .grid > div:last-of-type {
+    margin-right: -300px;
+  }
+
+  @media (max-width: 1350px) {
+    .grid > div:last-of-type {
+      margin-right: -200px;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .grid > div:last-of-type {
+      width: 600px;
+      margin: 0 auto;
+      order: -1;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .grid > div:last-of-type {
+      position: relative;
+      left: calc((100vw - 585px) / 2);
+    }
+  }
+
+  .mockup-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin: 0 auto;
+    position: relative;
+    left: -40px;
+  }
+
+  @media (max-width: 600px) {
+    .mockup-img {
+      left: -6%;
+    }
+  }
+
+  .therapist-directory h1 span {
+    color: #53caee;
+  }
+
+  .therapist-directory :global(svg path) {
+    stroke: #53caee;
+  }
+</style>

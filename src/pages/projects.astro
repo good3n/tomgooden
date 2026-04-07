@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro'
+import TherapistDirectory from '../components/TherapistDirectory.astro'
+import CheckInPortal from '../components/CheckInPortal.astro'
+import ProjectRoadmap from '../components/ProjectRoadmap.astro'
+import Cta from '../components/Cta.astro'
+---
+
+<Layout title="Projects">
+  <div class="projects">
+    <TherapistDirectory />
+    <CheckInPortal />
+  </div>
+  <ProjectRoadmap />
+  <Cta />
+</Layout>
+
+<style>
+  .projects {
+    overflow: hidden;
+  }
+
+  .projects :global(h1 span) {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .projects :global(ul) {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: var(--color__headline);
+  }
+
+  .projects :global(li) {
+    display: flex;
+    align-items: center;
+    line-height: 2.074rem;
+    margin: 0;
+  }
+
+  .projects :global(li svg) {
+    height: 24px;
+    width: 24px;
+    margin-right: 20px;
+  }
+</style>

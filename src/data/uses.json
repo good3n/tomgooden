@@ -6,56 +6,14 @@
         {
           "name": "Hardware",
           "items": [
-            {
-              "title": "💻 2021 MacBook Pro 16\" PRO MAX",
-              "description": "The new hotness. 🔥",
-              "link": "https://www.reviewed.com/laptops/content/apple-macbook-pro-16-m1-max-review"
-            },
-            {
-              "title": "💻 2015 MacBook Pro 15\"",
-              "description": "2015 MBP is the best machine ever made, change my mind.",
-              "link": "https://mashable.com/article/rip-2015-15-inch-retina-macbook-pro/"
-            },
-            {
-              "title": "🖥 x2 Dell U2719D Monitors",
-              "description": "In my experience, Dell's monitor quality is unmatched.",
-              "link": "https://smile.amazon.com/gp/product/B01D402Z28/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01D402Z28&linkCode=as2&tag=tgooden-20&linkId=383ca364fe780e6d2ae11e1a2104aaa7"
-            },
-            {
-              "title": "⌨️ Apple Magic Keyboard",
-              "description": "I enjoy the simplicity.",
-              "link": "https://smile.amazon.com/gp/product/B016QO64FI/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B016QO64FI&linkCode=as2&tag=tgooden-20&linkId=577a9630097a81b45c1a1301952f2fb7"
-            },
-            {
-              "title": "🖱 Apple Magic Mouse",
-              "description": "I still enjoy the simplicity.",
-              "link": "https://smile.amazon.com/gp/product/B016QO5YNG/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B016QO5YNG&linkCode=as2&tag=tgooden-20&linkId=a47a57e32da738ce52823fd86ec691f7"
-            },
-            {
-              "title": "🎤 Blue Yeti Microphone",
-              "description": "Not bad for a USB mic.",
-              "link": "https://smile.amazon.com/gp/product/B00N1YPXW2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00N1YPXW2&linkCode=as2&tag=tgooden-20&linkId=91ed94dc897efa77afc65e51b5950ee0"
-            },
-            {
-              "title": "🎥 Logitech C920 Pro HD Webcam",
-              "description": "Solid quality for less than a hundred bucks.",
-              "link": "https://smile.amazon.com/gp/product/B085TFF7M1/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B085TFF7M1&linkCode=as2&tag=tgooden-20&linkId=c3d157044aa332af607e4d68e990050f"
-            },
-            {
-              "title": "💾 Synology NAS DS920+",
-              "description": "Network-attached storage for my Plex media server amongst countless other things.",
-              "link": "https://smile.amazon.com/gp/product/B087Z34F3R/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B087Z34F3R&linkCode=as2&tag=tgooden-20&linkId=c96e57ce4d5ca6cc6b17c16b99894582"
-            },
-            {
-              "title": "💺 Secretlab Titan 2020",
-              "description": "Comfortable awesome looking chair.",
-              "link": "https://secretlab.co/collections/titan-series/"
-            },
-            {
-              "title": "🎒 eBags Pro Laptop Backpack",
-              "description": "Extremely awesome tech backpack.",
-              "link": "https://smile.amazon.com/gp/product/B00OKXYUJ0/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00OKXYUJ0&linkCode=as2&tag=tgooden-20&linkId=9a3dc494303f5fd835bd973fce23fddc"
-            }
+            { "title": "2021 MacBook Pro 16\" PRO MAX", "link": "https://www.reviewed.com/laptops/content/apple-macbook-pro-16-m1-max-review" },
+            { "title": "2015 MacBook Pro 15\"", "link": "https://mashable.com/article/rip-2015-15-inch-retina-macbook-pro/" },
+            { "title": "x2 Dell U2719D Monitors", "link": "https://smile.amazon.com/gp/product/B01D402Z28/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01D402Z28&linkCode=as2&tag=tgooden-20&linkId=383ca364fe780e6d2ae11e1a2104aaa7" },
+            { "title": "Apple Magic Keyboard", "link": "https://smile.amazon.com/gp/product/B016QO64FI/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B016QO64FI&linkCode=as2&tag=tgooden-20&linkId=577a9630097a81b45c1a1301952f2fb7" },
+            { "title": "Logitech G903", "link": "https://www.logitechg.com/en-us/products/gaming-mice/g903-hero-wireless-gaming-mouse.html" },
+            { "title": "Blue Yeti Microphone", "link": "https://smile.amazon.com/gp/product/B00N1YPXW2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00N1YPXW2&linkCode=as2&tag=tgooden-20&linkId=91ed94dc897efa77afc65e51b5950ee0" },
+            { "title": "Logitech C920 Pro HD Webcam", "link": "https://smile.amazon.com/gp/product/B085TFF7M1/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B085TFF7M1&linkCode=as2&tag=tgooden-20&linkId=c3d157044aa332af607e4d68e990050f" },
+            { "title": "Synology NAS DS920+", "link": "https://smile.amazon.com/gp/product/B087Z34F3R/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B087Z34F3R&linkCode=as2&tag=tgooden-20&linkId=c96e57ce4d5ca6cc6b17c16b99894582" }
           ]
         }
       ]
@@ -66,126 +24,39 @@
         {
           "name": "Software & Apps",
           "items": [
-            {
-              "title": "iTerm2",
-              "description": "Solid terminal replacement.",
-              "link": "https://iterm2.com/"
-            },
-            {
-              "title": "Alfred",
-              "description": "Spotlight replacement with workflows.",
-              "link": "https://www.alfredapp.com/"
-            },
-            {
-              "title": "Sizzy",
-              "description": "Cross-browser testing and development.",
-              "link": "https://sizzy.co/"
-            },
-            {
-              "title": "Bitwarden",
-              "description": "Password manager because ain't nobody got time for that.",
-              "link": "https://bitwarden.com/"
-            }
+            { "title": "iTerm2", "link": "https://iterm2.com/" },
+            { "title": "Alfred", "link": "https://www.alfredapp.com/" },
+            { "title": "Bitwarden", "link": "https://bitwarden.com/" }
           ]
         },
         {
           "name": "Design",
           "items": [
-            {
-              "title": "Figma",
-              "description": "Better than Sketch, imo.",
-              "link": "https://www.figma.com/"
-            },
-            {
-              "title": "SVGOMG",
-              "description": "I'd literally die without this. Optimizes SVG's.",
-              "link": "https://jakearchibald.github.io/svgomg/"
-            }
+            { "title": "Figma", "link": "https://www.figma.com/" },
+            { "title": "SVGOMG", "link": "https://jakearchibald.github.io/svgomg/" }
           ]
         },
         {
           "name": "SEO & Marketing",
           "items": [
-            {
-              "title": "SEMrush",
-              "description": "SEO tool for ranking monitoring, etc.",
-              "link": "https://www.semrush.com/"
-            },
-            {
-              "title": "Screaming Frog",
-              "description": "Best crawler for the web.",
-              "link": "https://www.screamingfrog.co.uk/seo-spider/"
-            }
+            { "title": "SEMrush", "link": "https://www.semrush.com/" },
+            { "title": "Screaming Frog", "link": "https://www.screamingfrog.co.uk/seo-spider/" }
           ]
         },
         {
           "name": "Git, Building, Hosting, Monitoring",
           "items": [
-            {
-              "title": "Github",
-              "description": "Duh.",
-              "link": "https://github.com/"
-            },
-            {
-              "title": "TravisCI",
-              "description": "Testing and CI/CD.",
-              "link": "https://www.travis-ci.com/"
-            },
-            {
-              "title": "Netlify",
-              "description": "Building all the things.",
-              "link": "https://www.netlify.com/"
-            },
-            {
-              "title": "Sentry",
-              "description": "Tracks and reports bugs and errors.",
-              "link": "https://sentry.io/"
-            },
-            {
-              "title": "AWS S3 & Amplify",
-              "description": "So many tools that I get lost.",
-              "link": "https://aws.amazon.com/"
-            }
+            { "title": "Github", "link": "https://github.com/" },
+            { "title": "Vercel", "link": "https://vercel.com/" },
+            { "title": "Netlify", "link": "https://www.netlify.com/" },
+            { "title": "Sentry", "link": "https://sentry.io/" }
           ]
         },
         {
-          "name": "3D Printing",
+          "name": "Artificial Unintelligence",
           "items": [
-            {
-              "title": "Ender 3",
-              "description": "Heavily modded I might add. See below.",
-              "link": "https://smile.amazon.com/gp/product/B07BR3F9N6/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07BR3F9N6&linkCode=as2&tag=tgooden-20&linkId=acd0ba95f8fa59072a88b9d49b039e6a"
-            },
-            {
-              "title": "BLTouch",
-              "description": "An auto mesh leveling sensor.",
-              "link": "https://smile.amazon.com/gp/product/B076PQG1FF/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B076PQG1FF&linkCode=as2&tag=tgooden-20&linkId=b0f2493a144383ea43c8dd3de90c3a49"
-            },
-            {
-              "title": "SKR Mini E3 V2",
-              "description": "A quiet board replacement.",
-              "link": "https://smile.amazon.com/gp/product/B088CQJWRP/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B088CQJWRP&linkCode=as2&tag=tgooden-20&linkId=b60a50307a72b4e42eb9f9f85801a7c7"
-            },
-            {
-              "title": "TFT35 E3 V3.0 Touchscreen",
-              "description": "Much prettier than the stock display.",
-              "link": "https://smile.amazon.com/gp/product/B082YPF5YV/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B082YPF5YV&linkCode=as2&tag=tgooden-20&linkId=1f23162ed86361acc69e901408e32210"
-            },
-            {
-              "title": "Ultimaker Cura",
-              "description": "Pretty great for free software. PrusaSlicer is another alternative.",
-              "link": "https://ultimaker.com/software/ultimaker-cura"
-            }
-          ]
-        },
-        {
-          "name": "Would love to learn more about...",
-          "items": [
-            {
-              "title": "Svelte",
-              "description": "",
-              "link": "https://svelte.dev/"
-            }
+            { "title": "OpenClaw", "link": "https://openclaw.ai/" },
+            { "title": "Claude Code", "link": "https://claude.ai/code" }
           ]
         }
       ]
@@ -196,126 +67,39 @@
         {
           "name": "IDE & Extensions",
           "items": [
-            {
-              "title": "VSCode",
-              "description": "Pretty sure it's taken over as the king of IDE's.",
-              "link": "https://code.visualstudio.com/"
-            },
-            {
-              "title": "Dracula Theme",
-              "description": "I absolutely love this theme on everything.",
-              "link": "https://draculatheme.com/"
-            },
-            {
-              "title": "Operator Mono Font",
-              "description": "A premium alternative to Fira Code.",
-              "link": "http://www.typography.com/fonts/operator/overview/"
-            },
-            {
-              "title": "Better Comments",
-              "description": "Color comments based on prefix.",
-              "link": "https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments"
-            },
-            {
-              "title": "Auto Rename Tag",
-              "description": "Super helpful but can also get you into trouble.",
-              "link": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
-            },
-            {
-              "title": "GitLens",
-              "description": "Really useful on large projects or working with teams.",
-              "link": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens"
-            },
-            {
-              "title": "Import Cost",
-              "description": "Shows the file size of imports.",
-              "link": "https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost"
-            },
-            {
-              "title": "Prettier",
-              "description": "I use the AirBnB standard.",
-              "link": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
-            },
-            {
-              "title": "ESLint",
-              "description": "",
-              "link": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
-            },
-            {
-              "title": "Rainbow Brackets",
-              "description": "Makes it easier to identify bracket pairs.",
-              "link": "https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets"
-            }
+            { "title": "VSCode", "link": "https://code.visualstudio.com/" },
+            { "title": "Dracula Theme", "link": "https://draculatheme.com/" },
+            { "title": "Operator Mono Font", "link": "http://www.typography.com/fonts/operator/overview/" },
+            { "title": "Better Comments", "link": "https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments" },
+            { "title": "Auto Rename Tag", "link": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag" },
+            { "title": "GitLens", "link": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" },
+            { "title": "Import Cost", "link": "https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost" },
+            { "title": "Prettier", "link": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" },
+            { "title": "ESLint", "link": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" },
+            { "title": "Rainbow Brackets", "link": "https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets" }
           ]
         },
         {
-          "name": "React",
+          "name": "JavaScript",
           "items": [
-            {
-              "title": "GatsbyJS",
-              "description": "My go-to static site generator, like this website.",
-              "link": "https://www.gatsbyjs.com/"
-            },
-            {
-              "title": "NextJS",
-              "description": "My go-to for anything but static.",
-              "link": "https://nextjs.org/"
-            }
-          ]
-        },
-        {
-          "name": "WordPress",
-          "items": [
-            {
-              "title": "Underscores",
-              "description": "A nearly bare bones template generator.",
-              "link": "https://underscores.me/"
-            },
-            {
-              "title": "Laravel Valet",
-              "description": "A must for local WordPress development. Hard pass on LocalWP due to restrictive hosting.",
-              "link": "https://laravel.com/docs/8.x/valet"
-            },
-            {
-              "title": "Advanced Custom Fields",
-              "description": "Create custom fields in WordPress. Extremely useful.",
-              "link": "https://www.advancedcustomfields.com/pro/"
-            },
-            {
-              "title": "WPGraphQL",
-              "description": "Great for headless WP. Turns your site into a GraphQL endpoint.",
-              "link": "https://www.wpgraphql.com/"
-            }
+            { "title": "AstroJS", "link": "https://astro.build/" },
+            { "title": "NextJS", "link": "https://nextjs.org/" }
           ]
         },
         {
           "name": "Automation",
           "items": [
-            {
-              "title": "Home Assistant",
-              "description": "Set up and manage multiple custom automations.",
-              "link": "https://www.home-assistant.io/"
-            },
-            {
-              "title": "Raspberry Pi 4 Model B",
-              "description": "Use them for everything from a DNS sinkhole to retro gaming console.",
-              "link": "https://smile.amazon.com/gp/product/B07TC2BK1X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07TC2BK1X&linkCode=as2&tag=tgooden-20&linkId=9d6e90d7e08bb21b29526cd852dbe5f3"
-            }
+            { "title": "Home Assistant", "link": "https://www.home-assistant.io/" },
+            { "title": "Raspberry Pi 4 Model B", "link": "https://smile.amazon.com/gp/product/B07TC2BK1X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07TC2BK1X&linkCode=as2&tag=tgooden-20&linkId=9d6e90d7e08bb21b29526cd852dbe5f3" }
           ]
         },
         {
           "name": "Misc",
           "items": [
-            {
-              "title": "Rode PSA1 Boom Arm",
-              "description": "Expensive but no other arm does the trick.",
-              "link": "https://smile.amazon.com/gp/product/B001D7UYBO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B001D7UYBO&linkCode=as2&tag=tgooden-20&linkId=093b6c0d61a068b4fb0da9ea7e975f9a"
-            },
-            {
-              "title": "Nulaxy Laptop Stand",
-              "description": "Cheap laptop stand, looks ok.",
-              "link": "https://smile.amazon.com/gp/product/B07P54RSPY/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07P54RSPY&linkCode=as2&tag=tgooden-20&linkId=6eb158d961ad94cc72a8b0727766778c"
-            }
+            { "title": "Secretlab Titan 2020", "link": "https://secretlab.co/collections/titan-series/" },
+            { "title": "eBags Pro Laptop Backpack", "link": "https://smile.amazon.com/gp/product/B00OKXYUJ0/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00OKXYUJ0&linkCode=as2&tag=tgooden-20&linkId=9a3dc494303f5fd835bd973fce23fddc" },
+            { "title": "Rode PSA1 Boom Arm", "link": "https://smile.amazon.com/gp/product/B001D7UYBO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B001D7UYBO&linkCode=as2&tag=tgooden-20&linkId=093b6c0d61a068b4fb0da9ea7e975f9a" },
+            { "title": "Nulaxy Laptop Stand", "link": "https://smile.amazon.com/gp/product/B07P54RSPY/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07P54RSPY&linkCode=as2&tag=tgooden-20&linkId=6eb158d961ad94cc72a8b0727766778c" }
           ]
         }
       ]

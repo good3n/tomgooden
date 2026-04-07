@@ -1,0 +1,171 @@
+---
+import { Image } from 'astro:assets'
+import borderImg from '../assets/images/border.png'
+---
+
+<div class="roadmap">
+  <div class="roadmap-intro">
+    <h2>Project roadmap</h2>
+    <p>
+      The "4 D's" as some call it, a common approach to
+      deciphering the lifecycle of a website or application project.
+      Planning is everything. Without implementing and executing a real plan
+      of action, your project will begin to take on water.
+    </p>
+  </div>
+  <div class="container roadmap-grid-wrap">
+    <Image alt="Lines" src={borderImg} width={1300} class="roadmap-border" />
+    <ul>
+      <li>
+        <h3>1. Discover</h3>
+        <p>
+          To determine the real scope of the work, we'll work closely
+          together to learn your goals and pain points. This step is
+          important to ensure we identify what problems we will be solving.
+        </p>
+      </li>
+      <li>
+        <h3>2. Design</h3>
+        <p>
+          Based on the findings of discovery, your project will be planned
+          from start to finish. Deliverable timelines will be established,
+          as well as initial concepts created.
+        </p>
+      </li>
+      <li>
+        <h3>3. Develop</h3>
+        <p>
+          With the planning done, it's time to start bringing these
+          ideas to life. Each project has a strict development process to
+          ensure quality is met.
+        </p>
+      </li>
+      <li>
+        <h3>4. Deploy</h3>
+        <p>
+          The final phase in the roadmap. Your application will be tested
+          and then deployed. This isn't the end of the overall journey
+          however. Digital tools require ongoing attention and care.
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .roadmap {
+    background-color: #403ec6;
+    padding: 6rem 0;
+    overflow: hidden;
+    color: #e5e5f8;
+    overflow-x: clip;
+  }
+
+  .roadmap-intro {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  @media (max-width: 1175px) {
+    .roadmap-intro {
+      max-width: 100%;
+      padding: 0 90px;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .roadmap-intro {
+      padding: 0 60px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .roadmap-intro {
+      padding: 0 30px;
+    }
+  }
+
+  .roadmap h2 {
+    color: #fff;
+    margin-top: 0;
+  }
+
+  .roadmap-grid-wrap {
+    position: relative;
+    margin-top: 5rem;
+  }
+
+  .roadmap-border {
+    position: absolute !important;
+    top: -35px;
+    left: 30px;
+    height: auto;
+  }
+
+  @media (max-width: 1175px) {
+    .roadmap-border {
+      top: -140px;
+      left: 60px;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .roadmap-border {
+      top: -120px;
+      left: 60px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .roadmap-border {
+      top: -100px;
+      left: 30px;
+    }
+  }
+
+  .roadmap ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    position: relative;
+  }
+
+  @media (max-width: 1175px) {
+    .roadmap ul {
+      grid-template-columns: 1fr 1fr;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .roadmap ul {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .roadmap li {
+    margin: 0;
+    display: block;
+  }
+
+  .roadmap h3 {
+    margin: 0;
+    font-size: var(--font-size__h5);
+    color: #fff;
+  }
+
+  .roadmap .roadmap-grid-wrap p {
+    margin: 5rem 0 0;
+    font-size: var(--font-size__small);
+  }
+
+  @media (max-width: 1175px) {
+    .roadmap .roadmap-grid-wrap p {
+      margin-top: 1rem;
+    }
+  }
+</style>

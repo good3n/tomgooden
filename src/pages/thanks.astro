@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Thank you!">
+  <div class="thanks container">
+    <h1>Sent!</h1>
+    <p>
+      Thanks for reaching out. Please allow up to 1-2 business days for a reply.
+    </p>
+    <a href="/">Back home</a>
+    <img alt="Send it to the internet!" src="/images/send-it-to-the-internet.gif" />
+  </div>
+</Layout>
+
+<style>
+  .thanks {
+    text-align: center;
+  }
+
+  .thanks a {
+    color: var(--color_blue);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .thanks img {
+    display: block;
+    margin: 50px auto 100px;
+  }
+</style>

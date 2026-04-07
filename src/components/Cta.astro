@@ -1,0 +1,43 @@
+<div class="cta container">
+  <h2>
+    Get a <span>free quote</span> for your next project
+  </h2>
+  <a class="button" href="/contact">Get in touch</a>
+</div>
+
+<style>
+  .cta {
+    text-align: center;
+    padding: 7rem 0 3rem;
+  }
+
+  @media (max-width: 600px) {
+    .cta {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  .cta h2 {
+    margin-top: 0;
+    font-size: var(--font-size__h3);
+  }
+
+  .cta h2 span {
+    position: relative;
+    display: inline-block;
+  }
+
+  .cta h2 span::after {
+    content: '';
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+    background-color: #53caee;
+    opacity: 0.3;
+    z-index: -1;
+  }
+</style>

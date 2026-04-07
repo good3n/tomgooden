@@ -39,7 +39,7 @@ const uniques = [...new Set(items.data.map((item: any) => item))]
               <div>
                 <h2>{name}</h2>
                 <ul>
-                  {catItems.map(({ title, description, link }: any) => {
+                  {catItems.map(({ title, link }: any) => {
                     const fromLink = link
                       ? link + (link.match(/\?./) ? '&' : '?') + 'from=tomgooden.net'
                       : null
@@ -52,7 +52,6 @@ const uniques = [...new Set(items.data.map((item: any) => item))]
                         ) : (
                           title
                         )}
-                        {description && <span>{description}</span>}
                       </li>
                     )
                   })}
@@ -146,47 +145,32 @@ const uniques = [...new Set(items.data.map((item: any) => item))]
     grid-column: 1 / 3;
   }
 
+  .grid > div:first-of-type ul {
+    columns: 2;
+    column-gap: 50px;
+  }
+
+  @media (max-width: 440px) {
+    .grid > div:first-of-type ul {
+      columns: 1;
+    }
+  }
+
   .grid > div:first-of-type li {
     font-weight: 700;
     display: block;
-  }
-
-  .grid > div:first-of-type li span {
-    display: inline-block;
-    font-size: var(--font-size__base);
-  }
-
-  .grid > div:first-of-type li span::before {
-    content: '-';
-    margin: 0 7px;
-  }
-
-  @media (max-width: 899px) {
-    .grid > div:first-of-type li span {
-      display: block;
-      font-size: var(--font-size__small);
-    }
-
-    .grid > div:first-of-type li span::before {
-      display: none;
-    }
+    break-inside: avoid;
   }
 
   ul {
     margin: 0;
-    padding-left: 10px;
+    padding-left: 0;
   }
 
   li {
     font-weight: 600;
     display: block;
-    margin-bottom: 1rem;
-  }
-
-  li span {
-    font-weight: normal;
-    display: block;
-    font-size: var(--font-size__small);
+    margin-bottom: 0.4rem;
   }
 
   li a {

@@ -110,6 +110,19 @@ const currentPath = Astro.url.pathname
     transition: opacity 0.2s ease;
   }
 
+  @media (max-width: 600px) {
+    .site-nav {
+      padding-left: 6vw;
+      align-items: flex-start;
+      padding-top: 25vh;
+    }
+
+    .site-nav a {
+      font-size: var(--font-size__h3);
+      padding: 12px 20px;
+    }
+  }
+
   .site-nav a:hover {
     opacity: 0.7;
   }

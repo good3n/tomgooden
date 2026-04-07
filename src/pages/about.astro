@@ -11,48 +11,47 @@ const yearsExperience = new Date().getFullYear() - 2007
         <img alt="Who even are you" src="/images/parks-and-rec-craig-who-even-are-you.gif" />
       </div>
       <div>
-        <h1>About me</h1>
+        <h1>Hey, I'm Tom.</h1>
         <p>
-          My name is Tom Gooden and I'm a Michigan based Developer and
-          Designer who specializes in custom solutions for businesses
-          including internal tooling and customer facing applications.
+          Michigan-based developer and designer with {yearsExperience}+ years
+          building custom web applications, internal tools, and everything
+          in between.
         </p>
       </div>
     </header>
     <div class="about-main">
       <p>
-        I'm a user-experience junkie, and for the past {yearsExperience}+ years I've been professionally
-        creating websites and applications for businesses and governments of
-        all sizes. My passion is coming up with ideas to make processes more
-        efficient utilizing the JAMstack. You can usually catch me hanging out
-        in the{' '}
+        I'm a UX junkie who gets unreasonably excited about making complex
+        things feel simple. I specialize in custom internal tooling,
+        customer-facing applications, and full-stack web development. When
+        I'm not working, I'm usually hanging out in the{' '}
         <a href="https://discord.gg/KntFa9p" rel="noopener noreferrer" target="_blank">
           CodeHelp discord server
         </a>.
       </p>
       <div class="blocks">
-        <div>
+        <div class="block-pink">
           <span>{`<code/help>`}</span>
           <a class="button" href="https://discord.gg/KntFa9p" rel="noopener noreferrer" target="_blank">
             Join
           </a>
         </div>
-        <div>
+        <div class="block-purple">
           <p>
             Here is a list of goodies I've compiled that I use in design,
             development, and just everyday life.
           </p>
-          <a class="button" href="/uses/">Uses</a>
+          <a class="button button--purple" href="/uses/">Uses</a>
         </div>
       </div>
 
-      <h2>A little more...</h2>
+      <h2>Off the clock</h2>
       <p>
-        Above all else I am a Dad to 3 kids and{' '}
+        Dad to 3 kids and{' '}
         <span class="strike">2</span> <span class="strike">3</span> 5
-        dogs. During my downtime I like to learn new things that help expand
-        my development skill-set, comic and MTG collecting, spending time
-        outside, fishing and camping.
+        dogs. Comic collector, Commander player, occasional fisherman, and
+        serial side-project starter. I learn new things by building them,
+        which is how most of my weekends disappear.
       </p>
     </div>
   </div>
@@ -140,25 +139,25 @@ const yearsExperience = new Date().getFullYear() - 2007
     }
   }
 
-  .blocks > div:nth-of-type(1) {
+  .block-pink {
     background: rgba(245, 45, 134, 0.1);
     color: rgb(245, 45, 134);
   }
 
-  .blocks > div:nth-of-type(1) span {
+  .block-pink span {
     font-family: var(--font-family__code);
     font-size: var(--font-size__h4);
   }
 
-  .blocks > div:nth-of-type(2) {
+  .block-purple {
     background: rgba(113, 28, 180, 0.1);
     color: rgb(113, 28, 180);
   }
 
-  .blocks > div:nth-of-type(2) a {
-    background: rgb(113, 28, 180);
+  .button--purple {
+    background: rgb(113, 28, 180) !important;
     font-family: var(--font-family__code);
-    color: #fff;
+    color: #fff !important;
   }
 
   .blocks p {

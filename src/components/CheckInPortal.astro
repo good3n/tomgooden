@@ -1,0 +1,120 @@
+---
+import ListItem from './ListItem.astro'
+---
+
+<section class="checkin-portal">
+  <div class="container red">
+    <div class="grid">
+      <div>
+        <img
+          alt="Tom Gooden GLPG Check-in Portal Design iPad"
+          src="/images/checkin-portal-glpg-mobile-mockup.png"
+          class="mockup-img"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <h1>
+          <span class="subheader">GLPG</span>Mobile Patient check-in
+        </h1>
+        <p>
+          A progressive web app designed and developed to allow patients to
+          self check-in for their appointments.
+        </p>
+        <ul>
+          <ListItem text="Svelte" />
+          <ListItem text="MongoDB" />
+          <ListItem text="NodeJS" />
+          <ListItem text="Salesforce" />
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .checkin-portal {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 10.699rem;
+  }
+
+  @media (max-width: 899px) {
+    .checkin-portal .container {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .checkin-portal {
+      padding-top: 1.44rem;
+    }
+
+    .checkin-portal .container {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 550px 1fr;
+    gap: 50px;
+    margin-top: 2.488rem;
+    position: relative;
+  }
+
+  @media (max-width: 1090px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .grid > div:first-of-type {
+    position: relative;
+    z-index: 1;
+    margin-left: -50px;
+  }
+
+  @media (max-width: 1090px) {
+    .grid > div:first-of-type {
+      margin-left: -30px;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .grid > div:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  .mockup-img {
+    max-width: 730px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin: 0 auto;
+    position: relative;
+    left: -40px;
+  }
+
+  @media (max-width: 600px) {
+    .mockup-img {
+      left: -6%;
+    }
+  }
+
+  .checkin-portal h1 span {
+    color: #f52d86;
+  }
+
+  .checkin-portal :global(svg path) {
+    stroke: #f52d86;
+  }
+</style>

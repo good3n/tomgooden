@@ -1,0 +1,101 @@
+---
+import Navigation from './Navigation.astro'
+---
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo-wrap">
+      <a href="/">
+        <svg fill="none" height="48" width="48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h48v48H0z" fill="#F52D86" />
+        </svg>
+        <svg fill="none" height="57" width="57" xmlns="http://www.w3.org/2000/svg">
+          <path d="m0 0 57 15.93L16.19 57 0 0Z" fill="#711CB4" />
+        </svg>
+        <svg fill="none" height="56" width="56" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" fill="#53CAEE" r="28" />
+        </svg>
+      </a>
+    </div>
+    <Navigation />
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: relative;
+    z-index: 998;
+    padding: 2rem 0;
+  }
+
+  .site-header .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+  }
+
+  .logo-wrap {
+    position: relative;
+    top: -30px;
+  }
+
+  @media (max-width: 900px) {
+    .logo-wrap {
+      transform: scale(0.7);
+      top: -25px;
+    }
+  }
+
+  .logo-wrap svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+
+  .logo-wrap svg:nth-of-type(1) {
+    animation-name: square;
+  }
+
+  .logo-wrap svg:nth-of-type(2) {
+    top: 20px;
+    left: 10px;
+    animation-name: triangle;
+  }
+
+  .logo-wrap svg:nth-of-type(3) {
+    top: 10px;
+    left: 40px;
+    animation-name: circle;
+  }
+
+  @keyframes square {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-10%, 10%); }
+    40% { transform: translate(0%, -10%); }
+    60% { transform: translate(20%, 0%); }
+    80% { transform: translate(10%, -10%); }
+  }
+
+  @keyframes triangle {
+    10% { transform: translate(5%, -10%); }
+    30% { transform: translate(10%, 5%); }
+    50% { transform: translate(-10%, -5%); }
+    70% { transform: translate(0%, 10%); }
+    90% { transform: translate(-5%, 0%); }
+  }
+
+  @keyframes circle {
+    5% { transform: translate(0, 0); }
+    15% { transform: translate(0%, 20%); }
+    35% { transform: translate(10%, 0%); }
+    55% { transform: translate(0%, 20%); }
+    75% { transform: translate(5%, 0%); }
+    95% { transform: translate(0%, 5%); }
+  }
+</style>

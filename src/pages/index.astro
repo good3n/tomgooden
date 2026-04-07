@@ -1,0 +1,252 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import heroImg from '../assets/images/tom-gooden-web-design-development.png'
+---
+
+<Layout
+  title="Web Developer / Designer"
+  description="I'm a Michigan based Developer and Designer who specializes in custom solutions for businesses including internal tooling and customer facing applications."
+>
+  <div class="home">
+    <div class="container">
+      <div class="content">
+        <div class="type" id="typing-target">&nbsp;</div>
+        <h2>
+          Digital <br />
+          Thing-maker
+        </h2>
+        <nav>
+          <a href="/about">About</a>
+          <svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h16v16H0z" fill="#F52D86" />
+          </svg>
+          <a href="/uses">Uses</a>
+          <svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="8" fill="#53CAEE" r="8" />
+          </svg>
+          <a href="/projects">Projects</a>
+          <svg fill="none" viewBox="0 0 17 15" xmlns="http://www.w3.org/2000/svg">
+            <path d="m8.24 0 8.17 14.46H.21L8.24 0Z" fill="#711CB4" />
+          </svg>
+          <a href="/contact">Contact</a>
+        </nav>
+        <h1>
+          I'm a Michigan based Developer and Designer who specializes in
+          custom solutions for businesses including internal tooling and
+          customer facing applications.
+        </h1>
+      </div>
+      <div class="image-wrap">
+        <svg fill="none" viewBox="0 0 657 549" xmlns="http://www.w3.org/2000/svg">
+          <path d="m271 163 386 107.89L380.6 549 271 163Z" fill="#711CB4" fill-opacity=".1" />
+          <path d="M0 28h268v268H0z" fill="#53CAEE" fill-opacity=".1" />
+          <circle cx="313.5" cy="216.5" fill="#F72585" fill-opacity=".2" r="216.5" />
+        </svg>
+        <Image
+          alt="Tom Gooden"
+          src={heroImg}
+          width={499}
+          class="hero-photo"
+          style="filter: grayscale(100%) contrast(150%);"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const phrases = [
+    "import { Development } from 'tom-gooden'",
+    "import { Design } from 'tom-gooden'",
+    "import { Seo } from 'tom-gooden'",
+  ]
+  const target = document.getElementById('typing-target')!
+  let phraseIndex = 0
+  let charIndex = 0
+  let isDeleting = false
+
+  function tick() {
+    const current = phrases[phraseIndex]
+    if (!isDeleting) {
+      target.textContent = current.slice(0, charIndex + 1)
+      charIndex++
+      if (charIndex === current.length) {
+        setTimeout(() => { isDeleting = true; tick() }, 1500)
+        return
+      }
+      setTimeout(tick, 100)
+    } else {
+      charIndex--
+      target.textContent = current.slice(0, charIndex) || '\u00A0'
+      if (charIndex === 0) {
+        isDeleting = false
+        phraseIndex = (phraseIndex + 1) % phrases.length
+        setTimeout(tick, 300)
+        return
+      }
+      setTimeout(tick, 30)
+    }
+  }
+  tick()
+</script>
+
+<style>
+  .home .container {
+    position: relative;
+    padding-top: 5rem;
+  }
+
+  @media (max-width: 1119px) {
+    .home .container {
+      padding-top: 8vw;
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding-right: 23%;
+  }
+
+  @media (max-width: 700px) {
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding-right: 0;
+    }
+  }
+
+  .type {
+    margin: 0;
+    font-family: var(--font-family__code);
+    font-size: var(--font-size__base--sm);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    min-height: 1.5em;
+  }
+
+  @media (max-width: 700px) {
+    .type {
+      order: 2;
+      font-size: 2.1vw;
+    }
+  }
+
+  .home h2 {
+    font-size: var(--font-size__h0);
+  }
+
+  @media (max-width: 1119px) {
+    .home h2 {
+      font-size: 9.6vw;
+      margin: 0.5em 0;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .home h2 {
+      font-size: 8.5vw;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .home h2 {
+      order: 1;
+      margin: 1.2em 0 0.4em;
+    }
+  }
+
+  .home h1 {
+    font-size: var(--font-size__base--lg);
+    color: var(--color__base);
+    font-weight: normal;
+    letter-spacing: 0;
+    margin: 0 0 1rem;
+    line-height: 1.75;
+  }
+
+  @media (max-width: 999px) {
+    .home h1 {
+      font-size: var(--font-size__base);
+    }
+  }
+
+  @media (max-width: 700px) {
+    .home h1 {
+      order: 4;
+    }
+  }
+
+  .image-wrap {
+    width: 657px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @media (max-width: 1119px) {
+    .image-wrap {
+      width: 58.8vw;
+    }
+  }
+
+  .image-wrap svg {
+    width: 100%;
+  }
+
+  .hero-photo {
+    position: absolute;
+    top: -54px;
+    right: 90px;
+    height: auto;
+  }
+
+  @media (max-width: 1119px) {
+    .hero-photo {
+      width: 44.7vw !important;
+      top: -4.8vw;
+      right: 8vw;
+    }
+  }
+
+  .home nav {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    margin: 3rem 0;
+    font-size: var(--font-size__base--sm);
+  }
+
+  @media (max-width: 999px) {
+    .home nav {
+      font-size: 1.6vw;
+      margin: 7vw 0;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .home nav {
+      order: 3;
+      align-items: center;
+      font-size: 2vw;
+    }
+  }
+
+  .home nav svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 2.3em;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 700px) {
+    .home nav svg {
+      margin: 0;
+      height: 8px;
+      width: 8px;
+    }
+  }
+</style>
